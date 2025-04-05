@@ -1,0 +1,68 @@
+<basis core="dbsource" source="basiscore" name="db" lid="1" mid="20" > <member request="cat" type="tree" name="productCat1" parentid="213997" postsql="select * from [db.productCat1] where parentid=213997"/> </basis>
+<basis core="dbsource" source="basiscore" name="db" lid="1" mid="20" > <member request="cat" type="tree" name="productCat2" parentid="[##cms.query.catid##]" /> </basis>
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>دسته بندی محصولات</title>
+    <meta name="description" content="دسته بندی محصولات مانلی">
+    <basis core="call" file="styles.inc" pageindex="[##cms.cms.pageindex##]" />
+</head>
+<body>
+    <main class="productCat" dir="rtl">
+        <basis core="call" file="header2.inc" pageindex="[##cms.cms.pageindex##]" />
+
+        <section class="section1 mb-16 relative flex items-center justify-center">
+            <basis core="print" datamembername="db.productCat1">
+              
+                <face filter="catid='[##cms.query.catid##]'">
+            <div class="imgS w-full relative after:absolute after:inset-0 after:bg-black/[0.5]">
+                <img class="w-full" src="[##cms.cms.cdn##]/images/m-@catid.jpg" alt="@name">
+            </div>
+                    <div class="title absolute translate-y-[100px]">
+                        <h1 class="font-Trueno200 text-white uppercase text-[32px] text-center whitespace-pre-line mb-5">
+                           @urltitle
+                        </h1>
+                        <h2 class="text-center font-YekanBakh400 text-xl text-white">
+                          @title
+                        </h2>
+                    </div>
+                    
+                </face>
+            </basis>
+        </section>
+        <section class="section2">
+            <basis core="print" datamembername="db.productCat2">
+              
+                <face filter="catid<>'[##cms.query.catid##]'">
+                    <div class="catBox ">
+                        <a href="/product-list.bc?catid=@catid" class="flex items-center justify-center relative">
+        
+                            <div class="imgS relative after:absolute after:inset-0 after:bg-black/[0.5]">
+                                <img src="[##cms.cms.cdn##]/images/m-@catid.jpg" alt="@title" class="w-full">
+                            </div>
+                            <div class="title absolute">
+                                <h3 class="font-Trueno300 text-white text-[28px] text-center mb-6">
+                                    @urltitle
+                                </h3>
+                                <h4 class="font-YekanBakh400 text-base text-center text-white">
+                                  @title
+                                </h4>
+                            </div>
+                        </a>
+                    </div>
+                    
+                </face>
+            </basis>
+        </section>
+
+        <basis core="call" file="footer.inc" pageindex="[##cms.cms.pageindex##]" />
+
+    </main>
+
+    <basis core="call" file="scripts.inc" pageindex="[##cms.cms.pageindex##]" />
+
+</body>
+</html>

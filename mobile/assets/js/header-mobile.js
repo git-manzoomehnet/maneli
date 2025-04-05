@@ -43,3 +43,9 @@ closeMagaMenu.addEventListener("click" , function (params) {
     megaMenu.classList.add("translate-x-[100%]")
 })
 
+let productsBtm = document.querySelector(".productsBtm")
+let megaProducts = document.querySelector(".megaProducts")
+productsBtm.addEventListener("click" , function (params) {
+    megaProducts.classList.toggle("activeMegaProducts")
+    productsBtm.classList.toggle("!text-gray2")
+})

@@ -1,17 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="../assets/css/outputMobile.css">
-</head>
-
-<body class="bg-black h-[400vh]">
     <basis core="dbsource" source="basiscore" name="db" lid="1" mid="20" > <member request="cat" type="tree" name="productCat1" parentid="213997" postsql="select * from [db.productCat1] where parentid=213997"/> </basis>
-    <header class="fixed py-5 z-[100000] w-full duration-1000 group/header [&.activeHeader]:bg-white"  dir="rtl">
-        <div class="w-90p mx-auto h-8 flex items-center justify-between">
+    <basis core="dbsource" name="db" source="basiscore" lid="1" mid="5" usedforid="9681"> <member name="contactus" type="view"/> </basis>
+    <header class="fixed z-[100000] w-full duration-1000 group/header [&.activeHeader]:bg-white"  dir="rtl">
+        <div class="topHeader bg-black w-full grid grid-cols-3">
+            <basis core="print" datamembername="db.productCat1">
+             
+                <face>
+                    <a href="/product-cat.bc?catid=@catid" title="@title" class="font-YekanBakh400 text-center py-3 text-sm text-white nth-[2]:border-r nth-[2]:border-r-white nth-[2]:border-l nth-[2]:border-l-white">
+                        @title  
+                    </a>
+                    
+                </face>
+            </basis>
+    
+    </div>
+        <div class="w-90p py-5 mx-auto flex items-center justify-between">
             <div class="flex items-center gap-x-6">
 
                 <div class="menuBar cursor-pointer">
@@ -40,7 +43,7 @@
             </div>
             <div class="logo">
                 <a href="/" title="logo" aria-label="logo">
-                    <img src="../assets/images/Mask group (2).png" alt="logo">
+                    <img src="[##cms.cms.cdn##]/images/Mask group (2).png" alt="logo">
                 </a>
             </div>
 
@@ -63,7 +66,7 @@
             <div class="innerMega flex flex-col items-center w-90p mx-auto max-w-[271px]">
                 <div class="logo mb-9">
                     <a href="/" title="logo" aria-label="logo1">
-                        <img src="../assets/images/Mask group (3).png" alt="logo1">
+                        <img src="[##cms.cms.cdn##]/images/logo-menu-m.png" alt="logo1">
                     </a>
                 </div>
                 <ul class="mb-16 flex flex-col gap-y-8">
@@ -93,85 +96,115 @@
                         </div>
                     </li>
                     <li>
-                        <a class="text-white text-base text-center block" href="" title="پروژه ها">
+                        <a class="text-white text-base text-center block" href="/project-list.bc" title="پروژه ها">
                             پروژه ها
                         </a>
                     </li>
                     <li>
-                        <a class="text-white text-base text-center block" href="" title="شوروم">
+                        <a class="text-white text-base text-center block" href="/showroom.bc" title="شوروم">
                             شوروم
                         </a>
                     </li>
                     <li>
-                        <a class="text-white text-base text-center block" href="" title="کارخانه">
+                        <a class="text-white text-base text-center block" href="/factory.bc" title="کارخانه">
                             کارخانه
                         </a>
                     </li>
                     <li>
-                        <a class="text-white text-base text-center block" href="" title="درباره ما">
+                        <a class="text-white text-base text-center block" href="/about-us.bc" title="درباره ما">
                             درباره ما
                         </a>
                     </li>
                     <li>
-                        <a class="text-white text-base text-center block" href="" title="بلاگ">
+                        <a class="text-white text-base text-center block" href="/blog.bc" title="بلاگ">
                             بلاگ
                         </a>
                     </li>
                     <li>
-                        <a class="text-white text-base text-center block" href="" title="کاتالوگ">
+                        <a class="text-white text-base text-center block" href="/catalogue.bc" title="کاتالوگ">
                             کاتالوگ
                         </a>
                     </li>
                     <li>
-                        <a class="text-white text-base text-center block" href="" title="خدمات">
+                        <a class="text-white text-base text-center block" href="/services.bc" title="خدمات">
                             خدمات
                         </a>
                     </li>
                     <li>
-                        <a class="text-white text-base text-center block" href="" title="تماس با ما">
+                        <a class="text-white text-base text-center block" href="/contact-us.bc" title="تماس با ما">
                             تماس با ما
                         </a>
                     </li>
                 </ul>
 
                 <div class="socials pb-9">
-                    <ul class="flex items-center gap-x-4">
-                        <li>
-                            <a target="_blank" href="" title="whatsapp" aria-label="whatsapp">
-                                <img src="../assets/images/whatsapp-h-m.svg" alt="whatsapp">
-                            </a>
-                        </li>
-                        <li>
-                            <a target="_blank" href="" title="pinterest" aria-label="pinterest">
-                                <img src="../assets/images/Pinterest-h-m.svg" alt="pinterest">
-                            </a>
-                        </li>
-                        <li>
-                            <a target="_blank" href="" title="telegram" aria-label="telegram">
-                                <img src="../assets/images/telegram-h-m.svg" alt="telegram">
-                            </a>
-                        </li>
-                        <li>
-                            <a target="_blank" href="" title="instagram" aria-label="instagram">
-                                <img src="../assets/images/instagram-h-m.svg" alt="instagram">
-                            </a>
-                        </li>
-                        <li>
-                            <a target="_blank" href="" title="linkdin" aria-label="linkdin">
-                                <img src="../assets/images/linkdin-h-m.svg" alt="linkdin">
-                            </a>
-                        </li>
-                        <li>
-                            <a target="_blank" href="" title="twitter" aria-label="twitter">
-                                <img src="../assets/images/twitter-h-m.svg" alt="twitter">
-                            </a>
-                        </li>
+                    <ul class="flex justify-center items-center gap-x-4">
+                        <basis core="print" datamembername="db.contactus">
+                          
+                            <face filter="text='واتس اپ'">
+                                <li>
+                                    <a target="_blank" href="https://wa.me/@largetext" title="whatsapp" aria-label="whatsapp">
+                                        <img src="[##cms.cms.cdn##]/images/whatsapp-h-m.svg" alt="whatsapp">
+                                    </a>
+                                </li>
+                                
+                            </face>
+                        </basis>
+                        <basis core="print" datamembername="db.contactus">
+                     
+                            <face filter="text='پینترست'">
+                                
+                                <li>
+                                    <a target="_blank" href="@largetext" title="pinterest" aria-label="pinterest">
+                                        <img src="[##cms.cms.cdn##]/images/Pinterest-h-m.svg" alt="pinterest">
+                                    </a>
+                                </li>
+                            </face>
+                        </basis>
+                        <basis core="print" datamembername="db.contactus">
+                        
+                            <face filter="text='تلگرام'">
+                                <li>
+                                    <a target="_blank" href="https://t.me/@largetext" title="telegram" aria-label="telegram">
+                                        <img src="[##cms.cms.cdn##]/images/telegram-h-m.svg" alt="telegram">
+                                    </a>
+                                </li>
+                                
+                            </face>
+                        </basis>
+                        <basis core="print" datamembername="db.contactus">
+                            
+                            <face filter="text='اینستاگرام'">
+                                <li>
+                                    <a target="_blank" href="@largetext" title="instagram" aria-label="instagram">
+                                        <img src="[##cms.cms.cdn##]/images/instagram-h-m.svg" alt="instagram">
+                                    </a>
+                                </li>
+                                
+                            </face>
+                        </basis>
+                        <basis core="print" datamembername="db.contactus">
+                            <face filter="text='لینکدین'">
+                                <li>
+                                    <a target="_blank" href="@largetext" title="linkdin" aria-label="linkdin">
+                                        <img src="[##cms.cms.cdn##]/images/linkdin-h-m.svg" alt="linkdin">
+                                    </a>
+                                </li>
+                            </face>
+                        </basis>
+                        <basis core="print" datamembername="db.contactus">
+                            
+                            <face filter="text='توییتر'">
+                                <li>
+                                    <a target="_blank" href="@largetext" title="twitter" aria-label="twitter">
+                                        <img src="[##cms.cms.cdn##]/images/twitter-h-m.svg" alt="twitter">
+                                    </a>
+                                </li>
+                                
+                            </face>
+                        </basis>
                     </ul>
                 </div>
             </div>
         </div>
     </div>
-    <script src="../assets/js/header-mobile.js"></script>
-</body>
-
-</html>
