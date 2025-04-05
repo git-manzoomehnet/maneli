@@ -1,0 +1,286 @@
+@font-face {
+    font-family: 'Trueno';
+    src: url('TruenoBlkIt.eot');
+    src: local('Trueno Black Italic'), local('TruenoBlkIt'),
+        url('TruenoBlkIt.eot?#iefix') format('embedded-opentype'),
+        url('TruenoBlkIt.woff2') format('woff2'),
+        url('TruenoBlkIt.woff') format('woff'),
+        url('TruenoBlkIt.ttf') format('truetype');
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Trueno';
+    src: url('TruenoBlkOl.eot');
+    src: local('Trueno Black Outline'), local('TruenoBlkOl'),
+        url('TruenoBlkOl.eot?#iefix') format('embedded-opentype'),
+        url('TruenoBlkOl.woff2') format('woff2'),
+        url('TruenoBlkOl.woff') format('woff'),
+        url('TruenoBlkOl.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Trueno';
+    src: url('TruenoBlk.eot');
+    src: local('Trueno Black'), local('TruenoBlk'),
+        url('TruenoBlk.eot?#iefix') format('embedded-opentype'),
+        url('TruenoBlk.woff2') format('woff2'),
+        url('TruenoBlk.woff') format('woff'),
+        url('TruenoBlk.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Trueno';
+    src: url('TruenoBdOlIt.eot');
+    src: local('Trueno Bold Outline Italic'), local('TruenoBdOlIt'),
+        url('TruenoBdOlIt.eot?#iefix') format('embedded-opentype'),
+        url('TruenoBdOlIt.woff2') format('woff2'),
+        url('TruenoBdOlIt.woff') format('woff'),
+        url('TruenoBdOlIt.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Trueno';
+    src: url('TruenoExBdIt.eot');
+    src: local('Trueno ExtraBold Italic'), local('TruenoExBdIt'),
+        url('TruenoExBdIt.eot?#iefix') format('embedded-opentype'),
+        url('TruenoExBdIt.woff2') format('woff2'),
+        url('TruenoExBdIt.woff') format('woff'),
+        url('TruenoExBdIt.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Trueno';
+    src: url('TruenoRgIt.eot');
+    src: local('Trueno Regular Italic'), local('TruenoRgIt'),
+        url('TruenoRgIt.eot?#iefix') format('embedded-opentype'),
+        url('TruenoRgIt.woff2') format('woff2'),
+        url('TruenoRgIt.woff') format('woff'),
+        url('TruenoRgIt.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Trueno';
+    src: url('TruenoExBd.eot');
+    src: local('Trueno ExtraBold'), local('TruenoExBd'),
+        url('TruenoExBd.eot?#iefix') format('embedded-opentype'),
+        url('TruenoExBd.woff2') format('woff2'),
+        url('TruenoExBd.woff') format('woff'),
+        url('TruenoExBd.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Trueno';
+    src: url('TruenoLtIt.eot');
+    src: local('Trueno Light Italic'), local('TruenoLtIt'),
+        url('TruenoLtIt.eot?#iefix') format('embedded-opentype'),
+        url('TruenoLtIt.woff2') format('woff2'),
+        url('TruenoLtIt.woff') format('woff'),
+        url('TruenoLtIt.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Trueno';
+    src: url('TruenoBdOl.eot');
+    src: local('Trueno Bold Outline'), local('TruenoBdOl'),
+        url('TruenoBdOl.eot?#iefix') format('embedded-opentype'),
+        url('TruenoBdOl.woff2') format('woff2'),
+        url('TruenoBdOl.woff') format('woff'),
+        url('TruenoBdOl.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Trueno';
+    src: url('TruenoLt.eot');
+    src: local('Trueno Light'), local('TruenoLt'),
+        url('TruenoLt.eot?#iefix') format('embedded-opentype'),
+        url('TruenoLt.woff2') format('woff2'),
+        url('TruenoLt.woff') format('woff'),
+        url('TruenoLt.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Trueno';
+    src: url('TruenoRg.eot');
+    src: local('Trueno Regular'), local('TruenoRg'),
+        url('TruenoRg.eot?#iefix') format('embedded-opentype'),
+        url('TruenoRg.woff2') format('woff2'),
+        url('TruenoRg.woff') format('woff'),
+        url('TruenoRg.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Trueno';
+    src: url('TruenoExBdOlIt.eot');
+    src: local('Trueno ExtraBold Outline Italic'), local('TruenoExBdOlIt'),
+        url('TruenoExBdOlIt.eot?#iefix') format('embedded-opentype'),
+        url('TruenoExBdOlIt.woff2') format('woff2'),
+        url('TruenoExBdOlIt.woff') format('woff'),
+        url('TruenoExBdOlIt.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Trueno';
+    src: url('TruenoBlkOlIt.eot');
+    src: local('Trueno Black Outline Italic'), local('TruenoBlkOlIt'),
+        url('TruenoBlkOlIt.eot?#iefix') format('embedded-opentype'),
+        url('TruenoBlkOlIt.woff2') format('woff2'),
+        url('TruenoBlkOlIt.woff') format('woff'),
+        url('TruenoBlkOlIt.ttf') format('truetype');
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Trueno';
+    src: url('TruenoBd.eot');
+    src: local('Trueno Bold'), local('TruenoBd'),
+        url('TruenoBd.eot?#iefix') format('embedded-opentype'),
+        url('TruenoBd.woff2') format('woff2'),
+        url('TruenoBd.woff') format('woff'),
+        url('TruenoBd.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Trueno';
+    src: url('TruenoExBdOl.eot');
+    src: local('Trueno ExtraBold Outline'), local('TruenoExBdOl'),
+        url('TruenoExBdOl.eot?#iefix') format('embedded-opentype'),
+        url('TruenoExBdOl.woff2') format('woff2'),
+        url('TruenoExBdOl.woff') format('woff'),
+        url('TruenoExBdOl.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Trueno';
+    src: url('TruenoBdIt.eot');
+    src: local('Trueno Bold Italic'), local('TruenoBdIt'),
+        url('TruenoBdIt.eot?#iefix') format('embedded-opentype'),
+        url('TruenoBdIt.woff2') format('woff2'),
+        url('TruenoBdIt.woff') format('woff'),
+        url('TruenoBdIt.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Trueno';
+    src: url('TruenoUltBlk.eot');
+    src: local('Trueno UltraBlack'), local('TruenoUltBlk'),
+        url('TruenoUltBlk.eot?#iefix') format('embedded-opentype'),
+        url('TruenoUltBlk.woff2') format('woff2'),
+        url('TruenoUltBlk.woff') format('woff'),
+        url('TruenoUltBlk.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Trueno';
+    src: url('TruenoSBdIt.eot');
+    src: local('Trueno SemiBold Italic'), local('TruenoSBdIt'),
+        url('TruenoSBdIt.eot?#iefix') format('embedded-opentype'),
+        url('TruenoSBdIt.woff2') format('woff2'),
+        url('TruenoSBdIt.woff') format('woff'),
+        url('TruenoSBdIt.ttf') format('truetype');
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Trueno';
+    src: url('TruenoUltLtIt.eot');
+    src: local('Trueno UltraLight Italic'), local('TruenoUltLtIt'),
+        url('TruenoUltLtIt.eot?#iefix') format('embedded-opentype'),
+        url('TruenoUltLtIt.woff2') format('woff2'),
+        url('TruenoUltLtIt.woff') format('woff'),
+        url('TruenoUltLtIt.ttf') format('truetype');
+    font-weight: 200;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Trueno';
+    src: url('TruenoUltBlkIt.eot');
+    src: local('Trueno UltraBlack Italic'), local('TruenoUltBlkIt'),
+        url('TruenoUltBlkIt.eot?#iefix') format('embedded-opentype'),
+        url('TruenoUltBlkIt.woff2') format('woff2'),
+        url('TruenoUltBlkIt.woff') format('woff'),
+        url('TruenoUltBlkIt.ttf') format('truetype');
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Trueno';
+    src: url('TruenoUltLt.eot');
+    src: local('Trueno UltraLight'), local('TruenoUltLt'),
+        url('TruenoUltLt.eot?#iefix') format('embedded-opentype'),
+        url('TruenoUltLt.woff2') format('woff2'),
+        url('TruenoUltLt.woff') format('woff'),
+        url('TruenoUltLt.ttf') format('truetype');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Trueno';
+    src: url('TruenoSBd.eot');
+    src: local('Trueno SemiBold'), local('TruenoSBd'),
+        url('TruenoSBd.eot?#iefix') format('embedded-opentype'),
+        url('TruenoSBd.woff2') format('woff2'),
+        url('TruenoSBd.woff') format('woff'),
+        url('TruenoSBd.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+

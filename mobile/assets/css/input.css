@@ -1,0 +1,31 @@
+@import "tailwindcss";
+@font-face {
+    font-family: "Trueno300";
+    src: url("../fonts/TruenoLt.eot");
+    src: url("../fonts/TruenoLt.eot?#iefix") format("embedded-opentype"),
+      url("../fonts/TruenoLt.woff") format("woff"),
+      url("../fonts/TruenoLt.woff2") format("woff2"),
+      url("../fonts/TruenoLt.ttf") format("truetype");
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+  }
+@font-face {
+    font-family: "YekanBakh500";
+    src: url("../_fonts/YekanBakh-Medium.eot");
+    src: url("../_fonts/YekanBakh-Medium.eot?#iefix") format("embedded-opentype"),
+      url("../_fonts/YekanBakh-Medium.woff") format("woff"),
+      url("../_fonts/YekanBakh-Medium.woff2") format("woff2"),
+      url("../_fonts/YekanBakh-Medium.ttf") format("truetype");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+  }
+
+@theme {
+    --font-Trueno300: "Trueno300" !important;
+    --font-YekanBakh500: "YekanBakh500" !important;
+    --color-matn: #525252;
+    --color-gray1: #F5F5F5;
+    --spacing-90p: 90%;
+  }
