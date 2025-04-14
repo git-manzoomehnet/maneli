@@ -1,0 +1,253 @@
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="10" usedforid="[##cms.query.id##]"> <member name="showroom" type="view"/> </basis>
+ <basis core="dbsource" name="db" source="media" lid="1" sourcemid="10" usedforid="[##cms.query.id##]"> <member name="showroomGallery" type="list" format="4"/> </basis>	
+
+
+ <basis core="group" if="'[##db.showroomGallery.RowNumber##]'=''">
+     <basis core="print" datamembername="db.showroomGallery">
+                       
+                        <face filter="ord=1000">
+                            <div class="imgS shrink-0">
+                                <img src="[##cms.cms.cdn##]/@largeIMG" alt="shoroom">
+                            </div>
+                            
+                        </face>
+                    </basis>
+    
+                    <div class="infoBox flex w-full px-20 py-14 bg-white"
+                    style="box-shadow: 5px 5px 25.4px 3px #A7A7A740;">
+                    <div class="rSec flex flex-col justify-between w-full">
+                            <basis core="print" datamembername="db.showroom">
+                               
+                                <face filter="TypeID=150">
+                                    <h3 class="font-YekanBakh400 text-[28px]">
+                                       @Answer
+                                    </h3>
+                                    
+                                </face>
+                            </basis>
+                            <basis core="print" datamembername="db.showroom">
+                                <layout>
+                                    <div class="address mb-5">
+                                        <span class="block text-matn font-YekanBakh400 text-sm leading-6">
+                                            آدرس :
+                                        </span>
+                                        <div class="para font-YekanBakh400 text-base">
+                                         
+                                            @child
+                                        </div>
+                                    </div>
+                                </layout>
+                              
+                                <face filter="TypeID=244">
+                                    @Answer
+                                </face>
+                            </basis>
+                            <div class="phone mb-5">
+                                <span class="block text-matn font-YekanBakh400 text-sm leading-6">
+                                    تلفن تماس با شوروم :
+                                </span>
+                                <div class="para font-YekanBakh400 text-base">
+                                    <p> 021 -75924</p>
+                                </div>
+                            </div>
+    
+                            <basis core="print" datamembername="db.showroom">
+                                <layout>
+                                    <div class="phone mb-5">
+                                        <span class="block text-matn font-YekanBakh400 text-sm leading-6">
+                                            تلفن تماس:
+                                        </span>
+                                        <div class="para font-YekanBakh400 text-base">
+                                            @child
+                                        </div>
+                                    </div>
+                                </layout>
+                                
+                                <face filter="TypeID=240">
+                                    
+                                    <p class="block">
+                                        @Answer
+                                    </p>
+                                </face>
+                            </basis>
+    
+                            <basis core="print" datamembername="db.showroom">
+                                <layout>
+                                    <div class="mail mb-5">
+                                        <span class="block text-matn font-YekanBakh400 text-sm leading-6">
+                                            ایمیل :
+                                        </span>
+                                        <div class="para font-YekanBakh400 text-base">
+                                            @child
+                                        </div>
+                                    </div>
+                                </layout>
+                                
+                                <face filter="TypeID=242">
+                                    <a href="mailto:@Answer" class="font-YekanBakh400 text-base block">
+                                        @Answer
+                                    </a>
+                                    
+                                </face>
+                            </basis>
+    
+                            <basis core="print" datamembername="db.showroom">
+                                <layout>
+                                    <div class="visit mb-5">
+                                        <span class="block text-matn font-YekanBakh400 text-sm leading-6">
+                                            بازدید از شوروم :
+                                        </span>
+                                        <div class="para font-YekanBakh400 text-base">
+                                           
+                                            @child
+                                        </div>
+                                    </div>
+                                </layout>
+                            
+                                <face filter="TypeID=128">
+                                    @Answer
+                                </face>
+                            </basis>
+    
+                        </div>
+    
+                        <basis core="print" datamembername="db.showroom">
+    
+                            <face filter="TypeID=246">
+                                <div class="mapS mb-6 w-full">
+                                    <div id="map" class="mapSectoin h-[400px]" data-x="@largetext" ,
+                                        data-y="@text">
+                                        <!-- @largetext -->
+                                    </div>
+                                </div>
+                            </face>
+                        </basis>
+    
+                    </div>
+     
+ </basis>
+ <basis core="group" if="'[##db.showroomGallery.RowNumber##]'<>''">
+
+ <basis core="print" datamembername="db.showroomGallery">
+                   
+                    <face filter="ord=1000">
+                        <div class="imgS shrink-0">
+                            <img src="[##cms.cms.cdn##]/@largeIMG" alt="shoroom">
+                        </div>
+                        
+                    </face>
+                </basis>
+
+                <div class="infoBox -mr-[211px] flex w-full px-20 py-14 bg-white"
+                style="box-shadow: 5px 5px 25.4px 3px #A7A7A740;">
+                <div class="rSec flex flex-col justify-between w-full">
+                        <basis core="print" datamembername="db.showroom">
+                           
+                            <face filter="TypeID=150">
+                                <h3 class="font-YekanBakh400 text-[28px]">
+                                   @Answer
+                                </h3>
+                                
+                            </face>
+                        </basis>
+                        <basis core="print" datamembername="db.showroom">
+                            <layout>
+                                <div class="address mb-5">
+                                    <span class="block text-matn font-YekanBakh400 text-sm leading-6">
+                                        آدرس :
+                                    </span>
+                                    <div class="para font-YekanBakh400 text-base">
+                                     
+                                        @child
+                                    </div>
+                                </div>
+                            </layout>
+                          
+                            <face filter="TypeID=244">
+                                @Answer
+                            </face>
+                        </basis>
+                        <div class="phone mb-5">
+                            <span class="block text-matn font-YekanBakh400 text-sm leading-6">
+                                تلفن تماس با شوروم :
+                            </span>
+                            <div class="para font-YekanBakh400 text-base">
+                                <p> 021 -75924</p>
+                            </div>
+                        </div>
+
+                        <basis core="print" datamembername="db.showroom">
+                            <layout>
+                                <div class="phone mb-5">
+                                    <span class="block text-matn font-YekanBakh400 text-sm leading-6">
+                                        تلفن تماس:
+                                    </span>
+                                    <div class="para font-YekanBakh400 text-base">
+                                        @child
+                                    </div>
+                                </div>
+                            </layout>
+                            
+                            <face filter="TypeID=240">
+                                
+                                <p class="block">
+                                    @Answer
+                                </p>
+                            </face>
+                        </basis>
+
+                        <basis core="print" datamembername="db.showroom">
+                            <layout>
+                                <div class="mail mb-5">
+                                    <span class="block text-matn font-YekanBakh400 text-sm leading-6">
+                                        ایمیل :
+                                    </span>
+                                    <div class="para font-YekanBakh400 text-base">
+                                        @child
+                                    </div>
+                                </div>
+                            </layout>
+                            
+                            <face filter="TypeID=242">
+                                <a href="mailto:@Answer" class="font-YekanBakh400 text-base block">
+                                    @Answer
+                                </a>
+                                
+                            </face>
+                        </basis>
+
+                        <basis core="print" datamembername="db.showroom">
+                            <layout>
+                                <div class="visit mb-5">
+                                    <span class="block text-matn font-YekanBakh400 text-sm leading-6">
+                                        بازدید از شوروم :
+                                    </span>
+                                    <div class="para font-YekanBakh400 text-base">
+                                       
+                                        @child
+                                    </div>
+                                </div>
+                            </layout>
+                        
+                            <face filter="TypeID=128">
+                                @Answer
+                            </face>
+                        </basis>
+
+                    </div>
+
+                    <basis core="print" datamembername="db.showroom">
+
+                        <face filter="TypeID=246">
+                            <div class="mapS mb-6 w-full">
+                                <div id="map" class="mapSectoin h-[400px]" data-x="@largetext" ,
+                                    data-y="@text">
+                                    <!-- @largetext -->
+                                </div>
+                            </div>
+                        </face>
+                    </basis>
+
+                </div>
+
+ </basis>

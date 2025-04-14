@@ -1,0 +1,296 @@
+<basis core="dbsource" source="media" name="basisName" lid="1" catid="2374"> <member type="list" name="banner-contact-desk" perpage="10" pageno="1" /> </basis>
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="5" usedforid="9681"> <member name="contactus" type="view"/> </basis>
+
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="10" catid="214202"> <member name="list-namayandegi" type="list"/> </basis>
+<!DOCTYPE html>
+<html lang="fa">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تماس با ما</title>
+    <meta name="description" content="تماس با مانلی">
+    <link rel="stylesheet" href="[##cms.cms.cdn##]/css/leaflet.css" />
+
+    <basis core="call" file="styles.inc"/>
+</head>
+
+<body>
+    <main class="contactUs" dir="rtl">
+        <basis core="call" file="header.inc"/>
+
+        <section class="section1 h-svh  relative flex items-center justify-center">
+            <div class="breadCrumb absolute top-[120px] z-10 w-80p mx-auto">
+                <a href="/" title="home" class="inline-block font-YekanBakh400 text-sm text-white ml-1.5">
+                    خانه
+                </a>
+
+
+                <i class="font-YekanBakh400 inline-block -translate-y-0.5 text-sm text-white ml-1.5">
+                    .
+                </i>
+                <span class="inline-block font-YekanBakh400 text-sm text-white ml-1.5">
+                    تماس با ما
+                </span>
+
+            </div>
+
+            <basis core="print" datamembername="basisName.banner-contact-desk">
+
+                <face>
+                    <div class="imgS w-full relative after:absolute after:inset-0 after:bg-black/[0.35]">
+                        <img class="w-full h-svh" src="[##cms.cms.cdn##]/@largeIMG" alt="@name">
+                    </div>
+                    <div class="title absolute translate-y-[100px]">
+                        <h1
+                            class="font-Trueno200 text-white uppercase text-5xl tracking-[15%] text-center whitespace-pre-line mb-5">
+                            @name
+                        </h1>
+                        <h2 class="text-center font-YekanBakh700 text-2xl text-white">
+                            @description
+                        </h2>
+                    </div>
+
+                </face>
+            </basis>
+            <div class="absolute -bottom-[29px] overflow-hidden h-fit">
+
+                <div class="scrollBtm overflow-hidden  h-[130px] w-px bg-gray2">
+                    <div class="line h-[58px] w-px bg-white">
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="section2 mb-20 relative pt-20">
+            <div class="bgImg absolute w-full top-0 left-0 right-0 -z-1">
+                <img class="w-full h-[407px]" src="[##cms.cms.cdn##]/images/mramar.png" alt="bg">
+            </div>
+
+
+            <div class="infoBox w-80p mx-auto px-16 py-20 bg-white" style="box-shadow: 5px 5px 25.4px 3px #A7A7A740;">
+                <div class=" gap-x-5 flex pb-9 justify-between border-b border-b-gray2">
+
+                    <div class="rSec flex flex-col justify-between">
+                        <h3 class="font-YekanBakh400 text-[28px]">
+                            تماس با ما
+                        </h3>
+                        <basis core="print" datamembername="db.contactus">
+
+                            <face filter="TypeID=150">
+                                <h3 class="font-YekanBakh400 text-[28px]">
+                                    @Answer
+                                </h3>
+
+                            </face>
+                        </basis>
+                        <basis core="print" datamembername="db.contactus">
+                            <layout>
+                                <div class="address mb-5">
+                                    <span class="block text-matn font-YekanBakh400 text-sm leading-6">
+                                        آدرس :
+                                    </span>
+                                    <div class="para font-YekanBakh400 text-base">
+
+                                        @child
+                                    </div>
+                                </div>
+                            </layout>
+
+                            <face filter="TypeID=244">
+                                @Answer
+                            </face>
+                        </basis>
+                        <div class="phone mb-5">
+                            <span class="block text-matn font-YekanBakh400 text-sm leading-6">
+                                تلفن تماس با شوروم :
+                            </span>
+                            <div class="para font-YekanBakh400 text-base">
+                                <p> 021 -75924</p>
+                            </div>
+                        </div>
+
+                        <basis core="print" datamembername="db.contactus">
+                            <layout>
+                                <div class="phone mb-5">
+                                    <span class="block text-matn font-YekanBakh400 text-sm leading-6">
+                                        تلفن تماس:
+                                    </span>
+                                    <div class="para font-YekanBakh400 text-base">
+                                        @child
+                                    </div>
+                                </div>
+                            </layout>
+
+                            <face filter="TypeID=240">
+
+                                <p class="block">
+                                    @Answer
+                                </p>
+                            </face>
+                        </basis>
+
+                        <basis core="print" datamembername="db.contactus">
+                            <layout>
+                                <div class="mail mb-5">
+                                    <span class="block text-matn font-YekanBakh400 text-sm leading-6">
+                                        ایمیل :
+                                    </span>
+                                    <div class="para font-YekanBakh400 text-base">
+                                        @child
+                                    </div>
+                                </div>
+                            </layout>
+
+                            <face filter="TypeID=242">
+                                <a href="mailto:@Answer" class="font-YekanBakh400 text-base block">
+                                    @Answer
+                                </a>
+
+                            </face>
+                        </basis>
+
+                        <basis core="print" datamembername="db.contactus">
+                            <layout>
+                                <div class="visit mb-5">
+                                    <span class="block text-matn font-YekanBakh400 text-sm leading-6">
+                                        بازدید از شوروم :
+                                    </span>
+                                    <div class="para font-YekanBakh400 text-base">
+
+                                        @child
+                                    </div>
+                                </div>
+                            </layout>
+
+                            <face filter="TypeID=128">
+                                @Answer
+                            </face>
+                        </basis>
+
+                        <div class="socials mt-14">
+                            <ul class="flex items-center  gap-x-4">
+                                <basis core="print" datamembername="db.contactus">
+
+                                    <face filter="text='واتس اپ'">
+                                        <li>
+                                            <a target="_blank" href="https://wa.me/@largetext" title="whatsapp"
+                                                aria-label="whatsapp">
+                                                <img src="[##cms.cms.cdn##]/images/m-cont-whatsapp.svg" alt="whatsapp">
+                                            </a>
+                                        </li>
+
+                                    </face>
+                                </basis>
+                                <basis core="print" datamembername="db.contactus">
+
+                                    <face filter="text='پینترست'">
+
+                                        <li>
+                                            <a target="_blank" href="@largetext" title="pinterest"
+                                                aria-label="pinterest">
+                                                <img src="[##cms.cms.cdn##]/images/m-cont-Pinterest.svg"
+                                                    alt="pinterest">
+                                            </a>
+                                        </li>
+                                    </face>
+                                </basis>
+                                <basis core="print" datamembername="db.contactus">
+
+                                    <face filter="text='تلگرام'">
+                                        <li>
+                                            <a target="_blank" href="https://t.me/@largetext" title="telegram"
+                                                aria-label="telegram">
+                                                <img src="[##cms.cms.cdn##]/images/m-cont-telegram.svg" alt="telegram">
+                                            </a>
+                                        </li>
+
+                                    </face>
+                                </basis>
+                                <basis core="print" datamembername="db.contactus">
+
+                                    <face filter="text='اینستاگرام'">
+                                        <li>
+                                            <a target="_blank" href="@largetext" title="instagram"
+                                                aria-label="instagram">
+                                                <img src="[##cms.cms.cdn##]/images/m-cont-instagram.svg"
+                                                    alt="instagram">
+                                            </a>
+                                        </li>
+
+                                    </face>
+                                </basis>
+                                <basis core="print" datamembername="db.contactus">
+                                    <face filter="text='لینکدین'">
+                                        <li>
+                                            <a target="_blank" href="@largetext" title="linkdin" aria-label="linkdin">
+                                                <img src="[##cms.cms.cdn##]/images/m-cont-linkdin.svg" alt="linkdin">
+                                            </a>
+                                        </li>
+                                    </face>
+                                </basis>
+                                <basis core="print" datamembername="db.contactus">
+
+                                    <face filter="text='توییتر'">
+                                        <li>
+                                            <a target="_blank" href="@largetext" title="twitter" aria-label="twitter">
+                                                <img src="[##cms.cms.cdn##]/images/m-cont-twitter.svg" alt="twitter">
+                                            </a>
+                                        </li>
+                                    </face>
+                                </basis>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <basis core="print" datamembername="db.contactus">
+
+                        <face filter="TypeID=246">
+                            <div class="mapS w-full max-w-[501px]">
+                                <div id="map" class="mapSectoin  h-[521px]" data-x="@largetext" ,
+                                    data-y="@text">
+                                    <!-- @largetext -->
+                                </div>
+                            </div>
+                        </face>
+                    </basis>
+                </div>
+
+
+                <basis core="print" datamembername="db.list-namayandegi">
+                    <layout>
+                        <div class="repList">
+                            <h3 class="mb-4 mt-5">
+                                نمایندگی و شعب
+                            </h3>
+                            <ul>
+                                @child
+                            </ul>
+                        </div>
+
+                    </layout>
+
+                    <face>
+
+                        <li class="mb-5 last:mb-0 grid grid-cols-2 items-center gap-x-5 shBox" data-sh="/load-sh.inc?id=@id">
+                           
+                        </li>
+                    </face>
+                </basis>
+            </div>
+
+        </section>
+
+        <basis core="call" file="footer.inc"/>
+
+    </main>
+
+    <basis core="call" file="scripts.inc"/>
+    <script src="http://i116yl.undertest.ir/_js/leaflet.js"></script>
+
+    <script src="[##cms.cms.cdn##]/js/contact.js"></script>
+
+</body>
+
+</html>

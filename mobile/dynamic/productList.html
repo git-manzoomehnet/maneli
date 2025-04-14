@@ -1,0 +1,96 @@
+<basis core="dbsource" request="seo" source="basiscore" name="db" lid="1" >
+    <member name="seolist" type="list" request="cat" id="[##cms.query.catid##]"></member>
+</basis>
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="20" catid="[##cms.query.catid##]"> <member name="m-productList" type="list" size="350x350"/> </basis>	
+<basis core="dbsource" name="db" source="basiscore" lid="2" mid="20" catid="[##cms.query.catid##]"> <member name="m-enproductList" type="list" size="350x350"/> </basis>	
+<basis core="dbsource" source="basiscore" name="db" lid="1" mid="20" >
+ <member request="navcatid" type="tree" name="navList" parentid="[##cms.query.catid##]" postsql="select * from [db.navList] where parentcatid not in (213958,213997)" />
+ </basis>	
+  <basis core="inlinesource" name="list" >
+    <member name="star" lefttblcol="db.m-productList.id" righttblcol="db.m-enproductList.id" format="join" jointype="leftjoin" />
+  </basis>
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <basis core="print" datamembername="db.seolist">
+        <face>
+            <title>[##cms.seo.title|db.seolist.title##]</title>
+            <meta name="description" content="[##cms.seo.description|db.seolist.description##]" />
+        </face>
+    </basis>
+    <basis core="call" file="styles.inc" pageindex="[##cms.cms.pageindex##]" />
+</head>
+<body>
+    <main class="productList" dir="rtl">
+        <basis core="call" file="header2.inc" pageindex="[##cms.cms.pageindex##]" />
+
+        <section class="section1 mt-[138px]">
+            <div class="breadCrumb w-90p mx-auto">
+                <a href="/" title="home" class="inline-block font-YekanBakh400 text-xs text-gray2 ml-1.5">
+                    خانه
+                </a>
+          
+                <basis core="print" datamembername="db.navList">
+                    <layout>
+                        <i class="font-YekanBakh400 inline-block -translate-y-0.5 text-xs text-gray2 ml-1.5">
+                            .
+                        </i>
+                        @child
+                    </layout>
+                    
+                    <face filter="parentcatid='[##cms.query.catid##]'">
+                        
+                        <h1 class="inline-block font-YekanBakh400 text-xs text-gray2 ml-1.5">
+                            @title
+                        </h1>
+                    </face>
+                </basis>
+            </div>
+        </section>
+        <section class="section2 pb-16 mt-2 bg-gray1">
+            <div class=" w-90p mx-auto">
+                <basis core="print" datamembername="list.star">
+                    <layout>
+                        @child
+                    </layout>
+                    <else-layout>
+                            <div class="para font-YekanBakh400">
+                                <p>
+                                    متاسفانه محصولی موجود نیست.
+                                </p>
+                            </div>
+                    </else-layout>
+                    <face>
+                        <div class="proBox mb-4 pb-2 border-b border-b-black">
+                            <a href="/@db.m-productList.link" title="@db.m-productList.title">
+                                <div class="imgS mb-0.5">
+                                    <img class="w-full" src="[##cms.cms.cdn##]/@db.m-productList.00350X00350prp" alt="@db.m-productList.title">
+                                </div>
+                                <h2 class="font-Trueno200  text-xl text-black mb-3 text-center">
+                                 @db.m-enproductList.title
+                                </h2>
+                                <h3 class="font-YekanBakh400 text-base text-center">
+                                   @db.m-productList.title
+                                </h3>
+                            </a>
+                        </div>
+                        
+                    </face>
+                </basis>
+            </div>
+        </section>
+
+         <basis core="call" file="top-footer.inc" pageindex="[##cms.cms.pageindex##]" />
+    </main>
+    <basis core="call" file="footer.inc" pageindex="[##cms.cms.pageindex##]" />
+
+    
+    <script>
+    document.querySelector("header").classList.add("darkHeader")
+    document.querySelector("header").classList.add("activeHeader")
+</script>
+    <basis core="call" file="scripts.inc" pageindex="[##cms.cms.pageindex##]" />
+</body>
+</html>

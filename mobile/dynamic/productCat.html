@@ -1,5 +1,9 @@
 <basis core="dbsource" source="basiscore" name="db" lid="1" mid="20" > <member request="cat" type="tree" name="productCat1" parentid="213997" postsql="select * from [db.productCat1] where parentid=213997"/> </basis>
 <basis core="dbsource" source="basiscore" name="db" lid="1" mid="20" > <member request="cat" type="tree" name="productCat2" parentid="[##cms.query.catid##]" /> </basis>
+<basis core="dbsource" source="basiscore" name="db" lid="1" mid="20" >
+    <member request="navcatid" type="tree" name="navList" parentid="[##cms.query.catid##]" postsql="select * from [db.navList] where parentcatid not in (213958,213997)" />
+    </basis>	
+
 <!DOCTYPE html>
 <html lang="fa">
 <head>
@@ -15,6 +19,29 @@
         <basis core="call" file="header2.inc" pageindex="[##cms.cms.pageindex##]" />
 
         <section class="section1 mb-16 relative flex items-center justify-center">
+
+            <div class="breadCrumb absolute top-[120px] z-10 w-90p mx-auto">
+                <a href="/" title="home" class="inline-block font-YekanBakh400 text-xs text-gray2 ml-1.5">
+                    خانه
+                </a>
+              
+                <basis core="print" datamembername="db.navList">
+                    <layout>
+                        <i class="font-YekanBakh400 inline-block -translate-y-0.5 text-xs text-gray2 ml-1.5">
+                            .
+                        </i>
+                        @child
+                    </layout>
+                    
+                    <face filter="parentcatid='[##cms.query.catid##]'">
+                        
+                        <h1 class="inline-block font-YekanBakh400 text-xs text-gray2 ml-1.5">
+                            @title
+                        </h1>
+                    </face>
+                </basis>
+            </div>
+
             <basis core="print" datamembername="db.productCat1">
               
                 <face filter="catid='[##cms.query.catid##]'">
@@ -32,6 +59,14 @@
                     
                 </face>
             </basis>
+            <div class="absolute -bottom-[29px] overflow-hidden h-fit">
+
+                <div class="scrollBtm overflow-hidden  h-[130px] w-px bg-gray2">
+                    <div class="line h-[58px] w-px bg-white">
+                    </div>
+
+                </div>
+            </div>
         </section>
         <section class="section2">
             <basis core="print" datamembername="db.productCat2">
@@ -58,9 +93,10 @@
             </basis>
         </section>
 
-        <basis core="call" file="footer.inc" pageindex="[##cms.cms.pageindex##]" />
-
+        
+        <basis core="call" file="top-footer.inc" pageindex="[##cms.cms.pageindex##]" />
     </main>
+    <basis core="call" file="footer.inc" pageindex="[##cms.cms.pageindex##]" />
 
     <basis core="call" file="scripts.inc" pageindex="[##cms.cms.pageindex##]" />
 

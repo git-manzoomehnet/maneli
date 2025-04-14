@@ -1,0 +1,99 @@
+<basis core="dbsource" source="media" name="basisName" lid="1" catid="2359"> <member type="list" name="banner-prj-mob" perpage="10" pageno="1"  /> </basis>
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="19" catid="214050"> <member name="list" size="360x419" type="list" link="project.bc"/> </basis>
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>پروژه ها</title>
+    <meta name="description" content="پروژه های مانلی">
+    <basis core="call" file="styles.inc" pageindex="[##cms.cms.pageindex##]" />
+
+</head>
+<body>
+    <main class="projectList" dir="rtl">
+        <basis core="call" file="header2.inc" pageindex="[##cms.cms.pageindex##]" />
+
+        <section class="section1 mb-16 relative flex items-center justify-center">
+            <div class="breadCrumb absolute top-[120px] z-10 w-90p mx-auto">
+                <a href="/" title="home" class="inline-block font-YekanBakh400 text-xs text-gray2 ml-1.5">
+                    خانه
+                </a>
+             
+              
+                        <i class="font-YekanBakh400 inline-block -translate-y-0.5 text-xs text-gray2 ml-1.5">
+                            .
+                        </i>
+                        <span class="inline-block font-YekanBakh400 text-xs text-gray2 ml-1.5">
+                            پروژه ها
+                        </span>
+                  
+            </div>
+            <basis core="print" datamembername="basisName.banner-prj-mob">
+              
+                <face>
+            <div class="imgS w-full relative after:absolute after:inset-0 after:bg-black/[0.5]">
+                        <img class="w-full" src="[##cms.cms.cdn##]/@largeIMG" alt="@name">
+                        
+                    </div>
+                    <div class="title absolute translate-y-[100px]">
+                        <h1 class="font-Trueno200 text-white uppercase text-[32px] text-center whitespace-pre-line mb-5">
+                          @name
+                        </h1>
+                        <h2 class="text-center font-YekanBakh400 text-xl text-white">
+                            @description
+                        </h2>
+                    </div>
+                    </face>
+                </basis>
+            <div class="absolute -bottom-[29px] overflow-hidden h-fit">
+
+                <div class="scrollBtm overflow-hidden  h-[130px] w-px bg-gray2">
+                    <div class="line h-[58px] w-px bg-white">
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <section class="section2 w-90p mx-auto">
+            <basis core="print" datamembername="db.list">
+             
+                <else-layout>
+                     <div class="para font-YekanBakh400 text-base text-matn">
+                        <p>
+                            متاسفانه پروژه ای موجود نیست.
+                        </p>
+                     </div>
+                </else-layout>
+                <face>
+                    
+                    <a href="/@link" class="flex w-full mb-3 items-center justify-center relative">
+                        <div class="imgS w-full">
+                            <img class="w-full" src="[##cms.cms.cdn##]/@00360X00419prp" alt="@title">
+                        </div>
+                        <div
+                            class="secImg w-[75%] absolute">
+                            <div class="in relative after:absolute after:inset-0 after:bg-black/[0.3]">
+        
+                                <img class="w-full" src="[##cms.cms.cdn##]/@00360X00419prp" alt="@title">
+                            </div>
+        
+                        </div>
+                        <div class="title absolute">
+                            <h4 class="text-white font-YekanBakh700 text-sm text-center">
+                               @title
+                            </h4>
+                        </div>
+                    </a>
+                </face>
+            </basis>
+        </section>
+
+        <basis core="call" file="footer.inc" pageindex="[##cms.cms.pageindex##]" />
+
+    </main>
+
+    <basis core="call" file="scripts.inc" pageindex="[##cms.cms.pageindex##]" />
+
+</body>
+</html>

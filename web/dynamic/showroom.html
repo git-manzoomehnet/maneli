@@ -1,0 +1,89 @@
+<basis core="dbsource" source="media" name="db" lid="1" catid="2351" > <member type="list" name="showroom-banner" perpage="10" pageno="1"/> </basis>	
+
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="10" catid="214202"> <member name="list-namayandegi" type="list" propertyid="8139,8140"/> </basis>
+
+<!DOCTYPE html>
+<html lang="fa">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>شوروم</title>
+    <meta name="description" content="شوروم مانلی">
+    <link rel="stylesheet" href="[##cms.cms.cdn##]/css/leaflet.css" />
+    <basis core="call" file="styles.inc"  />
+</head>
+
+<body>
+    <main class="showroom" dir="rtl">
+        <basis core="call" file="header.inc" />
+
+        <section class="section1 h-svh mb-36 relative flex items-center justify-center">
+            <div class="breadCrumb absolute top-[120px] z-10 w-80p mx-auto">
+                <a href="/" title="home" class="inline-block font-YekanBakh400 text-sm text-white ml-1.5">
+                    خانه
+                </a>
+
+
+                <i class="font-YekanBakh400 inline-block -translate-y-0.5 text-sm text-white ml-1.5">
+                    .
+                </i>
+                <span class="inline-block font-YekanBakh400 text-sm text-white ml-1.5">
+                    شوروم
+                </span>
+
+            </div>
+
+
+            <basis core="print" datamembername="db.showroom-banner">
+            
+                <face>
+                    <div class="imgS w-full relative after:absolute after:inset-0 after:bg-black/[0.35]">
+                        <img class="w-full h-svh" src="[##cms.cms.cdn##]/@largeIMG" alt="@name">
+                    </div>
+                    <div class="title absolute translate-y-[100px]">
+                        <h1
+                            class="font-Trueno200 text-white uppercase text-5xl tracking-[15%] text-center whitespace-pre-line mb-5">
+                        @description
+                        </h1>
+                        <h2 class="text-center font-YekanBakh700 text-2xl text-white">
+                         @name
+                        </h2>
+                    </div>
+                    
+                </face>
+            </basis>
+            <div class="absolute -bottom-[29px] overflow-hidden h-fit">
+
+                <div class="scrollBtm overflow-hidden  h-[130px] w-px bg-gray2">
+                    <div class="line h-[58px] w-px bg-white">
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <section class="section2 w-80p mx-auto">
+            <basis core="print" datamembername="db.list-namayandegi">
+              
+                <face>
+                    <div data-id="@id" class="showBox mb-24 flex items-center">
+                       
+                    </div>
+                    
+                </face>
+            </basis>
+        </section>
+
+        <basis core="call" file="footer.inc" />
+
+    </main>
+
+
+    <basis core="call" file="scripts.inc"  />
+
+    <script src="http://i116yl.undertest.ir/_js/leaflet.js"></script>
+    <script src="[##cms.cms.cdn##]/js/scrollTotop.js"></script>
+    <script src="[##cms.cms.cdn##]/js/shoroom.js"></script>
+</body>
+
+</html>

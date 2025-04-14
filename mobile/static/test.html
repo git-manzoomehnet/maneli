@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- CSS -->
+<style>
+   .scrollTop {
+  opacity: 0;
+  transform: translateY(150px);
+  transition: all 0.8s ease;
+}
+
+.scrollTop.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+  </style>
+  
+  <!-- HTML -->
+   <section style="margin: 100vh 0 300vh 0;">
+
+       <div class="scroll-animation scrollTop" style="margin-bottom: 50vh;">محتوا ۱</div>
+       <div class="scroll-animation scrollTop" style="margin-bottom: 50vh;">محتوا ۲</div>
+       <div class="scroll-animation scrollTop" style="margin-bottom: 50vh;">محتوا ۳</div>
+    </section>
+  
+  <!-- JavaScript -->
+<!-- JavaScript -->
+<script>
+  let lastScrollY = window.scrollY;
+
+const elements = document.querySelectorAll('.scrollTop');
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    const currentScrollY = window.scrollY;
+    const isScrollingDown = currentScrollY > lastScrollY;
+    const el = entry.target;
+
+    if (entry.isIntersecting) {
+      if (isScrollingDown) {
+        // از بالا رسیدی → انیمیشن اجرا شه
+        el.classList.add('visible', 'animate');
+      } else {
+        // از پایین به بالا رسیدی → فقط visible بدون انیمیشن
+        el.classList.add('visible');
+        el.classList.remove('animate');
+      }
+    } else {
+      if (!isScrollingDown) {
+        // از پایین به بالا خارج شد → مخفی شه
+        el.classList.remove('visible', 'animate');
+      }
+      // اگه از بالا خارج شد → کاری نکن، visible بمونه
+    }
+
+    lastScrollY = currentScrollY;
+  });
+}, {
+  threshold: 0.2
+});
+
+elements.forEach(el => observer.observe(el));
+
+</script>
+</body>
+</html>

@@ -1,6 +1,6 @@
 const header = document.querySelector('header');
 const darkLogo = "/images/darkLogo-m.png"
-const lightLogo = "/images/logo-m.png"
+const lightLogo = "/images/logo-light-m.png"
 let actualScroll = 0
 let darkFlag = false
 if (header.classList.contains("darkHeader")) {
@@ -32,6 +32,10 @@ if (top === 0) {
     }
   }
 })
+
+if (darkFlag) {
+    document.querySelector("header .logo img").setAttribute("src" , darkLogo)
+}
 
 let menuBar = document.querySelector(".menuBar")
 let megaMenu = document.querySelector(".megaMenu")

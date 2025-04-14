@@ -1,0 +1,98 @@
+<basis core="dbsource" source="media" name="basisName" lid="1" catid="2370"> <member type="list" name="banner-catalog-mob" perpage="10000" pageno="1"  /> </basis> 
+ <basis core="dbsource" name="db" source="media" lid="1" sourcemid="1" usedforid="2376255"> <member name="pdf" type="list" format="9"/> </basis>	
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="1" catid="214200"> <member name="list" typeid="159" type="list"/> </basis>
+  
+     <basis core="inlinesource" name="list" >
+        <member name="star" lefttblcol="db.pdf.Table1ID" righttblcol="db.list.id" format="join" jointype="leftjoin" />
+      </basis>
+
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لیست کاتالوگ ها</title>
+    <meta name="description" content="لیست کاتالوگ های مانلی">
+    <basis core="call" file="styles.inc" pageindex="[##cms.cms.pageindex##]" />
+</head>
+<body>
+    <main class="catalouge" dir="rtl">
+        <basis core="call" file="header2.inc" pageindex="[##cms.cms.pageindex##]" />
+
+        <section class="section1 mb-32 relative flex items-center justify-center">
+            <div class="breadCrumb absolute top-[120px] z-10 w-90p mx-auto">
+                <a href="/" title="home" class="inline-block font-YekanBakh400 text-xs text-gray2 ml-1.5">
+                    خانه
+                </a>
+             
+              
+                        <i class="font-YekanBakh400 inline-block -translate-y-0.5 text-xs text-gray2 ml-1.5">
+                            .
+                        </i>
+                        <span class="inline-block font-YekanBakh400 text-xs text-gray2 ml-1.5">
+                          کاتالوگ
+                        </span>
+                  
+            </div>
+            <basis core="print" datamembername="basisName.banner-catalog-mob">
+                
+                <face>
+                    <div class="imgS w-full relative after:absolute after:inset-0 after:bg-black/[0.5]">
+                        <img class="w-full" src="[##cms.cms.cdn##]/@largeIMG" alt="@name">
+                    </div>
+                    <div class="title absolute translate-y-[100px]">
+                        <h1 class="font-Trueno200 text-white uppercase text-[32px] text-center whitespace-pre-line mb-5">
+                           @name
+                        </h1>
+                        <h2 class="text-center font-YekanBakh400 text-xl text-white">
+                           @description
+                        </h2>
+                    </div>
+                    
+                </face>
+            </basis>
+            <div class="absolute -bottom-[29px] overflow-hidden h-fit">
+
+                <div class="scrollBtm overflow-hidden  h-[130px] w-px bg-gray2">
+                    <div class="line h-[58px] w-px bg-white">
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="section2 pb-20 w-90p mx-auto">
+
+            <basis core="print" datamembername="list.star">
+            
+                <face>
+                    <div class="catalougeBox mb-9">
+                        <a href="/@db.pdf.largeIMG" target="_blank" download="/@db.pdf.largeIMG">
+
+                        <div class="imgS mb-9">
+                            <img class="w-full" src="[##cms.cms.cdn##]/@db.list.image" alt="catalouge">
+                        </div>
+                        <h3 class="font-YekanBakh300 text-sm mb-9 text-matn text-center">
+                            @db.list.title
+                        </h3>
+                    
+                        <span
+                            class=" w-full h-[49px] border-t border-t-matn border-b border-b-matn font-YekanBakh300 text-sm text-matn flex items-center justify-center">
+                            دنلود
+                    </span>
+                        </a>
+        
+                    </div>
+                    
+                </face>
+            </basis>
+        </section>
+
+        <basis core="call" file="footer.inc" pageindex="[##cms.cms.pageindex##]" />
+
+    </main>
+
+    <basis core="call" file="scripts.inc" pageindex="[##cms.cms.pageindex##]" />
+
+</body>
+</html>

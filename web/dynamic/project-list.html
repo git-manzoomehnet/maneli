@@ -1,0 +1,113 @@
+<basis core="dbsource" source="media" name="basisName" lid="1" catid="2358"> <member type="list" name="banner-prj-desk" perpage="10" pageno="1"  /> </basis>
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="19" catid="214050"> <member name="list" size="383x447" type="list"/> </basis>
+<!DOCTYPE html>
+<html lang="fa">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>پروژه ها</title>
+    <meta name="description" content="پروژه های مانلی">
+    <basis core="call" file="styles.inc" />
+</head>
+
+<body>
+    <main class="projectList" dir="rtl">
+        <basis core="call" file="header.inc" />
+
+        <section class="section1 h-svh mb-16 relative flex items-center justify-center">
+            <div class="breadCrumb absolute top-[120px] z-10 w-80p mx-auto">
+                <a href="/" title="home" class="inline-block font-YekanBakh400 text-sm text-gray2 ml-1.5">
+                    خانه
+                </a>
+
+
+                <i class="font-YekanBakh400 inline-block -translate-y-0.5 text-sm text-gray2 ml-1.5">
+                    .
+                </i>
+                <span class="inline-block font-YekanBakh400 text-sm text-gray2 ml-1.5">
+                    پروژه ها
+                </span>
+
+            </div>
+
+            <basis core="print" datamembername="basisName.banner-prj-desk">
+
+                <face>
+                    <div class="imgS w-full relative after:absolute after:inset-0 after:bg-black/[0.35]">
+                        <img class="w-full h-svh" src="[##cms.cms.cdn##]/@largeIMG" alt="@name">
+                    </div>
+                    <div class="title absolute translate-y-[100px]">
+                        <h1
+                            class="font-Trueno200 text-white uppercase text-5xl tracking-[15%] text-center whitespace-pre-line mb-5">
+                            @name
+                        </h1>
+                        <h2 class="text-center font-YekanBakh700 text-2xl text-white">
+                            @description
+                        </h2>
+                    </div>
+
+                </face>
+            </basis>
+            <div class="absolute -bottom-[29px] overflow-hidden h-fit">
+
+                <div class="scrollBtm overflow-hidden  h-[130px] w-px bg-gray2">
+                    <div class="line h-[58px] w-px bg-white">
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <section class="section2 w-80p mx-auto">
+
+            <basis core="print" datamembername="db.list">
+                <layout>
+                    <div class="grid grid-cols-3 gap-16">
+
+                        @child
+                    </div>
+                </layout>
+                <else-layout>
+                    <div class="para font-YekanBakh400 text-base text-matn">
+                        متاسفانه پروژه‌ای موجود نیست.
+                    </div>
+                </else-layout>
+                <face>
+
+                    <a href="/@link" title="@title"
+                        class="flex card overflow-hidden w-full mb-3 items-center justify-center relative group/proj">
+                        <div class=" w-full">
+                            <img class="w-full imgS scale-105" src="[##cms.cms.cdn##]/@00383X00447prp" alt="@title">
+                        </div>
+
+                        <div data-tilt data-tilt-speed="300" class="secImg w-[75%] js-tilt absolute">
+                            <div
+                                class="in relative after:absolute duration-500 scale-110 opacity-0 group-hover/proj:opacity-100 group-hover/proj:scale-100 after:inset-0 after:bg-black/[0.3]">
+
+                                <img class="w-full" src="[##cms.cms.cdn##]/@00383X00447prp" alt="@title">
+                            </div>
+
+                        </div>
+                        <div data-tilt data-tilt-speed="300"
+                            class="title js-tilt absolute duration-500 scale-110 opacity-0 group-hover/proj:opacity-100 group-hover/proj:scale-100">
+                            <h4 class="text-white font-YekanBakh700 text-2xl text-center">
+                                @title
+                            </h4>
+                        </div>
+                    </a>
+                </face>
+            </basis>
+        </section>
+        <basis core="call" file="footer.inc" />
+
+    </main>
+    <script>
+        document.querySelector("header").classList.add("darkHeader")
+        document.querySelector("header").classList.add("activeHeader")
+    </script>
+    <basis core="call" file="scripts.inc" />
+
+    <script src="[##cms.cms.cdn##]/js/project-list.js"></script>
+</body>
+
+</html>

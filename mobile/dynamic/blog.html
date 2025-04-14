@@ -1,0 +1,120 @@
+<basis core="dbsource" source="media" name="basisName" lid="1" catid="2365"> <member type="list" name="banner-blog-mob" perpage="10" pageno="1"  /> </basis>
+<basis core="dbsource" source="basiscore" name="basisName" lid="1" mid="1" > <member request="cat" type="tree" name="articleCat" parentid="214075"  /> </basis>
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="1" catid="214076"> <member name="list-blog" size="351x200" type="list" propertyid="7249"/> </basis>
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>بلاگ</title>
+    <meta name="description" content="بلاگ مانلی">
+    <basis core="call" file="styles.inc" pageindex="[##cms.cms.pageindex##]" />
+</head>
+<body>
+    <main class="blog" dir="rtl">
+        <basis core="call" file="header2.inc" pageindex="[##cms.cms.pageindex##]" />
+
+        <section class="section1 relative flex items-center justify-center">
+            <div class="breadCrumb absolute top-[120px] z-10 w-90p mx-auto">
+                <a href="/" title="home" class="inline-block font-YekanBakh400 text-xs text-gray2 ml-1.5">
+                    خانه
+                </a>
+             
+              
+                        <i class="font-YekanBakh400 inline-block -translate-y-0.5 text-xs text-gray2 ml-1.5">
+                            .
+                        </i>
+                        <span class="inline-block font-YekanBakh400 text-xs text-gray2 ml-1.5">
+                          بلاگ
+                        </span>
+                  
+            </div>
+            <basis core="print" datamembername="basisName.banner-blog-mob">
+               
+                <face>
+                    
+                    <div class="imgS w-full relative after:absolute after:inset-0 after:bg-black/[0.5]">
+                        <img class="w-full" src="[##cms.cms.cdn##]/@largeIMG" alt="@name">
+                    </div>
+                    <div class="title absolute translate-y-[100px]">
+                        <h1 class="font-Trueno200 text-white uppercase text-[32px] text-center whitespace-pre-line mb-5">
+                          @name
+                        </h1>
+                        <h2 class="text-center font-YekanBakh400 text-xl text-white">
+                          @description
+                        </h2>
+                    </div>
+                </face>
+            </basis>
+            <div class="absolute -bottom-[29px] overflow-hidden h-fit">
+
+                <div class="scrollBtm overflow-hidden  h-[130px] w-px bg-gray2">
+                    <div class="line h-[58px] w-px bg-white">
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <section class="section2 relative pt-16">
+            <div class="bgImg absolute w-full top-0 left-0 right-0 -z-1">
+                <img class="w-full" src="[##cms.cms.cdn##]/images/bg-def-m.png" alt="bg">
+            </div>
+            <div class="grid w-90p mb-9 mx-auto grid-cols-2 gap-x-2">
+                <basis core="print" datamembername="basisName.articleCat">
+                   
+                    <face filter="catid<>214075">
+                        <div data-blog="/load-blog.inc?catid=@catid" class="filterBtn py-4 pr-14 border-b group/filterBtn duration-500 [&.activeFilter]:border-b-black border-b-gray2">
+                            <span class="font-YekanBakh700 group-[&.activeFilter]/filterBtn:text-black text-gray2 duration-500 text-base">
+                                @title
+                            </span>
+                        </div>
+                        
+                    </face>
+                </basis>
+            </div>
+            <div class="pb-16 w-90p mx-auto blogContainer">
+                <basis core="print" datamembername="db.list-blog">
+                
+                    <else-layout>
+                        <div class="para">
+                            <p>
+                                متاسفانه مقاله ای موجود نیست.
+                            </p>
+                        </div>
+                    </else-layout>
+                    <face>
+                        
+                        <div class="blogBox mb-6">
+                            <a href="/@link" title="@title">
+                                <div class="imgS mb-3.5">
+                                    <img src="[##cms.cms.cdn##]/@00351X00200prp" alt="@title" class="w-full">
+                                </div>
+                                <div class="date text-left mb-3.5">
+                                    <span class="font-YekanBakh400 text-sm leading-6 text-matn">
+                                      @prp_7249
+                                    </span>
+                                </div>
+                                <h3 class="font-YekanBakh700 text-base text-justify mb-3">
+                                 @title
+                                </h3>
+                                <div class="para font-YekanBakh400 text-sm leading-6 text-matn line-clamp-3">
+                                    <p>
+                                        @prp_7244
+                                    </p>
+                                </div>
+                            </a>
+                        </div>
+                    </face>
+                </basis>
+            </div>
+        </section>
+        <basis core="call" file="footer.inc" pageindex="[##cms.cms.pageindex##]" />
+
+    </main>
+
+
+    <script src="[##cms.cms.cdn##]/js/blog-mobile.js"></script>
+    <basis core="call" file="scripts.inc" pageindex="[##cms.cms.pageindex##]" />
+
+</body>
+</html>

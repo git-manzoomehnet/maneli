@@ -1,0 +1,234 @@
+@import "tailwindcss";
+@font-face {
+  font-family: "Trueno200";
+  src: url("../fonts/TruenoUltLt.eot");
+  src: url("../fonts/TruenoUltLt.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/TruenoUltLt.woff") format("woff"),
+    url("../fonts/TruenoUltLt.woff2") format("woff2"),
+    url("../fonts/TruenoUltLt.ttf") format("truetype");
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Trueno300";
+  src: url("../fonts/TruenoLt.eot");
+  src: url("../fonts/TruenoLt.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/TruenoLt.woff") format("woff"),
+    url("../fonts/TruenoLt.woff2") format("woff2"),
+    url("../fonts/TruenoLt.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "YekanBakh300";
+  src: url("../_fonts/YekanBakh-Light.woff") format("woff"),
+    url("../_fonts/YekanBakh-Light.woff2") format("woff2"),
+    url("../_fonts/YekanBakh-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "YekanBakh400";
+  src: url("../_fonts/Yekan Bakh FA 04 Regular.eot");
+  src: url("../_fonts/Yekan Bakh FA 04 Regular.eot?#iefix")
+      format("embedded-opentype"),
+    url("../_fonts/Yekan Bakh FA 04 Regular.woff") format("woff"),
+    url("../_fonts/Yekan Bakh FA 04 Regular.woff2") format("woff2"),
+    url("../_fonts/Yekan Bakh FA 04 Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "YekanBakh500";
+  src: url("../_fonts/YekanBakh-Medium.eot");
+  src: url("../_fonts/YekanBakh-Medium.eot?#iefix") format("embedded-opentype"),
+    url("../_fonts/YekanBakh-Medium.woff") format("woff"),
+    url("../_fonts/YekanBakh-Medium.woff2") format("woff2"),
+    url("../_fonts/YekanBakh-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "YekanBakh700";
+  src: url("../_fonts/Yekan Bakh FA 06 Bold.eot");
+  src: url("../_fonts/Yekan Bakh FA 06 Bold.eot?#iefix")
+      format("embedded-opentype"),
+    url("../_fonts/Yekan Bakh FA 06 Bold.woff") format("woff"),
+    url("../_fonts/Yekan Bakh FA 06 Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "IRANSansFaNum400";
+  src: url("../_fonts/IRANSansFaNum-Regular.eot");
+  src: url("../_fonts/IRANSansFaNum-Regular.eot?#iefix")
+      format("embedded-opentype"),
+    /* url("../_fonts/IRANSansFaNum-Regular.woff") format("woff"), */
+    url("../_fonts/IRANSansFaNum-Regular.woff2") format("woff2"),
+    url("../_fonts/IRANSansFaNum-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@theme {
+  --font-Trueno200: "Trueno200" !important;
+  --font-Trueno300: "Trueno300" !important;
+  --font-YekanBakh700: "YekanBakh700" !important;
+  --font-YekanBakh500: "YekanBakh500" !important;
+  --font-YekanBakh400: "YekanBakh400" !important;
+  --font-YekanBakh300: "YekanBakh300" !important;
+  --font-IRANSansFaNum400: "IRANSansFaNum400" !important;
+  --color-matn: #525252;
+  --color-gray2: #a3a3a3;
+  --color-gray1: #f5f5f5;
+  --color-gray700: #3f3f46;
+  --spacing-90p: 90%;
+  --spacing-80p: 80%;
+}
+
+@keyframes animTraitlinear {
+  0% {
+    transform: translate(0, -100%);
+  }
+
+  50% {
+    /* transform: translate(0,150px); */
+    height: 180px;
+  }
+  100% {
+    transform: translate(0, 150px);
+  }
+}
+
+.scrollBtm .line {
+  animation: animTraitlinear infinite 3s;
+}
+
+.tilt-bg {
+  transition: 0.5s ease;
+}
+
+.tilt {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  will-change: transform;
+}
+
+.w-80p {
+  max-width: 1280px;
+}
+.errorPage header {
+  background: transparent !important;
+}
+
+.loader {
+  width: 50px;
+  aspect-ratio: 1;
+  display: grid;
+  border: 4px solid #0000;
+  border-radius: 50%;
+  border-right-color: var(--color-StarDust950);
+  animation: l15 1s infinite linear;
+}
+.loader::before,
+.loader::after {
+  content: "";
+  grid-area: 1/1;
+  margin: 2px;
+  border: inherit;
+  border-radius: 50%;
+  animation: l15 2s infinite;
+}
+.loader::after {
+  margin: 8px;
+  animation-duration: 3s;
+}
+@keyframes l15 {
+  100% {
+    transform: rotate(1turn);
+  }
+}
+
+.popUpForm .homeForm1 legend,
+.services .homeForm1 legend {
+  display: none;
+}
+.popUpForm .homeForm1 span,
+.services .homeForm1 span {
+  font-family: "YekanBakh400";
+  font-size: 14px;
+  line-height: 25px;
+  text-align: right;
+}
+.popUpForm .homeForm1 [data-bc-title-container],
+.services .homeForm1 [data-bc-title-container] {
+  margin-bottom: 9px;
+  width: 100%;
+}
+.services .homeForm1 [data-bc-schema-column] {
+  display: flex;
+  column-gap: 51px;
+}
+.services .homeForm1 [data-bc-question] ,.services .homeForm1 [data-bc-answer-container]{
+  width: 100%;
+}
+.services .homeForm1 [data-bc-section]{
+  padding: 0 !important;
+  margin: 0 !important;
+}
+.popUpForm .homeForm1 input,
+.services .homeForm1 input,
+.popUpForm .homeForm1 textarea,
+.services .homeForm1 textarea {
+  background: #f5f5f5 !important;
+  border-radius: 0 !important;
+  border: none !important;
+  box-shadow: none !important;
+  font-family: "YekanBakh300" !important;
+  font-size: 14px !important;
+  line-height: 100% !important;
+  text-align: right !important;
+  color: #3f3f46 !important;
+}
+.popUpForm .homeForm1 [data-bc-part-container],
+.services .homeForm1 [data-bc-part-container] {
+  width: 100% !important;
+}
+.popUpForm .homeForm1 [data-bc-part],
+.services .homeForm1 [data-bc-part] {
+  width: 100% !important;
+  margin: 0 !important;
+}
+.popUpForm .homeForm1 [data-part-btn-container][data-bc-part],
+.services .homeForm1 [data-part-btn-container][data-bc-part] {
+  display: none;
+}
+.popUpForm .homeForm1 .errorPlaceholder,
+.services .homeForm1 .errorPlaceholder {
+  border: 1px solid #ff0000 !important;
+}
+.popUpForm .homeForm1 .errorPlaceholder::placeholder,
+.services .homeForm1 .errorPlaceholder::placeholder {
+  color: #ff0000 !important;
+}
+
+.popUpForm .homeForm1 [data-bc-validation-part],
+.services .homeForm1 [data-bc-validation-part] {
+  display: none;
+}
+.scrollTop {
+  opacity: 0;
+  transform: translateY(150px);
+  transition: all 0.8s ease;
+}
+
+.scrollTop.visible {
+  opacity: 1;
+  transform: translateY(0);
+}

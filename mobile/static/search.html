@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="fa">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <meta name="description" content="">
+    <link rel="stylesheet" href="../assets/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="../assets/css/outputMobile.css">
+</head>
+
+<body>
+
+    <div class="searchPage" dir="rtl">
+        <!-- <div class="formPage h-svh flex flex-col items-center justify-center w-90p mx-auto">
+            <form class="pb-5 border-b border-matn mx-auto flex items-center justify-center "
+            role="search" id="searchform" action="/search.bc" method="get">
+            <input type="search" name="q" placeholder="جستجو کنید..."
+                class="outline-0 border-0 font-YekanBakh400 w-full text-base  text-matn placeholder:font-YekanBakh400 placeholder:text-base placeholder:text-matn">
+            <button type="submit" class="cursor-pointer px-2.5">
+                <svg width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M13.149 0.263931C5.9986 0.263931 0.180908 6.08168 0.180908 13.2321C0.180908 20.3826 5.9986 26.2003 13.149 26.2003C16.429 26.2003 19.4302 24.9712 21.7195 22.9541L27.7843 28.919L29 27.6847L22.9403 21.7245C24.9185 19.4471 26.1223 16.4781 26.1223 13.2319C26.1173 6.08142 20.2994 0.263931 13.149 0.263931ZM13.149 24.469C6.9556 24.469 1.91224 19.4273 1.91224 13.2321C1.91224 7.03868 6.95386 1.99527 13.149 1.99527C19.3424 1.99527 24.3857 7.03695 24.3857 13.2321C24.3857 19.4256 19.3441 24.469 13.149 24.469Z" fill="#525252"/>
+                    </svg>
+                    
+            </button>
+            </form>
+        </div> -->
+
+        <!-- <div class="notFound h-svh flex flex-col items-center justify-center w-90p mx-auto">
+            <form class="pb-5 border-b border-matn mx-auto flex items-center justify-center w-full "
+            role="search" id="searchform" action="/search.bc" method="get">
+            <input type="search" name="q" placeholder="جستجو کنید..."
+                class="outline-0 border-0 font-YekanBakh400 w-full text-base  text-matn placeholder:font-YekanBakh400 placeholder:text-base placeholder:text-matn">
+            <button type="submit" class="cursor-pointer px-2.5">
+                <svg width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M13.149 0.263931C5.9986 0.263931 0.180908 6.08168 0.180908 13.2321C0.180908 20.3826 5.9986 26.2003 13.149 26.2003C16.429 26.2003 19.4302 24.9712 21.7195 22.9541L27.7843 28.919L29 27.6847L22.9403 21.7245C24.9185 19.4471 26.1223 16.4781 26.1223 13.2319C26.1173 6.08142 20.2994 0.263931 13.149 0.263931ZM13.149 24.469C6.9556 24.469 1.91224 19.4273 1.91224 13.2321C1.91224 7.03868 6.95386 1.99527 13.149 1.99527C19.3424 1.99527 24.3857 7.03695 24.3857 13.2321C24.3857 19.4256 19.3441 24.469 13.149 24.469Z" fill="#525252"/>
+                    </svg>
+                    
+            </button>
+            </form>
+
+            <div class="para mt-16 text-center font-YekanBakh400 text-base text-matn">
+                <p>
+                    
+                    صفحه مورد نظر یافت نشد،
+                    <br>
+ لطفا واژه ی دیگری را جستجو نمایید.
+                </p>
+            </div>
+        </div> -->
+
+        <div class="foundRes mt-36 w-90p mx-auto">
+            <form class="pb-5 mb-7 border-b border-matn mx-auto flex items-center justify-center " role="search"
+                id="searchform" action="/search.bc" method="get">
+                <input type="search" name="q" placeholder="جستجو کنید..."
+                    class="outline-0 border-0 font-YekanBakh400 w-full text-base  text-matn placeholder:font-YekanBakh400 placeholder:text-base placeholder:text-matn">
+                <button type="submit" class="cursor-pointer px-2.5">
+                    <svg width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M13.149 0.263931C5.9986 0.263931 0.180908 6.08168 0.180908 13.2321C0.180908 20.3826 5.9986 26.2003 13.149 26.2003C16.429 26.2003 19.4302 24.9712 21.7195 22.9541L27.7843 28.919L29 27.6847L22.9403 21.7245C24.9185 19.4471 26.1223 16.4781 26.1223 13.2319C26.1173 6.08142 20.2994 0.263931 13.149 0.263931ZM13.149 24.469C6.9556 24.469 1.91224 19.4273 1.91224 13.2321C1.91224 7.03868 6.95386 1.99527 13.149 1.99527C19.3424 1.99527 24.3857 7.03695 24.3857 13.2321C24.3857 19.4256 19.3441 24.469 13.149 24.469Z"
+                            fill="#525252" />
+                    </svg>
+
+                </button>
+            </form>
+
+            <section class="section1 mb-16">
+                <h1 class="font-YekanBakh500 text-xl mb-6">
+                    نتیجه جستجو در پروژه ها
+                </h1>
+
+                <!-- Slider main container -->
+                <div class="swiper relatedProject">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide group/slide">
+
+                            <a href="" class="flex items-center justify-center relative">
+                                <div class="imgS w-full">
+                                    <img class="w-full" src="../assets/images/7 2.png" alt="@title">
+                                </div>
+                                <div
+                                    class="secImg group-[&.swiper-slide-active]/slide:opacity-100 duration-500 opacity-0 w-[70%] absolute">
+                                    <div class="in relative after:absolute after:inset-0 after:bg-black/[0.3]">
+
+                                        <img class="w-full" src="../assets/images/7 3.png" alt="@title">
+                                    </div>
+
+                                </div>
+                                <div
+                                    class="title group-[&.swiper-slide-active]/slide:opacity-100 duration-500 opacity-0 absolute">
+                                    <h4 class="text-white font-YekanBakh700 text-sm text-center">
+                                        پروژه ی الهیه
+                                    </h4>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="swiper-slide group/slide">
+
+                            <a href="" class="flex items-center justify-center relative">
+                                <div class="imgS w-full">
+                                    <img class="w-full" src="../assets/images/7 2.png" alt="@title">
+                                </div>
+                                <div
+                                    class="secImg group-[&.swiper-slide-active]/slide:opacity-100 duration-500 opacity-0 w-[70%] absolute">
+                                    <div class="in relative after:absolute after:inset-0 after:bg-black/[0.3]">
+
+                                        <img class="w-full" src="../assets/images/7 3.png" alt="@title">
+                                    </div>
+
+                                </div>
+                                <div
+                                    class="title group-[&.swiper-slide-active]/slide:opacity-100 duration-500 opacity-0 absolute">
+                                    <h4 class="text-white font-YekanBakh700 text-sm text-center">
+                                        پروژه ی الهیه
+                                    </h4>
+                                </div>
+                            </a>
+                        </div>
+
+
+
+                    </div>
+
+                </div>
+
+                <div class="relatedProjectPagination flex justify-center items-center mt-3.5">
+
+                </div>
+            </section>
+
+            <section class="section2 mb-16">
+                <h3 class="font-YekanBakh500 text-xl mb-6">
+                    نتیجه جستجو در محصولات
+                </h3>
+
+                <!-- Slider main container -->
+                <div class="swiper relatedProduct">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide">
+
+                            <div class="proBox mb-4 pb-2 border-b border-b-black">
+                                <a href="" title="@title">
+                                    <div class="imgS mb-0.5">
+                                        <img class="w-full" src="../assets/images/Frame 38.png" alt="@title">
+                                    </div>
+                                    <h2 class="font-Trueno200  text-xl text-black mb-3 text-center">
+                                        KATRIN MODEL
+                                    </h2>
+                                    <h3 class="font-YekanBakh400 text-base text-center">
+                                        مدل آیلین
+                                    </h3>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+
+                            <div class="proBox mb-4 pb-2 border-b border-b-black">
+                                <a href="" title="@title">
+                                    <div class="imgS mb-0.5">
+                                        <img class="w-full" src="../assets/images/Frame 38.png" alt="@title">
+                                    </div>
+                                    <h2 class="font-Trueno200  text-xl text-black mb-3 text-center">
+                                        KATRIN MODEL
+                                    </h2>
+                                    <h3 class="font-YekanBakh400 text-base text-center">
+                                        مدل آیلین
+                                    </h3>
+                                </a>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+                <div class="relatedProductPagination flex justify-center items-center mt-3.5">
+
+                </div>
+            </section>
+
+
+            <section class="section3 mb-16">
+                <h3 class="font-YekanBakh500 text-xl mb-6">
+                    نتیجه جست و جو در بلاگ
+                </h3>
+
+                <!-- Slider main container -->
+                <div class="swiper relatedBlog">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide">
+
+                            <div class="blogBox ">
+                                <a href="" title="@title">
+                                    <div class="imgS mb-3.5">
+                                        <img src="../assets/images/Frame 483.png" alt="@title" class="w-full">
+                                    </div>
+                                    <div class="date text-left mb-3.5">
+                                        <span class="font-YekanBakh400 text-sm leading-6 text-matn">
+                                            1403 - 02 -02
+                                        </span>
+                                    </div>
+                                    <h3 class="font-YekanBakh700 text-base text-justify mb-3">
+                                        نقش میز خاطره در دکوراسیون | اصول چیدمان و نکات مهم خرید میز خاطره
+                                    </h3>
+                                    <div class="para font-YekanBakh400 text-sm leading-6 text-matn">
+                                        <p>
+                                            واحد طراحی و دیزاین خانه مانلی با بهره گیری از دانش دیزاینرهای مجموعه قبل از
+                                            خرید مبلمان با در اختیار داشتن عکس های فضا و منزل شما بهترین و ایده آل
+                                        </p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+
+                            <div class="blogBox ">
+                                <a href="" title="@title">
+                                    <div class="imgS mb-3.5">
+                                        <img src="../assets/images/Frame 483.png" alt="@title" class="w-full">
+                                    </div>
+                                    <div class="date text-left mb-3.5">
+                                        <span class="font-YekanBakh400 text-sm leading-6 text-matn">
+                                            1403 - 02 -02
+                                        </span>
+                                    </div>
+                                    <h3 class="font-YekanBakh700 text-base text-justify mb-3">
+                                        نقش میز خاطره در دکوراسیون | اصول چیدمان و نکات مهم خرید میز خاطره
+                                    </h3>
+                                    <div class="para font-YekanBakh400 text-sm leading-6 text-matn">
+                                        <p>
+                                            واحد طراحی و دیزاین خانه مانلی با بهره گیری از دانش دیزاینرهای مجموعه قبل از
+                                            خرید مبلمان با در اختیار داشتن عکس های فضا و منزل شما بهترین و ایده آل
+                                        </p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+
+                            <div class="blogBox ">
+                                <a href="" title="@title">
+                                    <div class="imgS mb-3.5">
+                                        <img src="../assets/images/Frame 483.png" alt="@title" class="w-full">
+                                    </div>
+                                    <div class="date text-left mb-3.5">
+                                        <span class="font-YekanBakh400 text-sm leading-6 text-matn">
+                                            1403 - 02 -02
+                                        </span>
+                                    </div>
+                                    <h3 class="font-YekanBakh700 text-base text-justify mb-3">
+                                        نقش میز خاطره در دکوراسیون | اصول چیدمان و نکات مهم خرید میز خاطره
+                                    </h3>
+                                    <div class="para font-YekanBakh400 text-sm leading-6 text-matn">
+                                        <p>
+                                            واحد طراحی و دیزاین خانه مانلی با بهره گیری از دانش دیزاینرهای مجموعه قبل از
+                                            خرید مبلمان با در اختیار داشتن عکس های فضا و منزل شما بهترین و ایده آل
+                                        </p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="relatedBlogPagination flex justify-center items-center mt-20">
+
+                </div>
+            </section>
+
+        </div>
+
+    </div>
+
+
+    <script src="../assets/js/header-mobile.js"></script>
+
+    <script src="../assets/js/swiper-bundle11.0.5.min.js"></script>
+    <script src="../assets/js/search-mobile.js"></script>
+</body>
+
+</html>

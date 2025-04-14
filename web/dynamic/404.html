@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 | Error</title>
+    <meta name="description" content="404 Error page">
+    <basis core="call" file="styles.inc" />
+</head>
+<body>
+    <main class="errorPage flex flex-col items-center justify-center h-svh bg-gray1">
+        <basis core="call" file="header.inc" />
+
+        <div class="imgS flex items-center justify-center mb-24">
+            <img class="" src="[##cms.cms.cdn##]/images/404.png" alt="404">
+        </div>
+
+        <div class="para w-90p mx-auto font-YekanBakh700 text-center text-2xl mb-5 text-gray2">
+            <p>
+                صفحه مورد نظر یافت نشد
+            </p>
+        </div>
+        <a href="/" title="home" class="flex w-[387px] group/link items-center duration-500 justify-center font-YekanBakh500 text-sm text-matn border-t border-t-matn border-b border-b-matn mx-auto h-[49px] after:w-full after:h-full after:bg-black hover:text-white after:duration-500 after:scale-x-0 hover:after:scale-x-100 after:origin-right after:absolute after:inset-0 relative">
+            <span class="group-hover/link:text-white z-1 font-YekanBakh500 text-sm text-matn duration-500">
+
+                باز گشت به صفحه نخست
+            </span>
+        </a>
+
+
+
+    </main>
+    <script>
+        document.querySelector("header").classList.add("darkHeader")
+        document.querySelector("header").classList.add("activeHeader")
+    </script>
+    <basis core="call" file="scripts.inc" />
+
+</body>
+</html>

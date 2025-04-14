@@ -1,0 +1,202 @@
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="1" usedforid="2375805"> 
+    <member name="service" type="view"/> 
+    
+    <member name="service250" type="view"  postsql="select * from [db.service250] where TypeID=250"/> 
+    
+    </basis>
+    
+    
+    <basis core="dbsource" name="db" source="media" lid="1" sourcemid="1" usedforid="2375805">
+     <member name="serviceGallery" type="list" perpage="100"/> 
+     <member name="serviceGallery1000" postsql="select * from [db.serviceGallery1000] where ord=1000" type="list" perpage="100"/> 
+    </basis>	
+    
+         <basis core="inlinesource" name="list" >
+            <member name="star" lefttblcol="db.service250.RowNumber" righttblcol="db.serviceGallery1000.RowNumber" format="join" jointype="leftjoin" />
+          </basis>
+<!DOCTYPE html>
+<html lang="fa">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>خدمات</title>
+    <meta name="description" content="خدمات مانلی">
+
+    <basis core="call" file="styles.inc" />
+</head>
+
+<body>
+    <main class="services" dir="rtl">
+        <basis core="call" file="header.inc" />
+
+        <section class="section1 h-svh  relative flex items-center justify-center">
+            <div class="breadCrumb absolute top-[120px] z-10 w-80p mx-auto">
+                <a href="/" title="home" class="inline-block font-YekanBakh400 text-sm text-gray2 ml-1.5">
+                    خانه
+                </a>
+
+
+                <i class="font-YekanBakh400 inline-block -translate-y-0.5 text-sm text-gray2 ml-1.5">
+                    .
+                </i>
+                <span class="inline-block font-YekanBakh400 text-sm text-gray2 ml-1.5">
+                    خدمات
+                </span>
+
+            </div>
+
+
+            <basis core="print" datamembername="db.serviceGallery">
+             
+                <face filter="ord=1">
+                    <div class="imgS w-full relative after:absolute after:inset-0 after:bg-black/[0.35]">
+                        <img class="w-full h-svh" src="[##cms.cms.cdn##]/@largeIMG" alt="@name">
+                    </div>
+                    <div class="title absolute translate-y-[100px]">
+                        <h1
+                            class="font-Trueno200 text-white uppercase text-5xl tracking-[15%] text-center whitespace-pre-line mb-5">
+                           @name
+                        </h1>
+                        <h2 class="text-center font-YekanBakh700 text-2xl text-white">
+                           @description
+                        </h2>
+                    </div>
+                    
+                </face>
+            </basis>
+            <div class="absolute -bottom-[29px] overflow-hidden h-fit">
+
+                <div class="scrollBtm overflow-hidden  h-[130px] w-px bg-gray2">
+                    <div class="line h-[58px] w-px bg-white">
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="section2 mb-20 relative pt-20">
+            <div class="bgImg absolute w-full top-0 left-0 right-0 -z-1">
+                <img class="w-full h-[573px]" src="[##cms.cms.cdn##]/images/mramar.png" alt="bg">
+            </div>
+
+            <basis core="print" datamembername="db.service">
+             
+                <face filter="TypeID=150">
+                    
+                    <h3 class="font-YekanBakh400 mb-6 text-[28px] text-center scrollTop">
+                        @Answer
+                    </h3>
+                </face>
+            </basis>
+            <basis core="print" datamembername="db.service">
+             
+                <face filter="TypeID=129">
+                    <div class="para font-YekanBakh400 text-base w-80p mx-auto text-center scrollTop">
+                       @Answer
+                    </div>
+                    
+                </face>
+            </basis>
+
+            <div class="grid w-80p mx-auto grid-cols-3 gap-x-14 mt-20">
+                <basis core="print" datamembername="list.star">
+                   
+                    <face>
+                        
+                        <div class="serviceBox scrollTop bg-white px-9 pt-14 pb-20" style="box-shadow: 5px 5px 25.4px 3px #A7A7A740;">
+                            <div class="imgS flex items-center justify-center mb-9">
+                                <img src="[##cms.cms.cdn##]/@db.serviceGallery1000.largeIMG	" alt="@title">
+                            </div>
+                            <h4 class="font-YekanBakh700 text-base text-center mb-9">
+                               @db.service250.text	
+                            </h4>
+                            <div class="para font-YekanBakh400 text-sm text-center text-matn">
+                               @db.service250.largetext	
+        
+                            </div>
+                        </div>
+                    </face>
+                </basis>
+            </div>
+        </section>
+        <section class="section3 mb-24 w-80p mx-auto">
+            <h3 class="font-YekanBakh400 text-[28px] text-center mb-16 scrollTop">
+                فرم درخواست خدمت
+            </h3>
+            <div class="formContainer relative scrollTop">
+                <div class="loaderContainer absolute flex items-center justify-center inset-0 bg-white/[0.6] z-1">
+                    <div class="loader"></div>
+                </div>
+                <form name="myForm" class="homeForm1" action="" onsubmit="return validateForm()" method="post">
+                    <basis core="schema" run="atclient"
+                        schemaUrl="/schema/domainform/322723FC-C477-4A6F-9AD3-6242DBAA6A82/40A96E00-D42A-41E6-B9AE-46E7CE3EF577/fa/فرم-درخواست-خدمت	"
+                        displayMode="new" button="[data-btn-add1]" resultSourceId="demo.data1" onRendered="renderFn1">
+                    </basis>
+                    <basis core="callback" run="AtClient" triggers="demo.data1" method="onSource1"></basis>
+                    <basis core="api" url="/schema/domainform/322723FC-C477-4A6F-9AD3-6242DBAA6A82/fa/editobject"
+                        method="post" run="atclient"
+                        body="object_edit={##edit.object1.value##}&captcha={##edit.object1.captcha##}&captchaid={##edit.object1.captchaid##}"
+                        content-type="application/x-www-form-urlencoded" triggers="edit.object1" if="{##edit.object1##}"
+                        OnProcessed="OnProcessedEditObject1" onRendered="renderEditobject">
+                    </basis>
+
+                    <div data-bc-question="" class="qclass8 flex gap-x-14">
+                        <div id="requestBox"
+                            class="captchaContainerclass h-[49px] max-w-[390px] py-1.5 border-b border-b-gray700 px-3.5 w-full gap-x-2.5 !flex flex-row-reverse items-center"
+                            data-bc-answer-container="" data-bc-schema-info-multi="0" data-bc-schema-info-word="58"
+                            data-bc-schema-info-part="1" data-bc-schema-info-part-0-type="text">
+                            <basis core="dbsource" source="trust_login" name="captcha1" triggers="cms.reload1"
+                                run="atclient">
+                                <member name="code1" type="scalar" request="captcha"></member>
+                            </basis>
+                            <basis datamembername="captcha1.code1" core="print" run="atclient">
+                                <face>
+                                    <script type="text/template">
+
+                            <span class="captcha-sefaresh shrink-0">
+                                <img src="/@captcha@" alt="captcha" width="88" height="44" class="captcha-sefaresh"
+                                title="captcha" />
+                            <input type="hidden" name="captchaid" aria-label="captcha" value="@captcha@" />
+                        </span>
+                    <img src="[##cms.cms.cdn##]/images/cached.png" alt="refressh" class="refressh cursor-pointer refressh1" run="atclient" bc-triggers="click" bc-name="cms.reload1" />
+                    <input type="text" class="codeinputm !bg-white" name="captcha" aria-label="captcha2" placeholder="عبارت امنیتی را وارد کنید" />
+                    </script>
+                                </face>
+                            </basis>
+                        </div>
+                        <button
+                            class=" formBtn flex items-center justify-center cursor-pointer group/link h-[49px] after:w-full after:h-full after:bg-black hover:text-white after:duration-500 after:scale-x-0 hover:after:scale-x-100 after:origin-right after:absolute after:inset-0 relative  border-t border-t-matn border-b border-b-matborder-t-matn w-[387px]"
+                            type="submit" data-btn-add1 data-btn-submit="">
+                            <span class="group-hover/link:text-white z-1 relative duration-500 font-YekanBakh500 text-sm text-black">
+                                ثبت
+                            </span>
+                            <div class="loaderForm absolute hidden"></div>
+                        </button>
+
+                        <div class="responsMsg1 responsMsg mt-3 hidden ">
+
+                            <span class="font-YekanBakh400 text-xl">فرم با موفقیت ثبت شد.</span>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+
+
+
+        </section>
+
+        <basis core="call" file="footer.inc" />
+
+     
+    </main>
+    <basis core="call" file="scripts.inc" />
+
+
+    <script src="[##cms.cms.cdn##]/_js/basiscore-2.30.1.min.js"></script>
+    <script src="[##cms.cms.cdn##]/js/scrollTotop.js"></script>
+    <script src="[##cms.cms.cdn##]/js/services.js"></script>
+</body>
+
+</html>

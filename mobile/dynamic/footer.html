@@ -1,201 +1,180 @@
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="5" usedforid="9681"> 
+    <member name="contactus" type="view"/>
+    <member name="contactus2" postsql="select * from [db.contactus2] where TypeID=240" type="view"/>
 
-    <basis core="dbsource" name="db" source="basiscore" lid="1" mid="5" usedforid="9681"> 
-        <member name="contactus" type="view"/>
-        <member name="contactus2" postsql="select * from [db.contactus2] where TypeID=240" type="view"/>
-    
-    </basis>
+</basis>
 
 
-    <div class="topFooter pt-8 pb-5">
-        <div class="flex items-center mb-3 justify-center flex-wrap gap-x-2.5">
-            <p class="font-YekanBakh400  text-sm text-matn">
-                تلفن تماس با شوروم :
-            </p>
-            <basis core="print" datamembername="db.contactus2">
-                <face filter="RowNumber=1">
-                    <a class="font-YekanBakh400 text-sm text-matn" href="tel:@Answer" title="tel">
-                       @Answer	
-                    </a>
-                </face>
-            </basis>
+<footer class="bg-black" dir="rtl">
+    <div class="inner w-90p mx-auto max-w-[290px] pt-3">
+        <div class="logo pb-5 border-b border-b-white mb-5 mx-auto text-center flex justify-center items-center">
+            <a href="/" title="logo" aria-label="logo1">
+                <img src="[##cms.cms.cdn##]/images/logo-footer-m.png" alt="logo1">
+            </a>
         </div>
 
-        <a href="/contact-us.bc" class="flex w-[184px] mx-auto border-t border-b border-t-matn border-b-matn items-center justify-center h-[49px]">
-            <span class="font-YekanBakh300 text-sm">
-                اطلاعات بیشتر
-            </span>
-        </a>
-    </div>
-    <footer class="bg-black" dir="rtl">
-        <div class="inner w-90p mx-auto max-w-[290px] pt-3">
-            <div class="logo pb-5 border-b border-b-white mb-5 mx-auto text-center flex justify-center items-center">
-                <a href="/" title="logo" aria-label="logo1">
-                    <img src="[##cms.cms.cdn##]/images/logo-footer-m.png" alt="logo1">
+        <ul class="columns-2 mb-6 gap-x-14 gap-y-3">
+            <li  class="mb-3 leading-[100%]">
+                <a class="text-white text-base text-center block" href="/" title="خانه">
+                    خانه
                 </a>
-            </div>
-
-            <ul class="columns-2 mb-6 gap-x-14 gap-y-3">
-                <li  class="mb-3 leading-[100%]">
-                    <a class="text-white text-base text-center block" href="/" title="خانه">
-                        خانه
-                    </a>
-                </li>
-                <li  class="mb-3 leading-[100%]">
-                    <a class="text-white text-base text-center block" href="/product-cat.bc" title="محصولات">
-                        محصولات
-                    </a>
-                </li>
-                <li  class="mb-3 leading-[100%]">
-                    <a class="text-white text-base text-center block" href="/project-list.bc" title="پروژه ها">
-                        پروژه ها
-                    </a>
-                </li>
-                <li  class="mb-3 leading-[100%]">
-                    <a class="text-white text-base text-center block" href="/showroom.bc" title="شوروم">
-                        شوروم
-                    </a>
-                </li>
-                <li  class="mb-3 leading-[100%]">
-                    <a class="text-white text-base text-center block" href="/factory.bc" title="کارخانه">
-                        کارخانه
-                    </a>
-                </li>
-                <li  class="mb-3 leading-[100%]">
-                    <a class="text-white text-base text-center block" href="/about-us.bc" title="درباره ما">
-                        درباره ما
-                    </a>
-                </li>
-                <li  class="mb-3 leading-[100%]">
-                    <a class="text-white text-base text-center block" href="/blog.bc" title="بلاگ">
-                        بلاگ
-                    </a>
-                </li>
-                <li  class="mb-3 leading-[100%]">
-                    <a class="text-white text-base text-center block" href="/catalogue.bc" title="کاتالوگ">
-                        کاتالوگ
-                    </a>
-                </li>
-                <li  class="mb-3 leading-[100%]">
-                    <a class="text-white text-base text-center block" href="/services.bc" title="خدمات">
-                        خدمات
-                    </a>
-                </li>
-                <li  class="mb-3 leading-[100%]">
-                    <a class="text-white text-base text-center block" href="/contact-us.bc" title="تماس با ما">
-                        تماس با ما
-                    </a>
-                </li>
-            </ul>
-            <basis core="print" datamembername="db.contactus">
-                <layout>
-                    <div class="mail mb-6 text-center">
-                        @child
-                    </div>
-                </layout>
-                
-                <face filter="TypeID=242">
-                    
-                    <a href="mailto:@Answer" class="font-Trueno300 text-base text-white" title="mail">
-                       @Answer
-                    </a>
-                </face>
-            </basis>
-            <basis core="print" datamembername="db.contactus">
-                <layout>
-                    <div class="flex justify-center mb-6 items-center flex-wrap gap-x-2.5">
-                        <span class="font-YekanBakh400 text-sm text-white">
-                            تلفن :
-                        </span>
-                        
-                        @child
-                    </div>
-                </layout>
-                
-                <face filter="TypeID=240">
-                    <a href="tel:@Answer" class="font-YekanBakh400 text-white text-base">
-                        @Answer
-                    </a>
-                    <i class="font-YekanBakh400 text-white text-base last:hidden">-</i>
-                    
-                </face>
-            </basis>
+            </li>
+            <li  class="mb-3 leading-[100%]">
+                <a class="text-white text-base text-center block" href="/product-cat.bc" title="محصولات">
+                    محصولات
+                </a>
+            </li>
+            <li  class="mb-3 leading-[100%]">
+                <a class="text-white text-base text-center block" href="/project-list.bc" title="پروژه ها">
+                    پروژه ها
+                </a>
+            </li>
+            <li  class="mb-3 leading-[100%]">
+                <a class="text-white text-base text-center block" href="/showroom.bc" title="شوروم">
+                    شوروم
+                </a>
+            </li>
+            <li  class="mb-3 leading-[100%]">
+                <a class="text-white text-base text-center block" href="/factory.bc" title="کارخانه">
+                    کارخانه
+                </a>
+            </li>
+            <li  class="mb-3 leading-[100%]">
+                <a class="text-white text-base text-center block" href="/about-us.bc" title="درباره ما">
+                    درباره ما
+                </a>
+            </li>
+            <li  class="mb-3 leading-[100%]">
+                <a class="text-white text-base text-center block" href="/blog.bc" title="بلاگ">
+                    بلاگ
+                </a>
+            </li>
+            <li  class="mb-3 leading-[100%]">
+                <a class="text-white text-base text-center block" href="/catalogue.bc" title="کاتالوگ">
+                    کاتالوگ
+                </a>
+            </li>
+            <li  class="mb-3 leading-[100%]">
+                <a class="text-white text-base text-center block" href="/services.bc" title="خدمات">
+                    خدمات
+                </a>
+            </li>
+            <li  class="mb-3 leading-[100%]">
+                <a class="text-white text-base text-center block" href="/contact-us.bc" title="تماس با ما">
+                    تماس با ما
+                </a>
+            </li>
+        </ul>
+        <basis core="print" datamembername="db.contactus">
+            <layout>
+                <div class="mail mb-6 text-center">
+                    @child
+                </div>
+            </layout>
             
-            <div class="socials pb-2 border-b border-b-white mb-5">
-                <ul class="flex items-center justify-center gap-x-4">
-                    <basis core="print" datamembername="db.contactus">
-                      
-                        <face filter="text='واتس اپ'">
-                            <li>
-                                <a target="_blank" href="https://wa.me/@largetext" title="whatsapp" aria-label="whatsapp">
-                                    <img src="[##cms.cms.cdn##]/images/whatsapp-h-m.svg" alt="whatsapp">
-                                </a>
-                            </li>
-                            
-                        </face>
-                    </basis>
-                    <basis core="print" datamembername="db.contactus">
-                 
-                        <face filter="text='پینترست'">
-                            
-                            <li>
-                                <a target="_blank" href="@largetext" title="pinterest" aria-label="pinterest">
-                                    <img src="[##cms.cms.cdn##]/images/Pinterest-h-m.svg" alt="pinterest">
-                                </a>
-                            </li>
-                        </face>
-                    </basis>
-                    <basis core="print" datamembername="db.contactus">
-                    
-                        <face filter="text='تلگرام'">
-                            <li>
-                                <a target="_blank" href="https://t.me/@largetext" title="telegram" aria-label="telegram">
-                                    <img src="[##cms.cms.cdn##]/images/telegram-h-m.svg" alt="telegram">
-                                </a>
-                            </li>
-                            
-                        </face>
-                    </basis>
-                    <basis core="print" datamembername="db.contactus">
-                        
-                        <face filter="text='اینستاگرام'">
-                            <li>
-                                <a target="_blank" href="@largetext" title="instagram" aria-label="instagram">
-                                    <img src="[##cms.cms.cdn##]/images/instagram-h-m.svg" alt="instagram">
-                                </a>
-                            </li>
-                            
-                        </face>
-                    </basis>
-                    <basis core="print" datamembername="db.contactus">
-                        <face filter="text='لینکدین'">
-                            <li>
-                                <a target="_blank" href="@largetext" title="linkdin" aria-label="linkdin">
-                                    <img src="[##cms.cms.cdn##]/images/linkdin-h-m.svg" alt="linkdin">
-                                </a>
-                            </li>
-                        </face>
-                    </basis>
-                    <basis core="print" datamembername="db.contactus">
-                        
-                        <face filter="text='توییتر'">
-                            <li>
-                                <a target="_blank" href="@largetext" title="twitter" aria-label="twitter">
-                                    <img src="[##cms.cms.cdn##]/images/twitter-h-m.svg" alt="twitter">
-                                </a>
-                            </li>
-                            
-                        </face>
-                    </basis>
-                </ul>
-            </div>
-            <div class="copyRight pb-4 flex justify-center gap-x-3.5 items-center">
-                <p class="font-IRANSansFaNum400 text-xs text-white">
-                    طراحی سایت و بهینه سازی سایت
-                </p>
-                <a href="https://namasite.ir" title="namasite" aria-label="namasite">
-
-                    <img src="[##cms.cms.cdn##]/images/namasite.png" alt="Namasite">
+            <face filter="TypeID=242">
+                
+                <a href="mailto:@Answer" class="font-Trueno300 text-base text-white" title="mail">
+                   @Answer
                 </a>
-            </div>
+            </face>
+        </basis>
+        <basis core="print" datamembername="db.contactus">
+            <layout>
+                <div class="flex justify-center mb-6 items-center flex-wrap gap-x-2.5">
+                    <span class="font-YekanBakh400 text-sm text-white">
+                        تلفن :
+                    </span>
+                    
+                    @child
+                </div>
+            </layout>
+            
+            <face filter="TypeID=240">
+                <a href="tel:@Answer" class="font-YekanBakh400 text-white text-base">
+                    @Answer
+                </a>
+                <i class="font-YekanBakh400 text-white text-base last:hidden">-</i>
+                
+            </face>
+        </basis>
+        
+        <div class="socials pb-2 border-b border-b-white mb-5">
+            <ul class="flex items-center justify-center gap-x-4">
+                <basis core="print" datamembername="db.contactus">
+                  
+                    <face filter="text='واتس اپ'">
+                        <li>
+                            <a target="_blank" href="https://wa.me/@largetext" title="whatsapp" aria-label="whatsapp">
+                                <img src="[##cms.cms.cdn##]/images/whatsapp-h-m.svg" alt="whatsapp">
+                            </a>
+                        </li>
+                        
+                    </face>
+                </basis>
+                <basis core="print" datamembername="db.contactus">
+             
+                    <face filter="text='پینترست'">
+                        
+                        <li>
+                            <a target="_blank" href="@largetext" title="pinterest" aria-label="pinterest">
+                                <img src="[##cms.cms.cdn##]/images/Pinterest-h-m.svg" alt="pinterest">
+                            </a>
+                        </li>
+                    </face>
+                </basis>
+                <basis core="print" datamembername="db.contactus">
+                
+                    <face filter="text='تلگرام'">
+                        <li>
+                            <a target="_blank" href="https://t.me/@largetext" title="telegram" aria-label="telegram">
+                                <img src="[##cms.cms.cdn##]/images/telegram-h-m.svg" alt="telegram">
+                            </a>
+                        </li>
+                        
+                    </face>
+                </basis>
+                <basis core="print" datamembername="db.contactus">
+                    
+                    <face filter="text='اینستاگرام'">
+                        <li>
+                            <a target="_blank" href="@largetext" title="instagram" aria-label="instagram">
+                                <img src="[##cms.cms.cdn##]/images/instagram-h-m.svg" alt="instagram">
+                            </a>
+                        </li>
+                        
+                    </face>
+                </basis>
+                <basis core="print" datamembername="db.contactus">
+                    <face filter="text='لینکدین'">
+                        <li>
+                            <a target="_blank" href="@largetext" title="linkdin" aria-label="linkdin">
+                                <img src="[##cms.cms.cdn##]/images/linkdin-h-m.svg" alt="linkdin">
+                            </a>
+                        </li>
+                    </face>
+                </basis>
+                <basis core="print" datamembername="db.contactus">
+                    
+                    <face filter="text='توییتر'">
+                        <li>
+                            <a target="_blank" href="@largetext" title="twitter" aria-label="twitter">
+                                <img src="[##cms.cms.cdn##]/images/twitter-h-m.svg" alt="twitter">
+                            </a>
+                        </li>
+                        
+                    </face>
+                </basis>
+            </ul>
         </div>
-    </footer>
+        <div class="copyRight pb-4 flex justify-center gap-x-3.5 items-center">
+            <p class="font-IRANSansFaNum400 text-xs text-white">
+                طراحی سایت و بهینه سازی سایت
+            </p>
+            <a href="https://namasite.ir" title="namasite" aria-label="namasite">
+
+                <img src="[##cms.cms.cdn##]/images/namasite.png" alt="Namasite">
+            </a>
+        </div>
+    </div>
+</footer>
