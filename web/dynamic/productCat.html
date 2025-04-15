@@ -1,0 +1,113 @@
+<basis core="dbsource" source="basiscore" name="db" lid="1" mid="20" > <member request="cat" type="tree" name="productCat1" parentid="213997" postsql="select * from [db.productCat1] where parentid=213997"/> </basis>
+<basis core="dbsource" source="basiscore" name="db" lid="1" mid="20" > <member request="cat" type="tree" name="productCat2" parentid="213998"/> </basis>
+<!DOCTYPE html>
+<html lang="fa">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>دسته بندی محصولات</title>
+    <meta name="description" content="دسته بندی محصولات مانلی">
+    <basis core="call" file="styles.inc"/>
+</head>
+
+<body>
+    <main class="produtCat" dir="rtl">
+        <basis core="call" file="header.inc"/>
+
+        <section class="section1 h-svh  relative flex items-center justify-center">
+            <div class="breadCrumb absolute top-[120px] z-10 w-80p mx-auto">
+                <a href="/" title="home" class="inline-block font-YekanBakh400 text-sm text-white ml-1.5">
+                    خانه
+                </a>
+
+
+                <i class="font-YekanBakh400 inline-block -translate-y-0.5 text-sm text-white ml-1.5">
+                    .
+                </i>
+                <span class="inline-block font-YekanBakh400 text-sm text-white ml-1.5">
+                    تماس با ما
+                </span>
+
+            </div>
+
+            <basis core="print" datamembername="db.productCat1">
+             
+                <face filter="catid='[##cms.query.catid##]'">
+                    <div class="imgS w-full relative after:absolute after:inset-0 after:bg-black/[0.35]">
+                        <img class="w-full h-svh object-cover" src="/@image" alt="@name">
+                    </div>
+                    <div class="title absolute translate-y-[100px]">
+                        <h1
+                            class="font-Trueno200 text-white uppercase text-5xl tracking-[15%] text-center whitespace-pre-line mb-5">
+                           @urltitle
+                        </h1>
+                        <h2 class="text-center font-YekanBakh700 text-2xl text-white">
+                           @title
+                        </h2>
+                    </div>
+                    
+                </face>
+            </basis>
+            <div class="absolute z-10 -bottom-[29px] overflow-hidden h-fit">
+
+                <div class="scrollBtm overflow-hidden  h-[130px] w-px bg-gray2">
+                    <div class="line h-[58px] w-px bg-white">
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="section2 w-80p mx-auto mb-24">
+            <basis core="print" datamembername="db.productCat2">
+                <layout>
+                        <div class="grid grid-cols-3 -translate-y-[36px]">
+                        @child
+                    </div>
+                    </layout>
+                    <else-layout>
+                        <div class="para font-YekanBakh400 text-base text-matn" >
+                            <p>
+
+                                متاسفانه دسته ای موجود نیست.
+                            </p>
+                        </div>
+                    </else-layout>
+                    <face filter="catid<>'[##cms.query.catid##]'">
+                        
+                        <div class="catBox group/catBox">
+                            <a href="/product-list.bc?catid=@catid" title="" class="relative flex items-center justify-center">
+        
+                                <div class="imgS relative after:absolute after:inset-0 after:bg-black/[0.3]">
+                                    <img class="w-full" src="[##cms.cms.cdn##]/@image" alt="@title">
+                                </div>
+                                <div class="title absolute">
+                                    <h3 class="font-Trueno200 mb-6 text-[40px] uppercase text-white text-center">
+                                        @urltitle
+                                    </h3>
+                                    <h4 class=" text-center text-white font-YekanBakh400 text-base mb-7">
+                                       @title
+                                    </h4>
+                                    <span class="-translate-y-[100px] after:h-full after:bg-white group/link hover:text-black after:duration-500 after:scale-x-0 hover:after:scale-x-100 after:origin-right after:absolute after:inset-0 relative  duration-500 opacity-0 group-hover/catBox:opacity-100 group-hover/catBox:translate-y-0 flex w-[163px] items-center justify-center font-YekanBakh300 h-[49px] mx-auto text-sm text-white border-t border-b border-b-white border-t-white">
+                                       <p class="group-hover/link:text-black relative z-1 duration-500">
+        
+                                           مشاهده 
+                                        </p>
+                                    </span>
+                                </div>
+                            </a>
+                        </div>
+                    </face>
+                </basis>
+
+        
+        </section>
+        <basis core="call" file="footer.inc"/>
+
+    </main>
+    <basis core="call" file="scripts.inc"/>
+
+</body>
+
+</html>

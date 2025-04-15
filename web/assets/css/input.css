@@ -232,3 +232,26 @@
   opacity: 1;
   transform: translateY(0);
 }
+.swiper-pagination-current {
+  font-size:32px;
+}
+.swiper-pagination-total {
+  font-size: 24px;
+}
+
+.relatedProjectPagination .swiper-pagination-bullet-active{
+  background: #525252;
+  }
+  .popFraction,.popFraction span{
+    color: white;
+  }
+  .popFractionVideos,.popFractionVideos span{
+    color: white;
+  }
+  .swiper-button-lock{
+    /* display: block; */
+  }
+  
+  .mainFraction{
+    color: white;
+  }
