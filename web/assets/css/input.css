@@ -70,7 +70,7 @@
   src: url("../_fonts/IRANSansFaNum-Regular.eot?#iefix")
       format("embedded-opentype"),
     /* url("../_fonts/IRANSansFaNum-Regular.woff") format("woff"), */
-    url("../_fonts/IRANSansFaNum-Regular.woff2") format("woff2"),
+      url("../_fonts/IRANSansFaNum-Regular.woff2") format("woff2"),
     url("../_fonts/IRANSansFaNum-Regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
@@ -175,10 +175,11 @@
   display: flex;
   column-gap: 51px;
 }
-.services .homeForm1 [data-bc-question] ,.services .homeForm1 [data-bc-answer-container]{
+.services .homeForm1 [data-bc-question],
+.services .homeForm1 [data-bc-answer-container] {
   width: 100%;
 }
-.services .homeForm1 [data-bc-section]{
+.services .homeForm1 [data-bc-section] {
   padding: 0 !important;
   margin: 0 !important;
 }
@@ -232,26 +233,37 @@
   opacity: 1;
   transform: translateY(0);
 }
-.swiper-pagination-current {
-  font-size:32px;
+.swiper-pagination-current , .currentFraction {
+  font-size: 32px;
 }
-.swiper-pagination-total {
+.swiper-pagination-total,.totalFraction {
   font-size: 24px;
 }
 
-.relatedProjectPagination .swiper-pagination-bullet-active{
+.relatedProjectPagination .swiper-pagination-bullet-active {
   background: #525252;
-  }
-  .popFraction,.popFraction span{
-    color: white;
-  }
-  .popFractionVideos,.popFractionVideos span{
-    color: white;
-  }
-  .swiper-button-lock{
-    /* display: block; */
-  }
-  
-  .mainFraction{
-    color: white;
-  }
+}
+.popFraction,
+.popFraction span {
+  color: white;
+}
+.popFractionVideos,
+.popFractionVideos span {
+  color: white;
+}
+.swiper-button-lock {
+  /* display: block; */
+}
+
+.mainFraction {
+  color: white;
+}
+
+.blogShow .swiper-button-lock {
+  display: block !important;
+}
+
+.swiper-button-disabled {
+  opacity: 0.5 !important;
+  cursor: no-drop !important;
+}

@@ -1,0 +1,483 @@
+@CHARSET "ISO-8859-1";
+/* Reset CSS
+ * --------------------------------------- */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,
+form,fieldset,input,textarea,p,blockquote,th,td {
+    padding: 0;
+    margin: 0;
+}
+a{
+	text-decoration:none;
+}
+table {
+    border-spacing: 0;
+}
+fieldset,img {
+    border: 0;
+}
+address,caption,cite,code,dfn,em,strong,th,var {
+    font-weight: normal;
+    font-style: normal;
+}
+strong{
+	font-weight: bold;
+}
+ol,ul {
+    list-style: none;
+    margin:0;
+    padding:0;
+}
+caption,th {
+    text-align: left;
+
+}
+h1,h2,h3,h4,h5,h6 {
+    font-weight: normal;
+    font-size: 100%;
+    margin:0;
+    padding:0;
+    color:#444;
+}
+q:before,q:after {
+    content:'';
+}
+abbr,acronym { border: 0;
+}
+
+
+/* Custom CSS
+ * --------------------------------------- */
+body{
+	font-family: arial,helvetica;
+	color: #333;
+	color: rgba(0,0,0,0.5);
+}
+.wrap{
+	margin-left: auto;
+	margin-right: auto;
+	width: 960px;
+	position: relative;
+}
+h1{
+	font-size: 6em;
+	font-weight: bold;
+}
+p{
+	font-size: 2em;
+}
+.intro p{
+	width: 50%;
+	margin: 0 auto;
+	font-size: 1.5em;
+}
+.section{
+	text-align:center;
+}
+#menu li {
+	display:inline-block;
+	margin: 10px;
+	color: #000;
+	background:#fff;
+	background: rgba(255,255,255, 0.5);
+	-webkit-border-radius: 10px;
+            border-radius: 10px;
+}
+#menu li.active{
+	background:#666;
+	background: rgba(0,0,0, 0.5);
+	color: #fff;
+}
+#menu li a{
+	text-decoration:none;
+	color: #000;
+}
+#menu li.active a:hover{
+	color: #000;
+}
+#menu li:hover{
+	background: rgba(255,255,255, 0.8);
+}
+#menu li a,
+#menu li.active a{
+	padding: 9px 18px;
+	display:block;
+}
+#menu li.active a{
+	color: #fff;
+}
+#menu{
+	position:fixed;
+	top:0;
+	left:0;
+	height: 40px;
+	z-index: 70;
+	width: 100%;
+	padding: 0;
+	margin:0;
+}
+.twitter-share-button{
+	position: fixed !important;
+	z-index: 99;
+	right: 149px;
+	top: 9px;
+}
+#infoMenu{
+	height: 20px;
+	color: #f2f2f2;
+	position:fixed;
+	z-index:70;
+	bottom:0;
+	width:100%;
+	text-align:right;
+	font-size:0.9em;
+	padding:8px 0 8px 0;
+}
+#infoMenu ul{
+	padding: 0 40px;
+}
+#infoMenu li a{
+	display: block;
+	margin: 0 22px 0 0;
+	color: #333;
+}
+#infoMenu li a:hover{
+	text-decoration:underline;
+}
+#infoMenu li{
+	display:inline-block;
+	position:relative;
+}
+#examplesList{
+	display:none;
+	background: #282828;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+	padding: 20px;
+	float: left;
+	position: absolute;
+	bottom: 29px;
+	right: 0;
+	width:822px;
+	text-align:left;
+}
+#examplesList ul{
+	padding:0;
+}
+#examplesList ul li{
+	display:block;
+	margin: 5px 0;
+}
+#examplesList ul li a{
+	color: #BDBDBD;
+	margin:0;
+}
+#examplesList ul li a:hover{
+	color: #f2f2f2;
+}
+#examplesList .column{
+	float: left;
+	margin: 0 20px 0 0;
+}
+#examplesList h3{
+	color: #f2f2f2;
+	font-size: 1.2em;
+	margin: 0 0 15px 0;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+	-webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1);
+	-moz-box-shadow: 0 1px 0 rgba(255,255,255,0.1);
+	box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1);
+	padding: 0 0 5px 0;
+}
+
+
+
+/* Demos Menu
+ * --------------------------------------- */
+ #demosMenu{
+	position:fixed;
+	bottom: 10px;
+	right:10px;
+	z-index: 999;
+ }
+
+/* Buttons
+ * --------------------------------------- */
+#download a{
+    text-decoration: none
+}
+#download,
+#download:hover {
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, .25)
+}
+.button {
+    margin: 20px 0 0 0;
+    vertical-align: middle;
+    display: inline-block
+}
+
+.button a {
+    color: #fff;
+    background: rgba(0,0,0,0.4);
+    padding: 15px 30px;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.button a:hover {
+    color: #316f68;
+    background-color: #fff
+}
+
+
+/* Extensions preview menu
+ * --------------------------------------- */
+.preview-extensions-menu{
+	position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 99;
+    border-top: 0;
+    box-shadow: 1px 0px 3px rgba(0,0,0,0.8);
+}
+.preview-extensions-menu li{
+	display: inline-block;
+	margin: 0;
+}
+.preview-extensions-menu li a{
+	padding: 15px 25px;
+	display: block;
+}
+.preview-buy-extension{
+    background: #3cc63c;
+}
+.preview-more-extensions{
+	background: #fff;
+}
+.preview-buy-extension a{
+	color: #fff;
+}
+.preview-buy-extension:hover{
+	background-color: #1a961a;
+}
+.preview-more-extensions a{
+	color: #333;
+}
+
+.code{
+	background: rgba(255,255,255,0.7);
+	padding: 0px 5px;
+	line-height: 25px;
+}
+
+
+/* Style for our header texts
+* --------------------------------------- */
+h1{
+	font-size: calc(2em + 2vw);
+	font-family: arial,helvetica;
+	color: #fff;
+	margin:0;
+}
+.section p,
+.intro p{
+	color: #fff;
+	font-size: calc(0.75em + 1vw);
+}
+
+/* Centered texts in each section
+* --------------------------------------- */
+.section{
+	text-align:center;
+}
+
+
+/* Bottom menu
+* --------------------------------------- */
+#infoMenu li a {
+	color: #fff;
+}
+
+/* Sections backgrounds
+* --------------------------------------- */
+#section0{
+	background-image: linear-gradient(128deg,#40afff,#3f61ff);
+}
+
+#section1{
+	background-image: linear-gradient(128deg,#ff9a3f,#ff4b40);
+}
+
+#section2{
+	background-image: linear-gradient(128deg,#fc40ff,#543fff);
+}
+
+#section3{
+	background-image: linear-gradient(128deg,#40fff2,#3fbcff);
+}
+
+.dynamic-button{
+	position: fixed;
+	top: 20px;
+	right: 20px;
+	z-index: 999;
+
+	font-weight: bold;
+    background: linear-gradient(135deg, #4600ca -13%, #e02ba0 100%);
+    box-shadow: 0 4px 24px 0 rgba(103, 151, 255, .1), 0 12px 64px 0 rgba(103, 151, 255, .1);
+    font-size: 1.12em;
+	padding: 10px 15px;
+    margin: 0px 3px;
+	border-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 1px;
+	line-height: 1.25;
+	transition: 0.15s;
+	color: #fff;
+}
+
+
+.cta-button{
+    position: fixed;
+    top: 20px;
+    right: 20px;
+
+    font-weight: bold;
+    background: linear-gradient(135deg, #4600ca -13%, #e02ba0 100%);
+    box-shadow: 0 4px 24px 0 rgba(103, 151, 255, .1), 0 12px 64px 0 rgba(103, 151, 255, .1);
+    font-size: 1.12em;
+    border-radius: 5px;
+    color: white;
+    margin: 0px 3px;
+    z-index: 99;
+	animation: heartbeat 1s infinite;
+    box-shadow: 0 4px 24px 0 rgb(255 255 255 / 50%), 0 12px 64px 0 rgba(103, 151, 255, .3);
+}  
+.inside-iframe .cta-button{
+	visibility: hidden;
+}
+
+.cta-button:hover {
+    color: white;
+    background-color: transparent;
+}
+
+
+.glowing-button {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    transition: 150ms ease-out;
+    cursor: pointer;
+    background: linear-gradient(135deg, #4600ca -13%, #e02ba0 100%);
+    font-weight: bold;
+    color: white;
+    gap: 6px;
+    font-size: 16px;
+	text-transform: non;
+    padding: 13px 15px;
+    justify-content: end;
+    border: 1px solid transparent;
+
+/**
+    * Adopted from https://codepen.io/pugson/pen/eYNXvyN
+    */
+.glow {
+    position: absolute;
+    content: "";
+    inset: 0;
+    z-index: -1;
+    transform: scale(0.9) translateZ(0);
+    filter: blur(10px);
+    background: linear-gradient(
+    to left,
+    #ff5770,
+    #e4428d,
+    #c42da8,
+    #9e16c3,
+    #6501de,
+    #9e16c3,
+    #c42da8,
+    #e4428d,
+    #ff5770
+    );
+    background-size: 200% 200%;
+    animation: glow 1.25s linear infinite;
+}
+
+&:hover {
+    background-color: rgb(249, 250, 251);
+}
+
+/**
+    * Adopted from https://codepen.io/solarrust/pen/zYQKvvV
+    */
+&::after {
+    /* content: ""; */
+    opacity: 0;
+    position: absolute;
+    inset: -1px;
+    border-radius: inherit;
+    z-index: -1;
+    animation-play-state: paused;
+    transition: 0.1s;
+    background-image: conic-gradient(
+    from var(--gradient-angle),
+    transparent,
+    #ff97d7
+    );
+    opacity: 1;
+    animation-play-state: running;
+    animation: rotate 3s linear infinite;
+}
+
+&::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    inset: -2px;
+    border-radius: 5px;
+    background: linear-gradient(
+    90deg,
+    rgb(243, 202, 77) 0%,
+    rgb(214, 19, 205) 42.88%,
+    rgb(86, 11, 206) 94.62%
+    );
+}
+}
+
+@property --gradient-angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+@keyframes rotate {
+to {
+    --gradient-angle: 360deg;
+}
+}
+
+@keyframes glow {
+0% {
+    background-position: 0% 50%;
+}
+100% {
+    background-position: 200% 50%;
+}
+}
+
+.glowing-button:hover{
+	color: white;
+	background: transparent;
+	border: 1px solid white;
+}
+
+@keyframes heartbeat {
+    50% {
+        transform: scale(1.05);
+    }
+}

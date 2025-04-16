@@ -1,9 +1,12 @@
 const gallerySlider = new Swiper('.gallerySlider', {
     // Optional parameters
-    loop: true,
     speed: 1000,
-    spaceBetween: 25.5,
+    // If we need pagination
+  
+    spaceBetween: 78,
 
+    slidesPerView:3,
+    
     navigation: {
         nextEl: '.nextMembers',
         prevEl: '.prevMembers',
@@ -187,7 +190,7 @@ closePop?.addEventListener("click", function (params) {
 
 let shareBtn = document.querySelector(".shareBtn")
 let share = document.querySelector(".share")
-shareBtn.addEventListener("mousein" , function (params) {
+shareBtn.addEventListener("mouseenter" , function (params) {
     share.classList.add("activeShare")
 })
 shareBtn.addEventListener("mouseout" , function (params) {

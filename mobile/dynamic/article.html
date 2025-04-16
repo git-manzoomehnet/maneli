@@ -1,18 +1,18 @@
 <basis core="dbsource" request="seo" source="basiscore" name="db" lid="1" >
-    <member name="seolist" type="list" request="product" id="[##cms.query.id##]"></member>
+    <member name="seolist" type="list" request="product" id="2375999"></member>
 </basis>
-<basis core="dbsource" name="db" source="basiscore" lid="1" mid="1" usedforid="[##cms.query.id##]"> <member name="article" type="view"/> </basis>	
-<basis core="dbsource" name="db" source="media" lid="1" sourcemid="1" usedforid="[##cms.query.id##]"> <member name="image-article" type="list" format="4"/> </basis>
-<basis core="dbsource" source="basiscore" name="basisName" lid="1" mid="1" usedforid="[##cms.query.id##]"> <member type="list" name="related-blog" size="351x200" blgid="222" propertyid="7249,7244" link="article.bc" /> </basis>
-<basis core="dbsource" source="basiscore" name="db" lid="1" mid="1" usedforid="[##cms.query.id##]"> <member type="list" name="related-product" size="371x371" blgid="221" /> </basis>
-<basis core="dbsource" source="basiscore" name="db" lid="2" mid="1" usedforid="[##cms.query.id##]"> <member type="list" name="en-related-product" size="371x371" blgid="221" /> </basis>
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="1" usedforid="2375999"> <member name="article" type="view"/> </basis>	
+<basis core="dbsource" name="db" source="media" lid="1" sourcemid="1" usedforid="2375999"> <member name="image-article" type="list" format="4"/> </basis>
+<basis core="dbsource" source="basiscore" name="basisName" lid="1" mid="1" usedforid="2375999"> <member type="list" name="related-blog" size="351x200" blgid="222" propertyid="7249,7244" link="article.bc" /> </basis>
+<basis core="dbsource" source="basiscore" name="db" lid="1" mid="1" usedforid="2375999"> <member type="list" name="related-product" size="371x371" blgid="221" /> </basis>
+<basis core="dbsource" source="basiscore" name="db" lid="2" mid="1" usedforid="2375999"> <member type="list" name="en-related-product" size="371x371" blgid="221" /> </basis>
   <basis core="inlinesource" name="list" >
     <member name="star" lefttblcol="db.related-product.id" righttblcol="db.en-related-product.id" format="join" jointype="leftjoin" />
   </basis>
 
-<basis core="dbsource" source="basiscore" name="basisName" lid="1" mid="1" usedforid="[##cms.query.id##]"> <member type="list" name="related-project" size="383x447" blgid="1611"  link="project.bc"/> </basis>	
+<basis core="dbsource" source="basiscore" name="basisName" lid="1" mid="1" usedforid="2375999"> <member type="list" name="related-project" size="383x447" blgid="1611"  link="project.bc"/> </basis>	
 
-<basis core="dbsource" source="userbehavior" name="db" lid="1" userid="100005" usedforid="[##cms.query.id##]">
+<basis core="dbsource" source="userbehavior" name="db" lid="1" userid="100005" usedforid="2375999">
     <member request="listcomment" type="list" name="commentlist" link="article.bc" />
 </basis>
 <!DOCTYPE html>
