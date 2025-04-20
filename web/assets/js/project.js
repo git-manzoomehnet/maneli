@@ -3,9 +3,9 @@ const gallerySlider = new Swiper('.gallerySlider', {
     speed: 1000,
     // If we need pagination
   
-    spaceBetween: 78,
+    spaceBetween: 10,
 
-    slidesPerView:3,
+    slidesPerView:1,
     
     navigation: {
         nextEl: '.nextMembers',

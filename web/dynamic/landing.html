@@ -1,0 +1,550 @@
+<basis core="dbsource" source="basiscore" name="db" lid="1" mid="20">
+    <member request="cat" type="tree" name="productCat2" parentid="213998" />
+</basis>
+<basis core="dbsource" name="db" source="media" lid="1" sourcemid="1" usedforid="2375784">
+    <member name="aboutGallery" type="list" />
+</basis>
+
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="19" catid="214050"> <member name="list" size="383x447" type="list" link="project.bc"/> </basis>
+<basis core="dbsource" source="basiscore" name="db" lid="1" mid="20" > <member request="cat" type="tree" name="productCat1" parentid="213997" postsql="select * from [db.productCat1] where parentid=213997"/> </basis>
+
+<basis core="dbsource" source="userbehavior" name="db" lid="1" userid="100005" usedforid="[##cms.query.id##]">
+    <member request="listcomment" type="list" name="commentlist" link="article.bc" />
+</basis>
+<!DOCTYPE html>
+<html lang="fa">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لندینگ</title>
+    <meta name="description" content="صفحه لندینگ مانلی">
+    <link rel="stylesheet" href="[##cms.cms.cdn##]/css/swiper-bundle.min.css">
+
+    <basis core="call" file="styles.inc"/>
+</head>
+
+<body>
+    <main class="landing" dir="rtl">
+        <basis core="call" file="header.inc" />
+
+        <section class="section1 h-svh  relative flex items-center justify-center">
+            <div class="breadCrumb absolute top-[120px] z-10 w-80p mx-auto">
+
+                <span class="inline-block font-YekanBakh400 text-sm text-white ml-1.5">
+                    لندینگ
+                </span>
+
+            </div>
+
+            <div class="imgS w-full relative after:absolute after:inset-0 after:bg-black/[0.35]">
+                <img class="w-full h-svh object-cover" src="[##cms.cms.cdn##]/images/landing-des.png" alt="@name">
+            </div>
+            <a href="/contact-us.bc" style="box-shadow: 5px 5px 25.4px 3px #A7A7A740;"
+                class="flex items-center justify-center fixed z-10 right-[5%] w-[280px] h-[49px] bg-white bottom-8 font-YekanBakh500 text-sm">
+                تماس با ما
+            </a>
+            <div class="absolute -bottom-[29px] overflow-hidden h-fit">
+
+                <div class="scrollBtm overflow-hidden  h-[130px] w-px bg-gray2">
+                    <div class="line h-[58px] w-px bg-white">
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <basis core="print" datamembername="db.productCat1">
+            <layout>
+                <section class="section2 mb-16 relative pt-10">
+                    <div class="bgImg absolute w-full top-0 left-0 right-0 -z-1">
+                        <img class="w-full h-[322px] object-cover" src="[##cms.cms.cdn##]/images/mramar.png" alt="bg">
+                    </div>
+                    <h2 class="font-YekanBakh400 text-[28px] text-center mb-10">
+                        محصولات
+                    </h2>
+                    <div class="grid grid-cols-3 w-80p mx-auto">
+                        @child
+                    </div>
+                
+                </section>
+                </layout>
+            
+                <face >
+
+                    <div class="catBox group/catBox">
+                        <a href="/product-list.bc?catid=@catid" title=""
+                            class="relative flex items-center justify-center">
+
+                            <div class="imgS relative after:absolute after:inset-0 after:bg-black/[0.3]">
+                                <img class="w-full" src="[##cms.cms.cdn##]/images/@catid-def.jpg" alt="@title">
+                            </div>
+                            <div class="title absolute">
+                                <h3 style="letter-spacing: 9px;"
+                                    class="font-Trueno200 mb-6 text-[40px] uppercase text-white text-center">
+                                    @urltitle
+                                </h3>
+                             
+                                <span
+                                    class="-translate-y-[100px] after:h-full after:bg-white group/link hover:text-black after:duration-500 after:scale-x-0 hover:after:scale-x-100 after:origin-right after:absolute after:inset-0 relative  duration-500 opacity-0 group-hover/catBox:opacity-100 group-hover/catBox:translate-y-0 flex w-[163px] items-center justify-center font-YekanBakh300 h-[49px] mx-auto text-sm text-white border-t border-b border-b-white border-t-white">
+                                    <p class="group-hover/link:text-black relative z-1 duration-500">
+
+                                        مشاهده
+                                    </p>
+                                </span>
+                            </div>
+                        </a>
+                    </div>
+                </face>
+            </basis>
+
+
+     
+        <section class="section3 w-80p !max-w-[1000px] mx-auto mb-16">
+            <h1 class="font-YekanBakh400 text-[32px] text-center mb-6">
+                درباره ما
+            </h1>
+            <div class="para font-YekanBakh400 mb-6 text-base text-matn text-center">
+                <p>
+                    برند خانه مانلی تحت شرکت رسمی صنایع شیمیایی، پلیمری و سلولزی ایپک (سهامی خاص) به شماره ثبت ۸۹۵۹۲ و
+                    در کارخانه ای به مساحت ۸۵۰۰ مترمربع به مدیر عاملی سرکار خانم الهه امیرکاشانی از سال ۲۰۱۷–1396 فعالیت
+                    خود را آغاز و از ‎زمان شروع تا امروز مسیر پرتلاش شبانه روزی را طی کرده است. تمام آنچه ارائه می گردد
+                    ساخته دست عزیزانی است که در این راه ما را یاری نمودندکلیه محصولات ارایه شده در خانه مانلی از صفر تا
+                    صد در کارخانه تولیدی این شرکت و زیر نظر متخصصین تولید می گردد.
+
+                </p>
+            </div>
+
+            <a href="/about-us.bc" title="home"
+                class="flex w-[387px] group/link items-center duration-500 justify-center font-YekanBakh500 text-sm text-matn border-t border-t-matn border-b border-b-matn mx-auto h-[49px] after:w-full after:h-full after:bg-black hover:text-white after:duration-500 after:scale-x-0 hover:after:scale-x-100 after:origin-right after:absolute after:inset-0 relative">
+                <span class="group-hover/link:text-white z-1 font-YekanBakh500 text-sm text-matn duration-500">
+                    بیشتر بدانید
+                </span>
+            </a>
+
+        </section>
+        <section class="section4 mb-16">
+            <basis core="print" datamembername="db.aboutGallery">
+
+                <face filter="ord=10">
+                    <video poster="[##cms.cms.cdn##]/@largeIMG" muted autoplay playsinline class="w-full">
+
+                </face>
+            </basis>
+            <basis core="print" datamembername="db.aboutGallery">
+
+                <face filter="format=3">
+                    <source src="[##cms.cms.cdn##]/@largeIMG">
+
+                </face>
+            </basis>
+            </video>
+        </section>
+
+
+
+        <section class="section5 mb-20">
+            <h3 class="text-center mb-6 font-YekanBakh500 text-xl">
+                سوالات متداول
+            </h3>
+            <div
+                class="accordion group/accordion w-90p mx-auto border-t border-t-gray2 last:border-b last:border-b-gray2">
+                <div class="accordion__intro py-2.5 px-3 flex justify-between items-center">
+                    <div class="flex gap-x-5 items-center">
+                        <h4 class="font-YekanBakh400 text-base">
+                            چگونه سبک طراحی متناسب با فضای خود را انتخاب کنم؟
+
+                        </h4>
+                    </div>
+
+                    <div class="arrow duration-500">
+                        <svg width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6.5 12L12.9952 0.75L0.00480938 0.75L6.5 12Z" fill="#A3A3A3" />
+                        </svg>
+
+                    </div>
+                </div>
+                <div class="accordion__content font-YekanBakh300 text-sm leading-6 text-justify text-matn">
+                    <p>
+                        مبلمان نه تنها به یک هدف کاربردی خدمت می کند، بلکه به سبک کلی فضا نیز کمک می کند. مبلمانی را
+                        انتخاب کنید که مکمل طراحی باشد و راحتی را افزایش دهد.
+                    </p>
+                </div>
+            </div>
+            <div
+                class="accordion group/accordion w-90p mx-auto border-t border-t-gray2 last:border-b last:border-b-gray2">
+                <div class="accordion__intro py-2.5 px-3 flex justify-between items-center">
+                    <div class="flex gap-x-5 items-center">
+                        <h4 class="font-YekanBakh400 text-base">
+                            در انتخاب رنگ برای دکوراسیون داخلی چه فاکتورهایی را باید در نظر بگیرم؟
+                        </h4>
+                    </div>
+
+                    <div class="arrow duration-500">
+                        <svg width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6.5 12L12.9952 0.75L0.00480938 0.75L6.5 12Z" fill="#A3A3A3" />
+                        </svg>
+
+                    </div>
+                </div>
+                <div class="accordion__content font-YekanBakh300 text-sm leading-6 text-justify text-matn">
+                    <p>
+                        مبلمان نه تنها به یک هدف کاربردی خدمت می کند، بلکه به سبک کلی فضا نیز کمک می کند. مبلمانی را
+                        انتخاب کنید که مکمل طراحی باشد و راحتی را افزایش دهد.
+                    </p>
+                </div>
+            </div>
+            <div
+                class="accordion group/accordion w-90p mx-auto border-t border-t-gray2 last:border-b last:border-b-gray2">
+                <div class="accordion__intro py-2.5 px-3 flex justify-between items-center">
+                    <div class="flex gap-x-5 items-center">
+                        <h4 class="font-YekanBakh400 text-base">
+                            نقش مبلمان در طراحی و اجرای دکوراسیون داخلی چیست؟
+                        </h4>
+                    </div>
+
+                    <div class="arrow duration-500">
+                        <svg width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6.5 12L12.9952 0.75L0.00480938 0.75L6.5 12Z" fill="#A3A3A3" />
+                        </svg>
+
+                    </div>
+                </div>
+                <div class="accordion__content font-YekanBakh300 text-sm leading-6 text-justify text-matn">
+                    <p>
+                        مبلمان نه تنها به یک هدف کاربردی خدمت می کند، بلکه به سبک کلی فضا نیز کمک می کند. مبلمانی را
+                        انتخاب کنید که مکمل طراحی باشد و راحتی را افزایش دهد.
+                    </p>
+                </div>
+            </div>
+            <div
+                class="accordion group/accordion w-90p mx-auto border-t border-t-gray2 last:border-b last:border-b-gray2">
+                <div class="accordion__intro py-2.5 px-3 flex justify-between items-center">
+                    <div class="flex gap-x-5 items-center">
+                        <h4 class="font-YekanBakh400 text-base">
+                            چگونه اثر هنری مناسب برای فضای خود انتخاب کنم؟
+                        </h4>
+                    </div>
+
+                    <div class="arrow duration-500">
+                        <svg width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6.5 12L12.9952 0.75L0.00480938 0.75L6.5 12Z" fill="#A3A3A3" />
+                        </svg>
+
+                    </div>
+                </div>
+                <div class="accordion__content font-YekanBakh300 text-sm leading-6 text-justify text-matn">
+                    <p>
+                        مبلمان نه تنها به یک هدف کاربردی خدمت می کند، بلکه به سبک کلی فضا نیز کمک می کند. مبلمانی را
+                        انتخاب کنید که مکمل طراحی باشد و راحتی را افزایش دهد.
+                    </p>
+                </div>
+            </div>
+            <div
+                class="accordion group/accordion w-90p mx-auto border-t border-t-gray2 last:border-b last:border-b-gray2">
+                <div class="accordion__intro py-2.5 px-3 flex justify-between items-center">
+                    <div class="flex gap-x-5 items-center">
+                        <h4 class="font-YekanBakh400 text-base">
+                            چگونه برای دکوراسیون داخلی کمک حرفه ای پیدا کنم؟
+                        </h4>
+                    </div>
+
+                    <div class="arrow duration-500">
+                        <svg width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6.5 12L12.9952 0.75L0.00480938 0.75L6.5 12Z" fill="#A3A3A3" />
+                        </svg>
+
+                    </div>
+                </div>
+                <div class="accordion__content font-YekanBakh300 text-sm leading-6 text-justify text-matn">
+                    <p>
+                        مبلمان نه تنها به یک هدف کاربردی خدمت می کند، بلکه به سبک کلی فضا نیز کمک می کند. مبلمانی را
+                        انتخاب کنید که مکمل طراحی باشد و راحتی را افزایش دهد.
+                    </p>
+                </div>
+            </div>
+
+        </section>
+
+
+        <basis core="print" datamembername="db.list">
+            <layout>
+                <section class="section7  mb-1 relative">
+                    <div class="bgImg absolute w-full top-[300px] left-0 right-0 -z-1">
+                        <img class="w-full h-[554px] object-cover" src="[##cms.cms.cdn##]/images/mramar.png" alt="bg">
+                    </div>
+                    <h3 class="font-YekanBakh500 text-center text-[28px] mb-12">
+                        پروژه های خانه مانلی
+                    </h3>
+
+                    <!-- Slider main container -->
+                    <div class="swiper relatedProject">
+                        <!-- Additional required wrapper -->
+                        <div class="swiper-wrapper">
+                            <!-- Slides -->
+                       
+
+
+                            @child
+
+                        </div>
+
+                    </div>
+
+
+
+                    </div>
+                </section>
+            </layout>
+
+            <face>
+                <div class="swiper-slide !w-[419px] group/slide">
+
+                    <a href="/@link" title="@title"
+                        class="flex card overflow-hidden w-full mb-3 items-center justify-center relative group/proj">
+                        <div class=" w-full">
+                            <img class="w-full imgS scale-105" src="[##cms.cms.cdn##]/@00383X00447prp" alt="@title">
+                        </div>
+
+                        <div data-tilt data-tilt-speed="300" class="secImg w-[75%] js-tilt absolute">
+                            <div
+                                class="in relative after:absolute duration-500 scale-110 opacity-0 group-hover/proj:opacity-100 group-hover/proj:scale-100 after:inset-0 after:bg-black/[0.3]">
+
+                                <img class="w-full" src="[##cms.cms.cdn##]/@00383X00447prp" alt="@title">
+                            </div>
+
+                        </div>
+                        <div data-tilt data-tilt-speed="300"
+                            class="title js-tilt absolute duration-500 scale-110 opacity-0 group-hover/proj:opacity-100 group-hover/proj:scale-100">
+                            <h4 class="text-white font-YekanBakh700 text-2xl text-center">
+                                @title
+                            </h4>
+                        </div>
+                    </a>
+                </div>
+
+            </face>
+        </basis>
+
+
+
+        <section class="section8 w-80p mx-auto mb-16 relative pt-20">
+
+            <h5 class="font-YekanBakh400 text-[28px] mb-10 w-80p mx-auto">
+                نظرات شما ارزشمند است
+            </h5>
+
+            <div class="swiper commentsSlider !pt-3 !pb-3">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <basis core="print" datamembername="db.commentlist">
+                        <layout>
+                            @child
+                        </layout>
+                        <else-layout>
+                            <div class="swiper-slide">
+                                <div class="in bg-white w-80p mx-auto py-9 px-6"
+                                    style="box-shadow: 5px 5px 25.4px 3px #A7A7A740;">
+
+                                    <div class="para font-YekanBakh400 text-sm text-center leading-6 text-matn">
+                                        <p>
+                                            هنوز کامنتی ثبت نشده است.
+                                            <br>
+                                            شما اولین نفر باشید
+
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </else-layout>
+                        <face>
+
+                            <div class="swiper-slide !h-auto">
+                                <div class="in bg-white w-80p mx-auto py-9 px-6"
+                                    style="box-shadow: 5px 5px 25.4px 3px #A7A7A740;">
+                                    <h6 class="text-center mb-4 font-YekanBakh400 text-sm leading-6">
+                                        @username
+                                    </h6>
+                                    <div class="para font-YekanBakh400 text-sm text-center leading-6 text-matn">
+                                        <p>
+
+                                            @comment
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </face>
+                    </basis>
+
+                </div>
+
+
+            </div>
+            <div class="btns mt-6 z-10 gap-x-9 justify-center w-full flex items-center">
+                <div class="prevMembers">
+                    <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <mask id="path-1-inside-1_103_2697" fill="white">
+                            <path d="M50 0H0V50H50V0Z" />
+                        </mask>
+                        <path d="M50 1H0V-1H50V1ZM0 49H50V51H0V49Z" fill="#A3A3A3"
+                            mask="url(#path-1-inside-1_103_2697)" />
+                        <path d="M33 24.5L21.75 18.0048V30.9952L33 24.5Z" fill="#A3A3A3" />
+                    </svg>
+
+                </div>
+                <div class="nextMembers">
+                    <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <mask id="path-1-inside-1_103_2693" fill="white">
+                            <path d="M0 0H50V50H0V0Z" />
+                        </mask>
+                        <path d="M0 1H50V-1H0V1ZM50 49H0V51H50V49Z" fill="#A3A3A3"
+                            mask="url(#path-1-inside-1_103_2693)" />
+                        <path d="M17 24.5L28.25 18.0048V30.9952L17 24.5Z" fill="#A3A3A3" />
+                    </svg>
+
+                </div>
+            </div>
+        </section>
+        <section class="section5 w-80p mx-auto mb-8">
+            <h3 class="font-YekanBakh400 text-28 mb-4">
+                ثبت نظر
+            </h3>
+            <div class="para font-YekanBakh400 text-sm leading-6 mb-8">
+                <p>
+                    لطفا دیدگاه خود را در رابطه با این مقاله برای ما بنویسید.
+                </p>
+            </div>
+
+
+            <basis core="dbsource" source="userbehavior" name="db" title="{##db.senduserName.value##}" run="atclient"
+                triggers="db.sendcomment" if="{##db.sendcomment##}" parentid="0" usedforid="[##cms.query.id##]"
+                userid="100005" mid="1" comment="{##db.sendcomment.value##}">
+                <member request="comment" type="scalar" name="comment" preview="true" onRendered="renderCommentFn" />
+            </basis>
+
+            <form action="#" class="commentP">
+                <div class="rSec">
+                    <div class="userInfo grid mb-6 grid-cols-3 gap-x-[51px]">
+                        <div class="nameInput relative">
+                            <label for="userName" class="font-YekanBakh400 text-sm leading-6 mb-2.5 block">
+                                نام و نام خانوادگی*
+                            </label>
+                            <input name="userName"
+                                class="w-full userName outline-0 h-[48px] text-right font-YekanBakh300 text-sm bg-gray1"
+                                type="text" />
+                        </div>
+                        <div class="emailInput relative">
+                            <label for="email" class="font-YekanBakh400 text-sm leading-6 mb-2.5 block">
+                                ایمیل*
+                            </label>
+                            <input type="email" name="email"
+                                class="w-full email outline-0 h-[48px] text-right font-YekanBakh300 text-sm bg-gray1" />
+                        </div>
+                        <div class="tellInput relative">
+                            <label for="tell" class="font-YekanBakh400 text-sm leading-6 mb-2.5 block">
+                                شماره تماس
+                            </label>
+                            <input type="tell" name="tell"
+                                class="w-full tell outline-0 h-[48px] text-right font-YekanBakh300 text-sm bg-gray1"
+                                placeholder="" />
+                        </div>
+                    </div>
+                    <div class="msg ">
+                        <div class="msgInput h-full relative mb-3">
+                            <label for="message" class="font-YekanBakh400 text-sm leading-6 mb-2.5 block">
+                                پیام و درخواست خود را برای ما بنویسید....
+                            </label>
+                            <textarea class="w-full  outline-0 h-[172px] text-right font-YekanBakh300 text-sm bg-gray1"
+                                name="message" id="message"></textarea>
+                        </div>
+                    </div>
+                   
+
+                    <div class="flex gap-x-14 items-end">
+                        <div class="btnsContainer max-w-[390px] w-full gap-x-2.5 flex justify-between items-center border-b border-b-black">
+                            <basis core="dbsource" source="trust_login" name="captcha1" triggers="cms.reload1"
+                                run="atclient">
+                                <member name="code1" type="scalar" request="captcha"></member>
+                            </basis>
+                            <basis datamembername="captcha1.code1" core="print" run="atclient">
+                                <face>
+                                    <script type="text/template">
+                                <div class="captchaContain w-full flex items-center gap-x-2.5 flex-row-reverse py-2 px-3.5">
+                    <span class="captcha-sefaresh shrink-0">
+                        <img src="/@captcha@" width="88" height="44" class="captcha-sefaresh"
+                            alt="captcha" title="captcha" />
+                        <input type="hidden" name="captchaid" value="@captcha@" />
+                    </span>
+    
+                <img src="[##cms.cms.cdn##]/images/cached.png" class="refressh refressh1 cursor-pointer" run="atclient" bc-triggers="click" bc-name="cms.reload1" />
+    
+                    <input type="text" class="codeinputm w-full font-Kohinoor400 text-sm text-gray-matn outline-0 self-stretch" placeholder="کد امنیتی را وارد نمایید" name="captcha" />
+                </div>
+              </script>
+                                </face>
+                            </basis>
+                        </div>
+                        <div class="btnssss flex items-end">
+                            <button type="button"
+                                class="submitComment group/link after:w-full after:h-full after:bg-black hover:text-white after:duration-500 after:scale-x-0 hover:after:scale-x-100 after:origin-right after:absolute after:inset-0 relative cursor-pointer flex items-center w-[387px] justify-center border-t border-t-matn border-b border-b-matn h-[49px]">
+        
+        
+                                <span class="font-Kohinoor400 group-hover/link:text-white z-1 text-sm text-black whitespace-nowrap">
+                                    ثبت
+                                </span>
+                            </button>
+                            <div class="messageSend mt-2 text-right font-YekanBakh300 text-sm ">
+                                <p></p>
+                            </div>
+    
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </form>
+
+
+
+
+        </section>
+
+        <section class="section10 relative flex items-center justify-center mb-10">
+            <div class="imgS relative after:absolute after:inset-0 after:bg-black/[0.35]">
+                <img class="w-full" src="[##cms.cms.cdn##]/images/landing-info.png" alt="landing">
+            </div>
+
+            <div class="title absolute">
+                <div class="para font-YekanBakh400 text-[32px] text-white text-center mb-14">
+                    <p>
+                        جهت کسب اطلاعات بیشتر ، آماده پاسخگویی
+                        <br>
+                        به شما هستیم
+                    </p>
+                </div>
+
+                <a href="/contact-us.bc" title="home"
+                    class="flex w-[387px] group/link items-center duration-500 justify-center font-YekanBakh500 text-sm text-matn border-t border-t-white border-b border-b-white mx-auto h-[49px] after:w-full after:h-full after:bg-black hover:text-white after:duration-500 after:scale-x-0 hover:after:scale-x-100 after:origin-right after:absolute after:inset-0 relative">
+                    <span class="group-hover/link:text-white z-1 font-YekanBakh500 text-sm text-white duration-500">
+
+                        تماس با ما
+                    </span>
+                </a>
+            </div>
+        </section>
+
+        <basis core="call" file="footer.inc" />
+
+    </main>
+
+    <basis core="call" file="scripts.inc" />
+
+    <script src="[##cms.cms.cdn##]/_js/basiscore-2.30.1.min.js"></script>
+    <script src="[##cms.cms.cdn##]/js/swiper-bundle7.4.1.min.js"></script>
+    <script src="[##cms.cms.cdn##]/js/landing.js"></script>
+</body>
+
+</html>

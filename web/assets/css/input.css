@@ -1,4 +1,5 @@
 @import "tailwindcss";
+
 @font-face {
   font-family: "Trueno200";
   src: url("../fonts/TruenoUltLt.eot");
@@ -10,6 +11,7 @@
   font-style: normal;
   font-display: swap;
 }
+
 @font-face {
   font-family: "Trueno300";
   src: url("../fonts/TruenoLt.eot");
@@ -21,6 +23,7 @@
   font-style: normal;
   font-display: swap;
 }
+
 @font-face {
   font-family: "YekanBakh300";
   src: url("../_fonts/YekanBakh-Light.woff") format("woff"),
@@ -30,11 +33,11 @@
   font-style: normal;
   font-display: swap;
 }
+
 @font-face {
   font-family: "YekanBakh400";
   src: url("../_fonts/Yekan Bakh FA 04 Regular.eot");
-  src: url("../_fonts/Yekan Bakh FA 04 Regular.eot?#iefix")
-      format("embedded-opentype"),
+  src: url("../_fonts/Yekan Bakh FA 04 Regular.eot?#iefix") format("embedded-opentype"),
     url("../_fonts/Yekan Bakh FA 04 Regular.woff") format("woff"),
     url("../_fonts/Yekan Bakh FA 04 Regular.woff2") format("woff2"),
     url("../_fonts/Yekan Bakh FA 04 Regular.ttf") format("truetype");
@@ -42,6 +45,7 @@
   font-style: normal;
   font-display: swap;
 }
+
 @font-face {
   font-family: "YekanBakh500";
   src: url("../_fonts/YekanBakh-Medium.eot");
@@ -53,24 +57,24 @@
   font-style: normal;
   font-display: swap;
 }
+
 @font-face {
   font-family: "YekanBakh700";
   src: url("../_fonts/Yekan Bakh FA 06 Bold.eot");
-  src: url("../_fonts/Yekan Bakh FA 06 Bold.eot?#iefix")
-      format("embedded-opentype"),
+  src: url("../_fonts/Yekan Bakh FA 06 Bold.eot?#iefix") format("embedded-opentype"),
     url("../_fonts/Yekan Bakh FA 06 Bold.woff") format("woff"),
     url("../_fonts/Yekan Bakh FA 06 Bold.ttf") format("truetype");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
+
 @font-face {
   font-family: "IRANSansFaNum400";
   src: url("../_fonts/IRANSansFaNum-Regular.eot");
-  src: url("../_fonts/IRANSansFaNum-Regular.eot?#iefix")
-      format("embedded-opentype"),
+  src: url("../_fonts/IRANSansFaNum-Regular.eot?#iefix") format("embedded-opentype"),
     /* url("../_fonts/IRANSansFaNum-Regular.woff") format("woff"), */
-      url("../_fonts/IRANSansFaNum-Regular.woff2") format("woff2"),
+    url("../_fonts/IRANSansFaNum-Regular.woff2") format("woff2"),
     url("../_fonts/IRANSansFaNum-Regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
@@ -89,6 +93,8 @@
   --color-gray2: #a3a3a3;
   --color-gray1: #f5f5f5;
   --color-gray700: #3f3f46;
+  --color-graygreen: #807f63;
+
   --spacing-90p: 90%;
   --spacing-80p: 80%;
 }
@@ -102,6 +108,7 @@
     /* transform: translate(0,150px); */
     height: 180px;
   }
+
   100% {
     transform: translate(0, 150px);
   }
@@ -123,6 +130,7 @@
 .w-80p {
   max-width: 1280px;
 }
+
 .errorPage header {
   background: transparent !important;
 }
@@ -136,6 +144,7 @@
   border-right-color: var(--color-StarDust950);
   animation: l15 1s infinite linear;
 }
+
 .loader::before,
 .loader::after {
   content: "";
@@ -145,10 +154,12 @@
   border-radius: 50%;
   animation: l15 2s infinite;
 }
+
 .loader::after {
   margin: 8px;
   animation-duration: 3s;
 }
+
 @keyframes l15 {
   100% {
     transform: rotate(1turn);
@@ -159,6 +170,7 @@
 .services .homeForm1 legend {
   display: none;
 }
+
 .popUpForm .homeForm1 span,
 .services .homeForm1 span {
   font-family: "YekanBakh400";
@@ -166,23 +178,38 @@
   line-height: 25px;
   text-align: right;
 }
+
 .popUpForm .homeForm1 [data-bc-title-container],
 .services .homeForm1 [data-bc-title-container] {
   margin-bottom: 9px;
   width: 100%;
 }
+
 .services .homeForm1 [data-bc-schema-column] {
   display: flex;
   column-gap: 51px;
 }
+
 .services .homeForm1 [data-bc-question],
 .services .homeForm1 [data-bc-answer-container] {
   width: 100%;
 }
-.services .homeForm1 [data-bc-section] {
+
+.services .homeForm1 [data-bc-section] ,.popUpForm .homeForm1 [data-bc-section]{
   padding: 0 !important;
   margin: 0 !important;
 }
+
+.popUpForm .homeForm1 [data-bc-schema-main-container] fieldset:nth-child(1) [data-bc-schema-column] {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 51px;
+}
+
+.popUpForm .homeForm1 [data-bc-answer-container] {
+  width: 100% !important;
+}
+
 .popUpForm .homeForm1 input,
 .services .homeForm1 input,
 .popUpForm .homeForm1 textarea,
@@ -197,23 +224,28 @@
   text-align: right !important;
   color: #3f3f46 !important;
 }
+
 .popUpForm .homeForm1 [data-bc-part-container],
 .services .homeForm1 [data-bc-part-container] {
   width: 100% !important;
 }
+
 .popUpForm .homeForm1 [data-bc-part],
 .services .homeForm1 [data-bc-part] {
   width: 100% !important;
   margin: 0 !important;
 }
+
 .popUpForm .homeForm1 [data-part-btn-container][data-bc-part],
 .services .homeForm1 [data-part-btn-container][data-bc-part] {
   display: none;
 }
+
 .popUpForm .homeForm1 .errorPlaceholder,
 .services .homeForm1 .errorPlaceholder {
   border: 1px solid #ff0000 !important;
 }
+
 .popUpForm .homeForm1 .errorPlaceholder::placeholder,
 .services .homeForm1 .errorPlaceholder::placeholder {
   color: #ff0000 !important;
@@ -223,6 +255,7 @@
 .services .homeForm1 [data-bc-validation-part] {
   display: none;
 }
+
 .scrollTop {
   opacity: 0;
   transform: translateY(150px);
@@ -233,24 +266,31 @@
   opacity: 1;
   transform: translateY(0);
 }
-.swiper-pagination-current , .currentFraction {
+
+.swiper-pagination-current,
+.currentFraction {
   font-size: 32px;
 }
-.swiper-pagination-total,.totalFraction {
+
+.swiper-pagination-total,
+.totalFraction {
   font-size: 24px;
 }
 
 .relatedProjectPagination .swiper-pagination-bullet-active {
   background: #525252;
 }
+
 .popFraction,
 .popFraction span {
   color: white;
 }
+
 .popFractionVideos,
 .popFractionVideos span {
   color: white;
 }
+
 .swiper-button-lock {
   /* display: block; */
 }
@@ -266,4 +306,108 @@
 .swiper-button-disabled {
   opacity: 0.5 !important;
   cursor: no-drop !important;
+}
+
+.roomy {
+  height: 700px !important;
+  background-size: cover;
+  text-align: center;
+  position: relative;
+  width: 33.333%;
+  display: table-cell;
+  -webkit-transition: width 0.5s ease-out;
+  transition: width 0.5s ease-out;
+  vertical-align: middle;
+}
+
+.roomy .whitebutton {
+  opacity: 0;
+}
+
+.columnContainer .roomy:hover .whitebutton {
+  opacity: 1;
+  -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -ms-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+}
+
+.columnContainer:hover .roomy:hover {
+  width: 50% !important;
+}
+
+.columnContainer:hover .roomy {
+  width: 25% !important;
+}
+
+.difftyp .roomy {
+  height: 400px !important;
+}
+
+.roomy:hover .hidewhitebox {
+  opacity: 1;
+}
+
+.columnContainer {
+  display: table;
+  width: 100%;
+}
+
+.columnContainerdiff {
+  display: table;
+  width: 100%;
+}
+
+.accordion {
+  overflow: hidden;
+  margin-bottom: 12px;
+  background-color: white;
+}
+
+.homePage .accordion {
+  box-shadow: 5px 5px 25.4px 3px #a7a7a740;
+}
+
+.accordion__intro {
+  position: relative;
+  padding: 20px;
+  cursor: pointer;
+}
+
+.accordion__content {
+  padding: 0 20px;
+  max-height: 0;
+  overflow: hidden;
+  will-change: max-height;
+  transition: all 0.25s ease-out;
+  opacity: 0;
+}
+
+.accordion__active {
+  background: #f5f5f5;
+}
+
+.accordion__active .accordion__content {
+  padding: 0 20px 20px;
+  opacity: 1;
+}
+
+
+/* @media (min-width: 1280px) {
+  .nav-align {
+    right: calc((100% - 1150px)/2);
+
+  }
+} */
+@media (min-width: 1600px) {
+  .nav-align {
+    right: calc((100% - 1280px)/2);
+
+  }
+}
+@media (max-width: 1599px) {
+  .nav-align {
+    right: 10%;
+  }
 }

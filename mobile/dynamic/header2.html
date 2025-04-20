@@ -1,18 +1,17 @@
-
     <basis core="dbsource" source="basiscore" name="db" lid="1" mid="20" > <member request="cat" type="tree" name="productCat1" parentid="213997" postsql="select * from [db.productCat1] where parentid=213997"/> </basis>
     <basis core="dbsource" name="db" source="basiscore" lid="1" mid="5" usedforid="9681"> <member name="contactus" type="view"/> </basis>
     <header class="fixed top-0 z-[100000] w-full duration-1000 group/header [&.activeHeader]:bg-white"  dir="rtl">
-        <div class="topHeader bg-black w-full grid grid-cols-3">
+        <div class="topHeader bg-black h-[35px] w-full grid grid-cols-3 items-center">
             <basis core="print" datamembername="db.productCat1">
-             
+            
                 <face>
-                    <a href="/product-cat.bc?catid=@catid" title="@title" class="font-YekanBakh400 text-center py-3 text-sm text-white nth-[2]:border-r nth-[2]:border-r-white nth-[2]:border-l nth-[2]:border-l-white">
+                    <a href="/product-cat.bc?catid=@catid" title="@title" class="font-YekanBakh400 text-center text-sm text-white nth-[2]:border-r nth-[2]:border-r-white nth-[2]:border-l nth-[2]:border-l-white">
                         @title  
                     </a>
                     
                 </face>
             </basis>
-    
+
     </div>
         <div class="w-90p py-5 mx-auto flex items-center justify-between">
             <div class="flex items-center gap-x-6">
@@ -25,7 +24,7 @@
                     </svg>
 
                 </div>
-                <a href="" title="search" aria-label="search">
+                <a href="/search.bc" title="search" aria-label="search">
                     <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path class="group-[&.activeHeader]/header:fill-black"
                             d="M9.55158 0.358398C4.81499 0.358398 0.959961 4.21343 0.959961 8.95002C0.959961 13.6866 4.81499 17.5416 9.55158 17.5416C14.2882 17.5416 18.1432 13.6866 18.1432 8.95002C18.1432 4.21052 14.2882 0.358398 9.55158 0.358398ZM9.55158 16.375C5.45507 16.375 2.12374 13.0436 2.12374 8.94711C2.12374 4.8506 5.45507 1.51927 9.55158 1.51927C13.6481 1.51927 16.9794 4.8506 16.9794 8.94711C16.9794 13.0436 13.6452 16.375 9.55158 16.375Z"
@@ -43,7 +42,7 @@
             </div>
             <div class="logo">
                 <a href="/" title="logo" aria-label="logo">
-                    <img src="[##cms.cms.cdn##]/images/Mask group (2).png" alt="logo">
+                    <img src="[##cms.cms.cdn##]/images/logo-light-m.png" alt="logo">
                 </a>
             </div>
 
@@ -82,9 +81,9 @@
                         <div class="megaProducts border-b border-b-white [&.activeMegaProducts]:mt-9 h-0 [&.activeMegaProducts]:h-fit origin-top scale-y-0 duration-500 [&.activeMegaProducts]:scale-y-100  [&.activeMegaProducts]:pb-4">
                             <ul class="flex px-5 justify-center items-center gap-x-10">
                                 <basis core="print" datamembername="db.productCat1">
-         
+        
                                     <face>
-                                         
+                                        
                                 <li>
                                     <a href="/product-cat.bc?catid=@catid" class="font-YekanBakh400 text-sm text-white" title="@title">
                                         @title
@@ -140,7 +139,7 @@
                 <div class="socials pb-9">
                     <ul class="flex justify-center items-center gap-x-4">
                         <basis core="print" datamembername="db.contactus">
-                          
+                        
                             <face filter="text='واتس اپ'">
                                 <li>
                                     <a target="_blank" href="https://wa.me/@largetext" title="whatsapp" aria-label="whatsapp">
@@ -151,7 +150,7 @@
                             </face>
                         </basis>
                         <basis core="print" datamembername="db.contactus">
-                     
+                    
                             <face filter="text='پینترست'">
                                 
                                 <li>

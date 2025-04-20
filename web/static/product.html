@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="fa">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../mobile/assets/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="../assets/css/outputDesk.css">
+    <style>
+        .swiper-slide img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      </style>
+</head>
+
+<body>
+
+    <main class="product bg-gray1" dir="rtl">
+        <section class="section1 w-80p mx-auto">
+            <div class="breadCrumb  mt-[120px] z-10 mb-24 mx-auto">
+                <a href="/" title="home" class="inline-block font-YekanBakh400 text-sm text-gray2 ml-1.5">
+                    خانه
+                </a>
+
+
+                <i class="font-YekanBakh400 inline-block -translate-y-0.5 text-sm text-gray2 ml-1.5">
+                    .
+                </i>
+                <span class="inline-block font-YekanBakh400 text-sm text-gray2 ml-1.5">
+                    تماس با ما
+                </span>
+
+            </div>
+            <div class="flex gap-x-8 justify-between">
+                <div class="flex w-full max-w-5xl max-h-[615px] h-[80vh] gap-4">
+                     <!-- Thumbnail Swiper -->
+                     <div class="w-[24%]">
+                        <div class="swiper thumbSlider relative h-full w-full overflow-hidden">
+                          <div class="swiper-wrapper">
+                            <div class="swiper-slide cursor-pointer"><img src="../assets/images/Frame 40.png" /></div>
+                            <div class="swiper-slide cursor-pointer"><img src="../assets/images/Frame 40.png" /></div>
+                            <div class="swiper-slide cursor-pointer"><img src="../assets/images/Frame 40.png" /></div>
+                          </div>
+                          <div class="prevThumb [&.swiper-button-disabled]:hidden absolute z-1 top-0 left-0 right-0 cursor-pointer flex justify-center pt-2 h-[64px] bg-gradient-to-b items-start from-white to-transparent w-full">
+                            <svg class="rotate-180" width="28" height="15" viewBox="0 0 28 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 1L14 14L27 1" stroke="black"/>
+                                </svg>
+                                
+                          </div>
+                          <div class="nextThumb [&.swiper-button-disabled]:hidden absolute z-1 bottom-0 left-0 right-0 cursor-pointer flex justify-center pb-2 h-[64px] bg-gradient-to-t items-end from-white to-transparent w-full">
+                            <svg width="28" height="15" viewBox="0 0 28 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 1L14 14L27 1" stroke="black"/>
+                                </svg>
+                                
+                          </div>
+                        </div>
+                      </div>
+                    <!-- Main Swiper -->
+                    <div class="flex-1">
+                      <div class="swiper gallerySlider h-full w-full  overflow-hidden">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide"><img src="../assets/images/Frame 40.png" /></div>
+                          <div class="swiper-slide"><img src="../assets/images/Frame 40.png" /></div>
+                          <div class="swiper-slide"><img src="../assets/images/Frame 40.png" /></div>
+                        </div>
+                      </div>
+                    </div>
+              
+                  
+                  </div>
+              
+                <div class="details w-[30%] flex flex-col justify-between">
+                    <div class="top">
+
+                        <div class="flex justify-between items-start gap-x-3">
+                            <h1 class="font-YekanBakh400 text-[40px] leading-7">
+                                مبلمان آنا
+                            </h1>
+    
+                            <div class="share  relative group/share cursor-pointer">
+            
+                                <div class="shareBtn">
+                                    <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M15.9375 18.9433L8.34524 15.0317C8.49551 14.8379 8.62789 14.6335 8.74107 14.4206L16.3333 18.3427C16.1831 18.5356 16.0507 18.7391 15.9375 18.9512V18.9433ZM20.4583 17.1044C19.6242 17.1044 18.8089 17.3253 18.1154 17.739C17.4218 18.1527 16.8813 18.7408 16.5621 19.4288C16.2429 20.1169 16.1594 20.874 16.3221 21.6044C16.4848 22.3348 16.8865 23.0057 17.4763 23.5323C18.0661 24.0589 18.8175 24.4175 19.6356 24.5628C20.4537 24.7081 21.3016 24.6335 22.0722 24.3485C22.8428 24.0635 23.5015 23.5809 23.9649 22.9617C24.4283 22.3425 24.6756 21.6145 24.6756 20.8698C24.676 20.3752 24.5672 19.8854 24.3554 19.4284C24.1436 18.9714 23.8329 18.5562 23.4413 18.2065C23.0496 17.8568 22.5845 17.5794 22.0727 17.3903C21.5608 17.2012 21.0123 17.1041 20.4583 17.1044ZM20.4583 0.363558C21.2928 0.363033 22.1087 0.583556 22.8027 0.997215C23.4968 1.41087 24.0378 1.99907 24.3573 2.68737C24.6767 3.37566 24.7603 4.13311 24.5975 4.86384C24.4346 5.59457 24.0326 6.26573 23.4423 6.79238C22.852 7.31903 22.1 7.67749 21.2815 7.82239C20.463 7.96729 19.6147 7.89212 18.844 7.60639C18.0733 7.32067 17.4149 6.83722 16.9521 6.21726C16.4893 5.59729 16.2429 4.86867 16.244 4.12361C16.244 3.62948 16.3531 3.1402 16.5648 2.68368C16.7766 2.22717 17.0871 1.81237 17.4784 1.46297C17.8697 1.11357 18.3343 0.836414 18.8456 0.64732C19.3569 0.458226 19.9049 0.360901 20.4583 0.360901V0.363558ZM4.22024 8.73133C3.38602 8.73081 2.57036 8.95119 1.87644 9.36462C1.18253 9.77804 0.641528 10.3659 0.321877 11.0539C0.0022257 11.7419 -0.0817149 12.4991 0.0806729 13.2297C0.243061 13.9602 0.644481 14.6314 1.23416 15.1583C1.82383 15.6851 2.57527 16.044 3.39342 16.1895C4.21157 16.335 5.05967 16.2606 5.83045 15.9757C6.60123 15.6908 7.26005 15.2082 7.72358 14.5889C8.18711 13.9696 8.43453 13.2415 8.43453 12.4967C8.43453 11.4985 7.99062 10.5412 7.20037 9.83512C6.41012 9.12906 5.33821 8.73204 4.22024 8.73133ZM8.34524 9.96165C8.49551 10.1555 8.62789 10.3599 8.74107 10.5728L16.3333 6.65068C16.1831 6.45778 16.0507 6.25427 15.9375 6.04217L8.34524 9.96165Z"
+                                            fill="#A3A3A3" />
+                                    </svg>
+                                </div>
+                                <div class="shareList origin-bottom scale-y-0 duration-500 group-[&.activeShare]/share:scale-y-100 bg-white z-10 absolute bottom-12 left-0 border border-gray2">
+                                    <ul class="flex gap-x-4 items-center py-1 px-2.5">
+                                        <li>
+                                            <a href="https://api.pp.com/send?text=[##cms.request.host##]/[##db.list5.link##]" title="whatsapp" aria-label="whatsapp">
+                                                <svg width="30" height="30" viewBox="0 0 30 30" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M15.0016 0.833336C22.8259 0.833336 29.1683 7.17575 29.1683 15C29.1683 22.8243 22.8259 29.1667 15.0016 29.1667C12.4981 29.1707 10.0386 28.5082 7.87581 27.2471L0.840648 29.1667L2.75598 22.1287C1.49386 19.9652 0.830798 17.5047 0.834981 15C0.834981 7.17575 7.1774 0.833336 15.0016 0.833336ZM10.1736 8.34167L9.89031 8.353C9.70689 8.36417 9.52762 8.41236 9.36331 8.49467C9.20963 8.5817 9.06935 8.69049 8.94681 8.81767C8.77681 8.97775 8.68048 9.11659 8.57706 9.25117C8.05307 9.93245 7.77094 10.7689 7.77523 11.6283C7.77806 12.3225 7.9594 12.9983 8.24273 13.6301C8.82215 14.9079 9.77556 16.2608 11.0336 17.5146C11.3367 17.8163 11.6342 18.1195 11.9544 18.4014C13.5175 19.7777 15.3803 20.7701 17.3944 21.2999L18.1991 21.4232C18.4611 21.4373 18.7232 21.4175 18.9867 21.4048C19.3993 21.3835 19.8022 21.2717 20.1668 21.0775C20.3523 20.9819 20.5334 20.8779 20.7094 20.7658C20.7094 20.7658 20.7703 20.7262 20.8865 20.6383C21.0777 20.4967 21.1953 20.3961 21.354 20.2303C21.4716 20.1085 21.5736 19.9654 21.6515 19.8025C21.762 19.5716 21.8725 19.131 21.9178 18.7641C21.9518 18.4836 21.9419 18.3306 21.9376 18.2357C21.932 18.0841 21.8059 17.9268 21.6685 17.8603L20.844 17.4905C20.844 17.4905 19.6115 16.9536 18.8578 16.6108C18.7789 16.5763 18.6944 16.5566 18.6085 16.5527C18.5116 16.5427 18.4136 16.5536 18.3213 16.5847C18.2289 16.6157 18.1442 16.6661 18.073 16.7326C18.0659 16.7298 17.971 16.8105 16.9467 18.0515C16.8879 18.1305 16.807 18.1902 16.7141 18.223C16.6213 18.2558 16.5208 18.2602 16.4254 18.2357C16.3331 18.2109 16.2427 18.1797 16.1548 18.1422C15.9791 18.0685 15.9182 18.0402 15.7978 17.9892C14.9847 17.6344 14.232 17.155 13.5666 16.5683C13.3881 16.4124 13.2223 16.2424 13.0523 16.0781C12.495 15.5443 12.0093 14.9405 11.6073 14.2818L11.5237 14.1472C11.4637 14.0567 11.4152 13.9592 11.3792 13.8568C11.3254 13.6485 11.4656 13.4813 11.4656 13.4813C11.4656 13.4813 11.8099 13.1045 11.97 12.9005C12.1258 12.7022 12.2576 12.5095 12.3426 12.3721C12.5097 12.1029 12.5621 11.8267 12.4743 11.6128C12.0776 10.6438 11.6668 9.679 11.2446 8.72134C11.1611 8.5315 10.9131 8.3955 10.6879 8.36859C10.6114 8.36009 10.5349 8.35159 10.4584 8.34592C10.2681 8.33647 10.0775 8.33836 9.88748 8.35159L10.1736 8.34167Z"
+                                                        fill="#A3A3A3" />
+                                                </svg>
+                        
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://t.me/share/url?url=[##cms.request.host##]/[##db.list5.link##]&text=maneli" title="telegram" aria-label="telegram">
+                                                <svg width="30" height="28" viewBox="0 0 30 28" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M14.9997 0.25C7.17967 0.25 0.833008 6.41 0.833008 14C0.833008 21.59 7.17967 27.75 14.9997 27.75C22.8197 27.75 29.1663 21.59 29.1663 14C29.1663 6.41 22.8197 0.25 14.9997 0.25ZM21.573 9.6C21.3605 11.7725 20.4397 17.0525 19.9722 19.4863C19.7738 20.5175 19.3772 20.8613 19.0088 20.9025C18.1872 20.9713 17.5638 20.38 16.7705 19.8713C15.5238 19.0738 14.8155 18.5788 13.6113 17.8088C12.2088 16.915 13.1155 16.42 13.923 15.6225C14.1355 15.4163 17.7622 12.2125 17.833 11.9238C17.8428 11.88 17.8415 11.8346 17.8292 11.7915C17.8169 11.7483 17.7938 11.7088 17.7622 11.6763C17.6772 11.6075 17.5638 11.635 17.4647 11.6488C17.3372 11.6763 15.3538 12.955 11.4863 15.485C10.9197 15.8563 10.4097 16.0488 9.95634 16.035C9.44634 16.0213 8.48301 15.76 7.76051 15.5263C6.86801 15.2513 6.17384 15.1 6.23051 14.6188C6.25884 14.3713 6.61301 14.1238 7.27884 13.8625C11.4155 12.1163 14.1638 10.9613 15.538 10.4113C19.4763 8.81625 20.2838 8.54125 20.8222 8.54125C20.9355 8.54125 21.2047 8.56875 21.3747 8.70625C21.5163 8.81625 21.5588 8.9675 21.573 9.0775C21.5588 9.16 21.5872 9.4075 21.573 9.6Z"
+                                                        fill="#A3A3A3" />
+                                                </svg>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.instagram.com/?url=https://[##cms.request.host##]/[##cms.request.rawurl##]" title="instagram" aria-label="instagram">
+                                                <svg width="30" height="30" viewBox="0 0 30 30" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M16.4558 0.833336C18.0496 0.837586 18.8585 0.846086 19.5569 0.865919L19.8318 0.875836C20.1491 0.887169 20.4622 0.901336 20.8404 0.918336C22.3478 0.989169 23.3763 1.22717 24.2787 1.57709C25.2137 1.93692 26.0013 2.42425 26.789 3.2105C27.5094 3.91869 28.0668 4.77534 28.4224 5.72084C28.7723 6.62325 29.0103 7.65175 29.0812 9.1605C29.0982 9.53734 29.1123 9.85042 29.1237 10.1692L29.1322 10.444C29.1534 11.141 29.1619 11.9499 29.1648 13.5437L29.1662 14.6005V16.4563C29.1697 17.4897 29.1588 18.523 29.1336 19.556L29.1251 19.8308C29.1138 20.1496 29.0996 20.4627 29.0826 20.8395C29.0118 22.3483 28.7709 23.3753 28.4224 24.2792C28.0678 25.2252 27.5103 26.082 26.789 26.7895C26.0806 27.5096 25.224 28.067 24.2787 28.4229C23.3763 28.7728 22.3478 29.0108 20.8404 29.0817C20.5043 29.0975 20.1681 29.1117 19.8318 29.1242L19.5569 29.1327C18.8585 29.1525 18.0496 29.1624 16.4558 29.1653L15.399 29.1667H13.5446C12.5108 29.1702 11.477 29.1594 10.4435 29.1341L10.1687 29.1256C9.83238 29.1128 9.49615 29.0982 9.16001 29.0817C7.65268 29.0108 6.62418 28.7728 5.72035 28.4229C4.77496 28.0679 3.91866 27.5104 3.21143 26.7895C2.49041 26.0816 1.9325 25.2249 1.5766 24.2792C1.22668 23.3768 0.988682 22.3483 0.917849 20.8395C0.902065 20.5033 0.887898 20.1671 0.875349 19.8308L0.868265 19.556C0.842159 18.523 0.830352 17.4897 0.832849 16.4563V13.5437C0.828895 12.5104 0.839285 11.477 0.864015 10.444L0.873932 10.1692C0.885265 9.85042 0.899432 9.53734 0.916432 9.1605C0.987265 7.65175 1.22527 6.62467 1.57518 5.72084C1.93093 4.77437 2.48995 3.91745 3.21285 3.2105C3.9199 2.49009 4.77564 1.93265 5.72035 1.57709C6.62418 1.22717 7.65126 0.989169 9.16001 0.918336C9.53685 0.901336 9.85135 0.887169 10.1687 0.875836L10.4435 0.867336C11.4765 0.842166 12.5099 0.831303 13.5432 0.834752L16.4558 0.833336ZM14.9995 7.91667C13.1209 7.91667 11.3192 8.66295 9.99084 9.99133C8.66246 11.3197 7.91618 13.1214 7.91618 15C7.91618 16.8786 8.66246 18.6803 9.99084 20.0087C11.3192 21.3371 13.1209 22.0833 14.9995 22.0833C16.8781 22.0833 18.6798 21.3371 20.0082 20.0087C21.3366 18.6803 22.0828 16.8786 22.0828 15C22.0828 13.1214 21.3366 11.3197 20.0082 9.99133C18.6798 8.66295 16.8781 7.91667 14.9995 7.91667ZM14.9995 10.75C15.5576 10.7499 16.1103 10.8597 16.626 11.0732C17.1416 11.2867 17.6102 11.5997 18.0049 11.9943C18.3996 12.3889 18.7128 12.8573 18.9264 13.3729C19.1401 13.8885 19.2501 14.4412 19.2502 14.9993C19.2503 15.5574 19.1405 16.1101 18.927 16.6258C18.7135 17.1414 18.4005 17.61 18.0059 18.0047C17.6113 18.3994 17.1429 18.7126 16.6273 18.9262C16.1117 19.1399 15.559 19.2499 15.0009 19.25C13.8738 19.25 12.7928 18.8022 11.9957 18.0052C11.1987 17.2082 10.7509 16.1272 10.7509 15C10.7509 13.8728 11.1987 12.7918 11.9957 11.9948C12.7928 11.1978 13.8738 10.75 15.0009 10.75M22.4384 5.79167C21.9688 5.79167 21.5184 5.97824 21.1863 6.31033C20.8542 6.64243 20.6676 7.09285 20.6676 7.5625C20.6676 8.03216 20.8542 8.48257 21.1863 8.81467C21.5184 9.14677 21.9688 9.33334 22.4384 9.33334C22.9081 9.33334 23.3585 9.14677 23.6906 8.81467C24.0227 8.48257 24.2093 8.03216 24.2093 7.5625C24.2093 7.09285 24.0227 6.64243 23.6906 6.31033C23.3585 5.97824 22.9081 5.79167 22.4384 5.79167Z"
+                                                        fill="#A3A3A3" />
+                                                </svg>
+                        
+                                            </a>
+                                        </li>
+                                        <li class="copyLink font-YekanBakh400  text-base text-gray2 whitespace-nowrap">
+                                            copy link
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="absolute left-4 bottom-[42px] scale-y-0 duration-500 group-[&.activeShare]/share:scale-y-100">
+                                    <svg width="9" height="7" viewBox="0 0 9 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M4.5 7L0.602886 0.25H8.39711L4.5 7Z" fill="#A3A3A3" />
+                                    </svg>
+                        
+                                </div>
+                            </div>
+                        </div>
+                        <div class="schemas mt-14">
+                            <ul>
+                                <li class="mb-3">
+                                    <span class="font-YekanBakh400 text-sm leading-7 block mb-2">
+                                        توضیحات
+                                    </span>
+                                    <div class="para font-YekanBakh400 text-sm text-justify leading-7 text-matn">
+                                        <p>
+                                            لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربرد
+                                        </p>
+                                    </div>
+                                </li>
+
+                                <li class="flex flex-wrap gap-x-1 mb-3">
+                                    <span class="font-YekanBakh400 text-balance text-matn whitespace-nowrap">
+                                        متریال:
+                                    </span>
+                                    <p class="font-YekanBakh400 text-base">
+                                        چوب راش 
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="flex w-full cursor-pointer group/link openpopUpForm items-center duration-500 justify-center font-YekanBakh500 text-sm text-matn border-t border-t-matn border-b border-b-matn mx-auto h-[49px] after:w-full after:h-full after:bg-black hover:text-white after:duration-500 after:scale-x-0 hover:after:scale-x-100 after:origin-right after:absolute after:inset-0 relative">
+                        <span class="group-hover/link:text-white z-1 font-YekanBakh500 text-sm text-matn duration-500">
+            
+                            فرم سفازش محصول
+                        </span>
+                    </div>
+            
+                </div>
+            </div>
+        </section>
+        <section class="section2 mt-20 w-80p mx-auto ">
+            <h4 class="font-YekanBakh400 text-sm mb-3">
+                توضیخات تکمیلی:
+            </h4>
+            <div class="para w-[75%] text-matn font-YekanBakh400 text-sm leading-7 text-justify">
+                <p>
+                    لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردلورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربرد
+                </p>
+            </div>
+        </section>
+
+
+
+        <section class="section4 mx-auto mb-16 relative pt-20">
+            <div class="bgImg absolute top-0 left-0 -z-1  right-0 w-full">
+                <img class="w-full h-[322px]" src="[##cms.cms.cdn##]/images/mramar.png" alt="bg">
+            </div>
+            <h5 class="font-YekanBakh400 text-[28px] mb-10 w-80p mx-auto">
+                نظرات شما ارزشمند است
+            </h5>
+
+            <div class="swiper commentsSlider !pt-3 !pb-3">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <basis core="print" datamembername="db.commentlist">
+                        <layout>
+                            @child
+                        </layout>
+                        <else-layout>
+                            <div class="swiper-slide">
+                                <div class="in bg-white w-80p mx-auto py-9 px-6"
+                                    style="box-shadow: 5px 5px 25.4px 3px #A7A7A740;">
+
+                                    <div class="para font-YekanBakh400 text-sm text-center leading-6 text-matn">
+                                        <p>
+                                            هنوز کامنتی ثبت نشده است.
+                                            <br>
+                                            شما اولین نفر باشید
+
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </else-layout>
+                        <face>
+
+                            <div class="swiper-slide !h-auto">
+                                <div class="in bg-white w-80p mx-auto py-9 px-6"
+                                    style="box-shadow: 5px 5px 25.4px 3px #A7A7A740;">
+                                    <h6 class="text-center mb-4 font-YekanBakh400 text-sm leading-6">
+                                        @username
+                                    </h6>
+                                    <div class="para font-YekanBakh400 text-sm text-center leading-6 text-matn">
+                                        <p>
+
+                                            @comment
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </face>
+                    </basis>
+
+                </div>
+
+
+            </div>
+            <div class="btns mt-6 z-10 gap-x-9 justify-center w-full flex items-center">
+                <div class="prevMembers">
+                    <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <mask id="path-1-inside-1_103_2697" fill="white">
+                            <path d="M50 0H0V50H50V0Z" />
+                        </mask>
+                        <path d="M50 1H0V-1H50V1ZM0 49H50V51H0V49Z" fill="#A3A3A3"
+                            mask="url(#path-1-inside-1_103_2697)" />
+                        <path d="M33 24.5L21.75 18.0048V30.9952L33 24.5Z" fill="#A3A3A3" />
+                    </svg>
+
+                </div>
+                <div class="nextMembers">
+                    <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <mask id="path-1-inside-1_103_2693" fill="white">
+                            <path d="M0 0H50V50H0V0Z" />
+                        </mask>
+                        <path d="M0 1H50V-1H0V1ZM50 49H0V51H50V49Z" fill="#A3A3A3"
+                            mask="url(#path-1-inside-1_103_2693)" />
+                        <path d="M17 24.5L28.25 18.0048V30.9952L17 24.5Z" fill="#A3A3A3" />
+                    </svg>
+
+                </div>
+            </div>
+        </section>
+        <section class="section5 w-80p mx-auto mb-8">
+            <h3 class="font-YekanBakh400 text-28 mb-4">
+                ثبت نظر
+            </h3>
+            <div class="para font-YekanBakh400 text-sm leading-6 mb-8">
+                <p>
+                    لطفا دیدگاه خود را در رابطه با این مقاله برای ما بنویسید.
+                </p>
+            </div>
+
+
+            <basis core="dbsource" source="userbehavior" name="db" title="{##db.senduserName.value##}" run="atclient"
+                triggers="db.sendcomment" if="{##db.sendcomment##}" parentid="0" usedforid="[##cms.query.id##]"
+                userid="100005" mid="1" comment="{##db.sendcomment.value##}">
+                <member request="comment" type="scalar" name="comment" preview="true" onRendered="renderCommentFn" />
+            </basis>
+
+            <form action="#" class="commentP">
+                <div class="rSec">
+                    <div class="userInfo grid mb-6 grid-cols-3 gap-x-[51px]">
+                        <div class="nameInput relative">
+                            <label for="userName" class="font-YekanBakh400 text-sm leading-6 mb-2.5 block">
+                                نام و نام خانوادگی*
+                            </label>
+                            <input name="userName"
+                                class="w-full userName outline-0 h-[48px] text-right font-YekanBakh300 text-sm bg-gray1"
+                                type="text" />
+                        </div>
+                        <div class="emailInput relative">
+                            <label for="email" class="font-YekanBakh400 text-sm leading-6 mb-2.5 block">
+                                ایمیل*
+                            </label>
+                            <input type="email" name="email"
+                                class="w-full email outline-0 h-[48px] text-right font-YekanBakh300 text-sm bg-gray1" />
+                        </div>
+                        <div class="tellInput relative">
+                            <label for="tell" class="font-YekanBakh400 text-sm leading-6 mb-2.5 block">
+                                شماره تماس
+                            </label>
+                            <input type="tell" name="tell"
+                                class="w-full tell outline-0 h-[48px] text-right font-YekanBakh300 text-sm bg-gray1"
+                                placeholder="" />
+                        </div>
+                    </div>
+                    <div class="msg ">
+                        <div class="msgInput h-full relative mb-3">
+                            <label for="message" class="font-YekanBakh400 text-sm leading-6 mb-2.5 block">
+                                پیام و درخواست خود را برای ما بنویسید....
+                            </label>
+                            <textarea class="w-full  outline-0 h-[172px] text-right font-YekanBakh300 text-sm bg-gray1"
+                                name="message" id="message"></textarea>
+                        </div>
+                    </div>
+                   
+
+                    <div class="flex gap-x-14 items-end">
+                        <div class="btnsContainer max-w-[390px] w-full gap-x-2.5 flex justify-between items-center border-b border-b-black">
+                            <basis core="dbsource" source="trust_login" name="captcha1" triggers="cms.reload1"
+                                run="atclient">
+                                <member name="code1" type="scalar" request="captcha"></member>
+                            </basis>
+                            <basis datamembername="captcha1.code1" core="print" run="atclient">
+                                <face>
+                                    <script type="text/template">
+                                <div class="captchaContain w-full flex items-center gap-x-2.5 flex-row-reverse py-2 px-3.5">
+                    <span class="captcha-sefaresh shrink-0">
+                        <img src="/@captcha@" width="88" height="44" class="captcha-sefaresh"
+                            alt="captcha" title="captcha" />
+                        <input type="hidden" name="captchaid" value="@captcha@" />
+                    </span>
+    
+                <img src="[##cms.cms.cdn##]/images/cached.png" class="refressh refressh1 cursor-pointer" run="atclient" bc-triggers="click" bc-name="cms.reload1" />
+    
+                    <input type="text" class="codeinputm w-full font-Kohinoor400 text-sm text-gray-matn outline-0 self-stretch" placeholder="کد امنیتی را وارد نمایید" name="captcha" />
+                </div>
+              </script>
+                                </face>
+                            </basis>
+                        </div>
+                        <div class="btnssss flex items-end">
+                            <button type="button"
+                                class="submitComment group/link after:w-full after:h-full after:bg-black hover:text-white after:duration-500 after:scale-x-0 hover:after:scale-x-100 after:origin-right after:absolute after:inset-0 relative cursor-pointer flex items-center w-[387px] justify-center border-t border-t-matn border-b border-b-matn h-[49px]">
+        
+        
+                                <span class="font-Kohinoor400 group-hover/link:text-white z-1 text-sm text-black whitespace-nowrap">
+                                    ثبت
+                                </span>
+                            </button>
+                            <div class="messageSend mt-2 text-right font-YekanBakh300 text-sm ">
+                                <p></p>
+                            </div>
+    
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </form>
+
+
+
+
+        </section>
+
+
+
+        <basis core="print" datamembername="list.star">
+            <layout>
+                <section class="section7 w-80p mx-auto mb-24">
+                    <h3 class="font-YekanBakh500 text-[28px] mb-6">
+                        محصولات مرتبط
+                    </h3>
+        
+                    <!-- Slider main container -->
+                    <div class="swiper relatedProduct">
+                        <!-- Additional required wrapper -->
+                        <div class="swiper-wrapper">
+                            <!-- Slides -->
+                            
+                          
+                            @child
+        
+                        </div>
+        
+                    </div>
+        
+                    <div class="btns z-10 gap-x-3 justify-center mt-6 w-full flex items-center">
+                        <div class="prevRelatedProduct cursor-pointer">
+                            <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <mask id="path-1-inside-1_265_5064" fill="white">
+                                <path d="M50 0H0V50H50V0Z"/>
+                                </mask>
+                                <path d="M50 1H0V-1H50V1ZM0 49H50V51H0V49Z" fill="#A3A3A3" mask="url(#path-1-inside-1_265_5064)"/>
+                                <path d="M33 24.5L21.75 18.0048V30.9952L33 24.5Z" fill="#A3A3A3"/>
+                                </svg>
+                                
+        
+        
+                        </div>
+                        <div class="nextRelatedProduct cursor-pointer">
+                            <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <mask id="path-1-inside-1_265_5060" fill="white">
+                                <path d="M0 0H50V50H0V0Z"/>
+                                </mask>
+                                <path d="M0 1H50V-1H0V1ZM50 49H0V51H50V49Z" fill="#A3A3A3" mask="url(#path-1-inside-1_265_5060)"/>
+                                <path d="M17 24.5L28.25 18.0048V30.9952L17 24.5Z" fill="#A3A3A3"/>
+                                </svg>
+                                
+        
+        
+                        </div>
+                    </div>
+        
+                </section>
+            
+            </layout>
+         
+            <face>
+                <div class="swiper-slide">
+        
+                    <div class="proBox mb-4 pb-2 border-b border-b-black">
+                        <a href="/@db.related-product.link" title="@db.related-product.title">
+                            <div class="imgS mb-0.5">
+                                <img class="w-full" src="[##cms.cms.cdn##]/@db.related-product.00371X00371prp" alt="@db.related-product.title">
+                            </div>
+                            <h2 class="font-Trueno200  text-xl text-black mb-3 text-center">
+                               @db.en-related-product.title	
+                            </h2>
+                            <h3 class="font-YekanBakh400 text-base text-center">
+                                @db.related-product.title	
+                            </h3>
+                        </a>
+                    </div>
+                </div>
+            </face>
+        </basis>
+     
+    
+
+        <basis core="print" datamembername="basisName.related-project">
+            <layout>
+                
+                <section class="section8 w-80p mx-auto mb-1">
+                    <h3 class="font-YekanBakh500 text-[28px] mb-6">
+                        پروژه های مرتبط
+                    </h3>
+        
+                    <!-- Slider main container -->
+                    <div class="swiper relatedProject">
+                        <!-- Additional required wrapper -->
+                        <div class="swiper-wrapper">
+                            <!-- Slides -->
+                          
+                            @child
+        
+        
+                        </div>
+        
+                    </div>
+        
+                    <div class="btns z-10 gap-x-3 justify-center mt-6 w-full flex items-center">
+                        <div class="prevRelatedProject cursor-pointer">
+                            <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <mask id="path-1-inside-1_265_5064" fill="white">
+                                <path d="M50 0H0V50H50V0Z"/>
+                                </mask>
+                                <path d="M50 1H0V-1H50V1ZM0 49H50V51H0V49Z" fill="#A3A3A3" mask="url(#path-1-inside-1_265_5064)"/>
+                                <path d="M33 24.5L21.75 18.0048V30.9952L33 24.5Z" fill="#A3A3A3"/>
+                                </svg>
+                                
+        
+        
+                        </div>
+                        <div class="nextRelatedProject cursor-pointer">
+                            <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <mask id="path-1-inside-1_265_5060" fill="white">
+                                <path d="M0 0H50V50H0V0Z"/>
+                                </mask>
+                                <path d="M0 1H50V-1H0V1ZM50 49H0V51H50V49Z" fill="#A3A3A3" mask="url(#path-1-inside-1_265_5060)"/>
+                                <path d="M17 24.5L28.25 18.0048V30.9952L17 24.5Z" fill="#A3A3A3"/>
+                                </svg>
+                                
+        
+        
+                        </div>
+                    </div>
+        
+        
+                    </div>
+                </section>
+            </layout>
+          
+            <face>
+                <div class="swiper-slide group/slide">
+        
+                    <a href="/@link" class="flex card overflow-hidden w-full mb-3 items-center justify-center relative group/proj">
+                        <div class=" w-full">
+                            <img class="w-full imgS scale-105" src="[##cms.cms.cdn##]/@00383X00447prp" alt="@title">
+                        </div>
+                    
+                        <div  data-tilt data-tilt-speed="300"
+                         class="secImg w-[75%] js-tilt absolute">
+                            <div class="in relative after:absolute duration-500 scale-110 opacity-0 group-hover/proj:opacity-100 group-hover/proj:scale-100 after:inset-0 after:bg-black/[0.3]">
+        
+                                <img class="w-full" src="[##cms.cms.cdn##]/@00383X00447prp" alt="@title">
+                            </div>
+        
+                        </div>
+                        <div data-tilt data-tilt-speed="300" class="title js-tilt absolute duration-500 scale-110 opacity-0 group-hover/proj:opacity-100 group-hover/proj:scale-100">
+                            <h4 class="text-white font-YekanBakh700 text-2xl text-center">
+                               @title
+                            </h4>
+                        </div>
+                    </a>
+                </div>
+            </face>
+        </basis>
+
+
+        <basis core="print" datamembername="basisName.related-blog">
+            <layout>
+                <section class="section6 w-80p mx-auto mb-16">
+                    <h3 class="font-YekanBakh500 text-xl mb-6">
+                        بلاگ مرتبط
+                    </h3>
+        
+                    <!-- Slider main container -->
+                    <div class="swiper relatedBlog">
+                        <!-- Additional required wrapper -->
+                        <div class="swiper-wrapper">
+                            <!-- Slides -->
+                          
+                            @child
+        
+                        </div>
+        
+                    </div>
+        
+                    <div class="relatedBlogPagination flex justify-center items-center mt-20">
+        
+                    </div>
+                </section>
+              
+            </layout>
+        
+            <face>
+                <div class="swiper-slide">
+        
+                    <div class="blogBox mb-6 group/blogBox">
+                        <a href="/@link" title="@title">
+                            <div class="imgS mb-3.5">
+                                <img src="[##cms.cms.cdn##]/@00387X00221prp" alt="@title" class="w-full group-hover/blogBox:opacity-50 duration-500">
+                            </div>
+                            <div class="date text-left mb-3.5">
+                                <span class="font-YekanBakh400 text-sm leading-6 text-matn">
+                                  @prp_7249
+                                </span>
+                            </div>
+                            <h3 class="font-YekanBakh700 text-base text-justify mb-3">
+                             @title
+                            </h3>
+                            <div class="para font-YekanBakh400 text-sm leading-6 text-matn line-clamp-3">
+                                <p>
+                                    @prp_7244
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+
+
+                    
+                </div>
+            </face>
+        </basis>
+
+
+
+    </main>
+    <div dir="rtl" class="popUpForm overflow-y-auto w-dvw h-svh fixed bg-black/[0.85] inset-0 z-[102585201285] scale-0 duration-1000">
+        <div class="in w-90p mx-auto relative">
+
+            <div class="closePop mt-10">
+                <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M0.347807 0.347807C0.811562 -0.115936 1.56344 -0.115936 2.0272 0.347807L9.50001 7.82065L16.9728 0.347807C17.4366 -0.115936 18.1885 -0.115936 18.6522 0.347807C19.1159 0.811562 19.1159 1.56344 18.6522 2.0272L11.1794 9.50001L18.6522 16.9728C19.1159 17.4366 19.1159 18.1885 18.6522 18.6522C18.1885 19.1159 17.4366 19.1159 16.9728 18.6522L9.50001 11.1794L2.0272 18.6522C1.56344 19.1159 0.811562 19.1159 0.347807 18.6522C-0.115936 18.1885 -0.115936 17.4366 0.347807 16.9728L7.82065 9.50001L0.347807 2.0272C-0.115936 1.56344 -0.115936 0.811562 0.347807 0.347807Z"
+                        fill="white" />
+                </svg>
+
+            </div>
+
+            <div class="mt-6 bg-white pb-10 pt-16">
+                <h5 class=" text-center mb-14 font-YekanBakh400 text-[28px]">
+                    فرم سفارش محصول
+                </h5>
+                <div class="formContainer w-90p mx-auto relative ">
+                    <div class="loaderContainer absolute flex items-center justify-center inset-0 bg-white/[0.6] z-1">
+                        <div class="loader"></div>
+                    </div>
+                    <form name="myForm" class="homeForm1" action="" onsubmit="return validateForm()" method="post">
+                        <basis core="schema" run="atclient"
+                            schemaUrl="/schema/domainform/322723FC-C477-4A6F-9AD3-6242DBAA6A82/2BCE5803-60BF-4196-9E46-4A7F027D02A0/fa/فرم-سفارش-محصول"
+                            displayMode="new" button="[data-btn-add1]" resultSourceId="demo.data1"
+                            onRendered="renderFn1">
+                        </basis>
+                        <basis core="callback" run="AtClient" triggers="demo.data1" method="onSource1"></basis>
+                        <basis core="api" url="/schema/domainform/322723FC-C477-4A6F-9AD3-6242DBAA6A82/fa/editobject"
+                            method="post" run="atclient"
+                            body="object_edit={##edit.object1.value##}&captcha={##edit.object1.captcha##}&captchaid={##edit.object1.captchaid##}"
+                            content-type="application/x-www-form-urlencoded" triggers="edit.object1"
+                            if="{##edit.object1##}" OnProcessed="OnProcessedEditObject1" onRendered="renderEditobject">
+                        </basis>
+
+                        <div data-bc-question="" class="qclass8">
+                            <div id="requestBox"
+                                class="captchaContainerclass mb-10 w-full gap-x-2.5 !flex flex-row-reverse items-center"
+                                data-bc-answer-container="" data-bc-schema-info-multi="0" data-bc-schema-info-word="58"
+                                data-bc-schema-info-part="1" data-bc-schema-info-part-0-type="text">
+                                <basis core="dbsource" source="trust_login" name="captcha1" triggers="cms.reload1"
+                                    run="atclient">
+                                    <member name="code1" type="scalar" request="captcha"></member>
+                                </basis>
+                                <basis datamembername="captcha1.code1" core="print" run="atclient">
+                                    <face>
+                                        <script type="text/template">
+
+                    <span class="captcha-sefaresh shrink-0">
+                        <img src="/@captcha@" alt="captcha" width="88" height="44" class="captcha-sefaresh"
+                        title="captcha" />
+                    <input type="hidden" name="captchaid" aria-label="captcha" value="@captcha@" />
+                </span>
+            <img src="[##cms.cms.cdn##]/images/cached.png" alt="refressh" class="refressh cursor-pointer refressh1" run="atclient" bc-triggers="click" bc-name="cms.reload1" />
+            <input type="text" class="codeinputm" name="captcha" aria-label="captcha2" placeholder="عبارت امنیتی را وارد کنید" />
+            </script>
+                                    </face>
+                                </basis>
+                            </div>
+                            <button
+                                class="w-full formBtn  cursor-pointer py-3.5 border-t border-t-black border-b border-b-black"
+                                type="submit" data-btn-add1 data-btn-submit="">
+                                <span class="font-YekanBakh500 text-sm text-black">
+
+                                    ثبت
+
+                                </span>
+                                <div class="loaderForm absolute hidden"></div>
+                            </button>
+
+                            <div class="responsMsg1 responsMsg mt-3 hidden ">
+
+                                <span class="font-YekanBakh400 text-xl">فرم با موفقیت ثبت شد.</span>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
+
+    <!-- <script>
+        document.querySelector("header").classList.add("darkHeader")
+        document.querySelector("header").classList.add("activeHeader")
+    </script> -->
+
+    <script src="../../mobile/assets/js/swiper-bundle11.0.5.min.js"></script>
+    <script src="../assets/js/product.js"></script>
+</body>
+
+</html>

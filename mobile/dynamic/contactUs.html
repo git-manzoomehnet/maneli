@@ -20,16 +20,16 @@
 
 
         <section class="section1 relative flex items-center justify-center">
-            <div class="breadCrumb absolute top-[120px] z-10 w-90p mx-auto">
-                <a href="/" title="home" class="inline-block font-YekanBakh400 text-xs text-gray2 ml-1.5">
+            <div class="breadCrumb absolute top-[87px] z-10 w-90p mx-auto">
+                <a href="/" title="home" class="inline-block font-YekanBakh400 text-xs text-white ml-1.5">
                     خانه
                 </a>
 
 
-                <i class="font-YekanBakh400 inline-block -translate-y-0.5 text-xs text-gray2 ml-1.5">
+                <i class="font-YekanBakh400 inline-block -translate-y-0.5 text-xs text-white ml-1.5">
                     .
                 </i>
-                <span class="inline-block font-YekanBakh400 text-xs text-gray2 ml-1.5">
+                <span class="inline-block font-YekanBakh400 text-xs text-white ml-1.5">
                     تماس با ما
                 </span>
 
@@ -75,7 +75,7 @@
                     <basis core="print" datamembername="db.contactus">
                         <layout>
                             <div class="address text-center mb-10">
-                                <span class="block text-center font-YekanBakh400 text-sm leading-6">
+                                <span class="block text-center text-matn font-YekanBakh400 text-sm leading-6">
                                   آدرس :
                                 </span>
                                 <div class="para text-center font-YekanBakh400 text-base leading-6">
@@ -92,7 +92,7 @@
 
                 
                     <div class="phone text-center mb-10">
-                        <span class="block text-center font-YekanBakh400 text-sm leading-6">
+                        <span class="block text-center text-matn font-YekanBakh400 text-sm leading-6">
                             تلفن تماس با شوروم :
                         </span>
                         <a href="tel:02175924" title="tel"
@@ -103,7 +103,7 @@
                     <basis core="print" datamembername="db.contactus">
                         <layout>
                             <div class="phone text-center mb-10">
-                                <span class="block text-center font-YekanBakh400 text-sm leading-6">
+                                <span class="block text-matn text-center font-YekanBakh400 text-sm leading-6">
                                     تلفن تماس:
                                 </span>
                                 @child
@@ -122,7 +122,7 @@
                     <basis core="print" datamembername="db.contactus">
                         <layout>
                             <div class="mail text-center mb-10">
-                                <span class="block text-center font-YekanBakh400 text-sm leading-6">
+                                <span class="block text-matn text-center font-YekanBakh400 text-sm leading-6">
                                     ایمیل :
                                 </span>
                                 @child
@@ -144,7 +144,7 @@
                         <face filter="TypeID=128">
                             
                             <div class="visit text-center mb-8">
-                                <span class="block text-center font-YekanBakh400 text-sm leading-6">
+                                <span class="block text-matn text-center font-YekanBakh400 text-sm leading-6">
                                    @Question :
                                 </span>
                                 <div class="para text-center font-YekanBakh400 text-base leading-6">
@@ -265,9 +265,10 @@
                 </div>
             </div>
         </section>
-        <basis core="call" file="footer.inc" pageindex="[##cms.cms.pageindex##]" />
-
+            <basis core="call" file="top-footer.inc" pageindex="[##cms.cms.pageindex##]" />
     </main>
+    <basis core="call" file="footer.inc" pageindex="[##cms.cms.pageindex##]" />
+
 
     <basis core="call" file="scripts.inc" pageindex="[##cms.cms.pageindex##]" />
 

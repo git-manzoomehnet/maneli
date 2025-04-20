@@ -1,0 +1,340 @@
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="19" catid="214050"> <member name="project-list" postsql=" select * from [db.project-list] where title like '%[##cms.query.q##]%'" size="383x447" type="list" link="project.bc"/> </basis>
+	<basis core="dbsource" name="db" source="basiscore" lid="2" mid="20" catid="213958"> <member name="en-productList" type="list" size="371x371"/> </basis>	
+
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="20" catid="213958"> <member name="productList" type="list" size="371x371" postsql=" select * from [db.productList] where title like '%[##cms.query.q##]%'"/> </basis>	
+  <basis core="inlinesource" name="list" >
+    <member name="star" lefttblcol="db.productList.id" righttblcol="db.en-productList.id" format="join" jointype="leftjoin"  />
+  </basis>
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="1" catid="213959"> <member name="list-blog" postsql=" select * from [db.list-blog] where title like '%[##cms.query.q##]%'" size="387x221" type="list" propertyid="7249,7244" link="article.bc"/> </basis>
+
+
+<!DOCTYPE html>
+<html lang="fa">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>نتیجه جستجو برای [##cms.query.q##]</title>
+    <meta name="description" content="نتیجه جستجو برای [##cms.query.q##]">
+
+    <link rel="stylesheet" href="[##cms.cms.cdn##]/css/swiper-bundle.min.css">
+    <basis core="call" file="styles.inc"  />
+</head>
+
+<body>
+
+    <main class="searchPage" dir="rtl">
+        <basis core="call" file="header.inc"  />
+
+        <basis core="group" if="'[##cms.query.q##]'=''">
+            
+            <div class="formPage h-svh flex flex-col items-center justify-center w-80p mx-auto">
+                <form class="pb-5 w-full border-b border-matn mx-auto flex items-center justify-center " role="search"
+                    id="searchform" action="/search.bc" method="get">
+                    <input type="search" name="q" placeholder="جستجو کنید..."
+                        class="outline-0 border-0 font-YekanBakh400 w-full text-base  text-matn placeholder:font-YekanBakh400 placeholder:text-base placeholder:text-graygreen">
+                    <button type="submit" class="cursor-pointer px-2.5">
+                        <svg width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M13.149 0.263931C5.9986 0.263931 0.180908 6.08168 0.180908 13.2321C0.180908 20.3826 5.9986 26.2003 13.149 26.2003C16.429 26.2003 19.4302 24.9712 21.7195 22.9541L27.7843 28.919L29 27.6847L22.9403 21.7245C24.9185 19.4471 26.1223 16.4781 26.1223 13.2319C26.1173 6.08142 20.2994 0.263931 13.149 0.263931ZM13.149 24.469C6.9556 24.469 1.91224 19.4273 1.91224 13.2321C1.91224 7.03868 6.95386 1.99527 13.149 1.99527C19.3424 1.99527 24.3857 7.03695 24.3857 13.2321C24.3857 19.4256 19.3441 24.469 13.149 24.469Z"
+                                fill="#525252" />
+                        </svg>
+    
+                    </button>
+                </form>
+            </div>
+        </basis>
+
+        <basis core="group"
+            if="'[##list.star.RowNumber##]' = '' and '[##db.list-blog.RowNumber##]' = '' and '[##db.project-list.RowNumber##]' = ''">
+
+            <div class="notFound h-svh flex flex-col items-center justify-center w-80p mx-auto">
+                <form class="pb-5 border-b border-matn mx-auto flex items-center justify-center w-full " role="search"
+                    id="searchform" action="/search.bc" method="get">
+                    <input type="search" name="q" placeholder="جستجو کنید..."
+                    class="outline-0 border-0 font-YekanBakh400 w-full text-base  text-matn placeholder:font-YekanBakh400 placeholder:text-base placeholder:text-graygreen">
+               <button type="submit" class="cursor-pointer px-2.5">
+                        <svg width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M13.149 0.263931C5.9986 0.263931 0.180908 6.08168 0.180908 13.2321C0.180908 20.3826 5.9986 26.2003 13.149 26.2003C16.429 26.2003 19.4302 24.9712 21.7195 22.9541L27.7843 28.919L29 27.6847L22.9403 21.7245C24.9185 19.4471 26.1223 16.4781 26.1223 13.2319C26.1173 6.08142 20.2994 0.263931 13.149 0.263931ZM13.149 24.469C6.9556 24.469 1.91224 19.4273 1.91224 13.2321C1.91224 7.03868 6.95386 1.99527 13.149 1.99527C19.3424 1.99527 24.3857 7.03695 24.3857 13.2321C24.3857 19.4256 19.3441 24.469 13.149 24.469Z"
+                                fill="#525252" />
+                        </svg>
+
+                    </button>
+                </form>
+
+                <div class="para mt-28 text-center font-YekanBakh700 text-2xl text-matn">
+                    <p>
+
+                        صفحه مورد نظر یافت نشد،
+                        لطفا واژه ی دیگری را جستجو نمایید.
+                    </p>
+                </div>
+            </div>
+
+        </basis>
+        <basis core="group" if="'[##cms.query.q##]' <> ''">
+        <basis core="group"
+            if="'[##list.star.RowNumber##]' <> '' or '[##db.list-blog.RowNumber##]' <> '' or '[##db.project-list.RowNumber##]' <> ''">
+
+            <div class="foundRes mt-36 w-80p mx-auto">
+                <form class="pb-5 mb-7 border-b border-matn mx-auto w-full flex items-center justify-center " role="search"
+                    id="searchform" action="/search.bc" method="get">
+                    <input type="search" name="q" placeholder="جستجو کنید..."
+                        class="outline-0 border-0 font-YekanBakh400 w-full text-base  text-matn placeholder:font-YekanBakh400 placeholder:text-base placeholder:text-graygreen">
+                    <button type="submit" class="cursor-pointer px-2.5">
+                        <svg width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M13.149 0.263931C5.9986 0.263931 0.180908 6.08168 0.180908 13.2321C0.180908 20.3826 5.9986 26.2003 13.149 26.2003C16.429 26.2003 19.4302 24.9712 21.7195 22.9541L27.7843 28.919L29 27.6847L22.9403 21.7245C24.9185 19.4471 26.1223 16.4781 26.1223 13.2319C26.1173 6.08142 20.2994 0.263931 13.149 0.263931ZM13.149 24.469C6.9556 24.469 1.91224 19.4273 1.91224 13.2321C1.91224 7.03868 6.95386 1.99527 13.149 1.99527C19.3424 1.99527 24.3857 7.03695 24.3857 13.2321C24.3857 19.4256 19.3441 24.469 13.149 24.469Z"
+                                fill="#525252" />
+                        </svg>
+
+                    </button>
+                </form>
+
+
+                <basis core="print" datamembername="db.project-list">
+                    <layout>
+                        <section class="section1 mb-16">
+                            <h1 class="font-YekanBakh400 text-28 mb-6">
+                                نتیجه جستجو در پروژه ها
+                            </h1>
+        
+                            <!-- Slider main container -->
+                            <div class="swiper relatedProject">
+                                <!-- Additional required wrapper -->
+                                <div class="swiper-wrapper">
+                                    <!-- Slides -->
+                            
+        
+            @child
+        
+                                </div>
+        
+                            </div>
+        
+                            <div class="btns mt-5 gap-x-9 justify-center w-full flex items-center">
+                                <div class="prevProjects cursor-pointer">
+                                    <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <mask id="path-1-inside-1_103_2697" fill="white">
+                                            <path d="M50 0H0V50H50V0Z" />
+                                        </mask>
+                                        <path d="M50 1H0V-1H50V1ZM0 49H50V51H0V49Z" fill="#A3A3A3"
+                                            mask="url(#path-1-inside-1_103_2697)" />
+                                        <path d="M33 24.5L21.75 18.0048V30.9952L33 24.5Z" fill="#A3A3A3" />
+                                    </svg>
+                
+                                </div>
+                                <div class="nextProjects cursor-pointer">
+                                    <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <mask id="path-1-inside-1_103_2693" fill="white">
+                                            <path d="M0 0H50V50H0V0Z" />
+                                        </mask>
+                                        <path d="M0 1H50V-1H0V1ZM50 49H0V51H50V49Z" fill="#A3A3A3"
+                                            mask="url(#path-1-inside-1_103_2693)" />
+                                        <path d="M17 24.5L28.25 18.0048V30.9952L17 24.5Z" fill="#A3A3A3" />
+                                    </svg>
+                
+                                </div>
+                            </div>
+                        </section>
+                    
+                    </layout>
+                 
+                    <face>
+                        <div class="swiper-slide group/slide">
+        
+                            <a href="/@link" title="@title" class="flex card overflow-hidden w-full mb-3 items-center justify-center relative group/proj">
+                        <div class=" w-full">
+                            <img class="w-full imgS scale-105" src="[##cms.cms.cdn##]/@00383X00447prp" alt="@title">
+                        </div>
+
+                        <div data-tilt data-tilt-speed="300" class="secImg w-[75%] js-tilt absolute">
+                            <div
+                                class="in relative after:absolute duration-500 scale-110 opacity-0 group-hover/proj:opacity-100 group-hover/proj:scale-100 after:inset-0 after:bg-black/[0.3]">
+
+                                <img class="w-full" src="[##cms.cms.cdn##]/@00383X00447prp" alt="@title">
+                            </div>
+
+                        </div>
+                        <div data-tilt data-tilt-speed="300"
+                            class="title js-tilt absolute duration-500 scale-110 opacity-0 group-hover/proj:opacity-100 group-hover/proj:scale-100">
+                            <h4 class="text-white font-YekanBakh700 text-2xl text-center">
+                                @title
+                            </h4>
+                        </div>
+                    </a>
+                        </div>
+                     
+                    </face>
+                </basis>
+
+
+                <basis core="print" datamembername="list.star">
+                    <layout>
+                        <section class="section2 mb-16">
+                            <h3 class="font-YekanBakh500 text-xl mb-6">
+                                نتیجه جستجو در محصولات
+                            </h3>
+        
+                            <!-- Slider main container -->
+                            <div class="swiper relatedProduct">
+                                <!-- Additional required wrapper -->
+                                <div class="swiper-wrapper">
+                                    <!-- Slides -->
+                                    
+                                    @child
+                                    
+                                    
+                                </div>
+                                
+                            </div>
+                            <div class="btns z-10 gap-x-9 justify-center mt-6 w-full flex items-center">
+                                <div class="prevRelatedProduct cursor-pointer">
+                                    <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <mask id="path-1-inside-1_265_5064" fill="white">
+                                        <path d="M50 0H0V50H50V0Z"/>
+                                        </mask>
+                                        <path d="M50 1H0V-1H50V1ZM0 49H50V51H0V49Z" fill="#A3A3A3" mask="url(#path-1-inside-1_265_5064)"/>
+                                        <path d="M33 24.5L21.75 18.0048V30.9952L33 24.5Z" fill="#A3A3A3"/>
+                                        </svg>
+                                        
+                
+                
+                                </div>
+                                <div class="nextRelatedProduct cursor-pointer">
+                                    <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <mask id="path-1-inside-1_265_5060" fill="white">
+                                        <path d="M0 0H50V50H0V0Z"/>
+                                        </mask>
+                                        <path d="M0 1H50V-1H0V1ZM50 49H0V51H50V49Z" fill="#A3A3A3" mask="url(#path-1-inside-1_265_5060)"/>
+                                        <path d="M17 24.5L28.25 18.0048V30.9952L17 24.5Z" fill="#A3A3A3"/>
+                                        </svg>
+                                        
+                
+                
+                                </div>
+                            </div>
+                        </section>
+                    </layout>
+                 
+                    <face>
+                        <div class="swiper-slide">
+                
+                            <div class="proBox mb-4 pb-2 border-b border-b-black">
+                                <a href="/@db.productList.link" title="@db.en-productList.title">
+                                    <div class="imgS mb-0.5">
+                                        <img class="w-full" src="[##cms.cms.cdn##]/@db.productList.00371X00371prp" alt="@db.en-productList.title">
+                                    </div>
+                                    <h2 class="font-Trueno200  text-xl text-black mb-3 text-center">
+                                       @db.en-productList.title	
+                                    </h2>
+                                    <h3 class="font-YekanBakh400 text-base text-center">
+                                        @db.productList.title	
+                                    </h3>
+                                </a>
+                            </div>
+                        </div>
+                    </face>
+                </basis>
+
+
+                <basis core="print" datamembername="db.list-blog">
+                    <layout>
+                        <section class="section3 mb-16">
+                            <h3 class="font-YekanBakh500 text-xl mb-6">
+                                نتیجه جست و جو در بلاگ
+                            </h3>
+        
+                            <!-- Slider main container -->
+                            <div class="swiper relatedBlog">
+                                <!-- Additional required wrapper -->
+                                <div class="swiper-wrapper">
+                                    <!-- Slides -->
+                                    @child
+                                    
+                                </div>
+                                
+                            </div>
+                            
+                           
+
+                            <div class="btns z-10 gap-x-9 justify-center mt-6 w-full flex items-center">
+                                <div class="prevBlog cursor-pointer">
+                                    <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <mask id="path-1-inside-1_265_5064" fill="white">
+                                        <path d="M50 0H0V50H50V0Z"/>
+                                        </mask>
+                                        <path d="M50 1H0V-1H50V1ZM0 49H50V51H0V49Z" fill="#A3A3A3" mask="url(#path-1-inside-1_265_5064)"/>
+                                        <path d="M33 24.5L21.75 18.0048V30.9952L33 24.5Z" fill="#A3A3A3"/>
+                                        </svg>
+                                        
+                
+                
+                                </div>
+                                <div class="nextBlog cursor-pointer">
+                                    <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <mask id="path-1-inside-1_265_5060" fill="white">
+                                        <path d="M0 0H50V50H0V0Z"/>
+                                        </mask>
+                                        <path d="M0 1H50V-1H0V1ZM50 49H0V51H50V49Z" fill="#A3A3A3" mask="url(#path-1-inside-1_265_5060)"/>
+                                        <path d="M17 24.5L28.25 18.0048V30.9952L17 24.5Z" fill="#A3A3A3"/>
+                                        </svg>
+                                        
+                
+                
+                                </div>
+                            </div>
+
+
+                        </section>
+                    </layout>
+                    
+                    <face>
+                        <div class="swiper-slide">
+    
+                            <div class="blogBox group/blogBox">
+                                <a href="/@link" title="@title">
+                                    <div class="imgS mb-3.5">
+                                        <img src="[##cms.cms.cdn##]/@00387X00221prp" alt="@title" class="w-full group-hover/blogBox:opacity-50 duration-500">
+                                    </div>
+                                    <div class="date text-left mb-3.5">
+                                        <span class="font-YekanBakh400 text-sm leading-6 text-matn">
+                                          @prp_7249
+                                        </span>
+                                    </div>
+                                    <h3 class="font-YekanBakh700 text-base text-justify mb-3">
+                                     @title
+                                    </h3>
+                                    <div class="para font-YekanBakh400 text-sm leading-6 text-matn line-clamp-3">
+                                        <p>
+                                            @prp_7244
+                                        </p>
+                                    </div>
+                                </a>
+                            </div>
+
+                        </div>
+                        
+                    </face>
+                </basis>
+
+            </div>
+
+            <basis core="call" file="footer.inc"  />
+        </basis>
+        </basis>
+    </main>
+
+    <script>
+        document.querySelector("header").classList.add("darkHeader")
+        document.querySelector("header").classList.add("activeHeader")
+    </script>
+    <basis core="call" file="scripts.inc"  />
+
+
+    <script src="[##cms.cms.cdn##]/_js/swiper-bundle11.0.5.min.js"></script>
+    <script src="[##cms.cms.cdn##]/js/search.js"></script>
+</body>
+
+</html>

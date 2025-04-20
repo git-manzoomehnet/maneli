@@ -1,0 +1,182 @@
+    <basis core="dbsource" request="seo" source="basiscore" name="db" lid="1" >
+        <member name="seolist" type="list" request="cat" id="[##cms.query.catid##]"></member>
+    </basis>
+    <basis core="dbsource" source="basiscore" name="db" lid="1" mid="20" > <member request="navcatid" type="tree" name="navList" parentid="214007" /> </basis>	
+
+    <basis core="dbsource" source="basiscore" name="db" lid="1" mid="20" > <member request="cat" type="tree" name="filter" parentid="213999" size="452x452"></member> </basis>
+
+    <basis core="dbsource" name="db" source="basiscore" lid="1" mid="20" catid="214007"> <member name="productList" type="list" size="452x452"/> </basis>	
+    <basis core="dbsource" name="db" source="basiscore" lid="2" mid="20" catid="214007"> <member name="en-productList" type="list" size="452x452"/> </basis>	
+
+    
+        <basis core="inlinesource" name="list" >
+            <member name="star" lefttblcol="db.productList.id" righttblcol="db.en-productList.id" format="join" jointype="leftjoin" />
+        </basis>
+    <!DOCTYPE html>
+    <html lang="fa">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <basis core="print" datamembername="db.seolist">
+            <face>
+                <title>[##cms.seo.title|db.seolist.title##]</title>
+                <meta name="description" content="[##cms.seo.description|db.seolist.description##]" />
+            </face>
+        </basis>
+
+        <link rel="stylesheet" href="[##cms.cms.cdn##]/css/fullpage.min.css">
+        <basis core="call" file="styles.inc"/>
+
+    </head>
+    <body>
+        
+        <main class="productList" dir="rtl">
+            <basis core="call" file="header.inc"/>
+
+            <div class=" relative">
+                <nav class="nav nav-align flex flex-col gap-y-4 fixed  z-10 top-[291px]">
+
+                    <div class="nav-btn prevSection prev cursor-pointer">
+                        <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <mask id="path-1-inside-1_78_2978" fill="white">
+                                <path d="M0 0L0 50H50V0L0 0Z" />
+                            </mask>
+                            <path d="M1 0L1 50H-1L-1 0L1 0ZM49 50V0L51 0V50H49Z" fill="#A3A3A3"
+                                mask="url(#path-1-inside-1_78_2978)" />
+                            <path d="M24.5 17L18.0048 28.25H30.9952L24.5 17Z" fill="#A3A3A3" />
+                        </svg>
+
+                    </div>
+                    <span class="sectionFraction flex items-end gap-x-2 font-YekanBakh300 text-3xl">1/3</span>
+                    <div class="nav-btn next nextSection cursor-pointer">
+
+                        <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <mask id="path-1-inside-1_78_2974" fill="white">
+                                <path d="M0 50L0 0H50V50H0Z" />
+                            </mask>
+                            <path d="M1 50L1 0H-1L-1 50H1ZM49 0V50H51V0H49Z" fill="#A3A3A3"
+                                mask="url(#path-1-inside-1_78_2974)" />
+                            <path d="M24.5 33L18.0048 21.75H30.9952L24.5 33Z" fill="#A3A3A3" />
+                        </svg>
+
+                    </div>
+                </nav>
+                <div id="fullpage" class="" dir="rtl">
+
+                    <section class="section2 h-svh section !justify-start relative">
+
+                            <div class="breadCrumb w-80p mt-[110px] top-[110px] z-10 mb-16 mx-auto">
+                                <a href="/" title="home" class="inline-block font-YekanBakh400 text-sm text-gray2 ml-1.5">
+                                    خانه
+                                </a>
+                                
+
+                                <basis core="print" datamembername="db.navList">
+                                
+                                    <face filter="parentcatid not in (213958,'[##cms.query.catid##]') ">
+                                        <i class="font-YekanBakh400 inline-block -translate-y-0.5 text-sm text-gray2 ml-1.5">
+                                            .
+                                        </i>
+                                        
+                                        <a href="/product-list.bc?catid=@parentcatid" title="home" class="inline-block font-YekanBakh400 text-sm text-gray2 ml-1.5">
+                                            @title
+                                        </a>
+                                        
+                                    </face>
+                                </basis>
+                            
+
+                                <basis core="print" datamembername="db.navList">
+                                
+                                    <face filter="parentcatid <> '[##cms.query.catid##]'">
+                                        <i class="font-YekanBakh400 inline-block -translate-y-0.5 text-sm text-gray2 ml-1.5">
+                                            .
+                                        </i>
+                                        <span class="inline-block font-YekanBakh400 text-sm text-gray2 ml-1.5">
+                                        @title
+                                        </span>
+                                        
+                                    </face>
+                                </basis>
+
+                            </div>
+
+                            <basis core="print" datamembername="db.filter">
+                                <layout>
+                                    <div class="filters w-80p mb-10 pb-7 border-b-black w-full mx-auto border-b">
+                                        <ul class="flex items-center justify-center gap-x-8">
+                                            
+                                            @child
+                                        </ul>
+                                    </div>
+                                </layout>
+                                
+                                <face filter="catid<> '[##cms.query.catid##]'">
+                                    <li data-id="@catid" class="filterBtn cursor-pointer group/filterBtn">
+                                        <span
+                                            class="font-YekanBakh400 text-base leading-6 text-gray2 duration-500 group-[&.activeFilterBtn]/filterBtn:text-black">
+                                        @title
+                                        </span>
+                                    </li>
+                                    
+                                </face>
+                            </basis>
+
+
+                            <div class="grid gap-x-10 w-80p mx-auto grid-cols-3">
+                                <basis core="print" datamembername="list.star">
+                                    <layout>
+                                        @child
+                                    </layout>
+                                    <else-layout>
+                                        <div class="para font-YekanBakh400 text-base text-matn">
+                                            <p>
+                                                متاسفانه محصولی موجود نیست.
+                                            </p>
+                                        </div>
+                                    </else-layout>
+                                    <face>
+                                        <div class="proBox duration-500 1 pb-2">
+                                            <a href="/@db.productList.link" title="@db.productList.title">
+                                                <div class="imgS mb-0.5">
+                                                    <img class="w-full" src="[##cms.cms.cdn##]/@db.productList.00452X00452prp" alt="@db.productList.title">
+                                                </div>
+                                                <h2 class="font-Trueno200  text-xl text-black mb-3 text-center">
+                                                @db.en-productList.title	
+                                                </h2>
+                                                <h3 class="font-YekanBakh400 text-base text-center">
+                                                @db.productList.title	
+                                                </h3>
+                                            </a>
+                                        </div>
+                                        
+                                    </face>
+                                </basis>
+                        
+                            </div>
+                        </section>
+
+                        <section class="section footerSection !justify-end relative">
+                            <basis core="call" file="footer.inc"/>
+
+
+                        </section>
+
+
+                </div>
+
+            </div>
+
+        </main>
+        <script>
+            document.querySelector("header").classList.add("darkHeader")
+            document.querySelector("header").classList.add("activeHeader")
+        </script>
+
+        <basis core="call" file="scripts.inc"/>
+
+        <script src="[##cms.cms.cdn##]/_js/fullpage4.0.22.js"></script>
+
+    <script src="[##cms.cms.cdn##]/js/productList.js"></script>
+    </body>
+    </html>

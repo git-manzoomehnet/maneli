@@ -1,0 +1,39 @@
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="10" usedforid="[##cms.query.id##]"> <member name="namayandegi" type="view"/> </basis>
+
+  <basis core="print" datamembername="db.namayandegi">
+                                        <layout>
+                                            <div class="address text-center mb-4">
+                                                @child
+                                            </div>
+                                        </layout>
+                                        
+                                        <face filter="TypeID=150">
+                                            <span class="block text-matn text-center font-YekanBakh400 text-sm leading-6">
+                                                 @Answer :
+                                            </span>
+                                        </face>
+                                        <face filter="TypeID=244">
+                                            <div class="para text-center font-YekanBakh400 text-base leading-6">
+                                                @Answer
+                                             
+                                            </div>
+                                        </face>
+                                    </basis>
+                                    <basis core="print" datamembername="db.namayandegi">
+                                        <layout>
+                                            <div class="phone text-center mb-4">
+                                                <span class="block text-matn text-center font-YekanBakh400 text-sm leading-6">
+                                                    تلفن تماس :
+                                                </span>
+                                                @child
+                                            </div>
+                                        </layout>
+                                        
+                                        <face filter="TypeID=240">
+                                            <a href="tel:@Answer" title="tel"
+                                                class="para text-center font-YekanBakh400 text-base leading-6">
+                                               @Answer
+                                            </a>
+                                            
+                                        </face>
+                                    </basis>
