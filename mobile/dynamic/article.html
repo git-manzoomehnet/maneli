@@ -1,18 +1,18 @@
 <basis core="dbsource" request="seo" source="basiscore" name="db" lid="1" >
-    <member name="seolist" type="list" request="product" id="2375999"></member>
+    <member name="seolist" type="list" request="product" id="[##cms.query.id##]"></member>
 </basis>
-<basis core="dbsource" name="db" source="basiscore" lid="1" mid="1" usedforid="2375999"> <member name="article" type="view"/> </basis>	
-<basis core="dbsource" name="db" source="media" lid="1" sourcemid="1" usedforid="2375999"> <member name="image-article" type="list" format="4"/> </basis>
-<basis core="dbsource" source="basiscore" name="basisName" lid="1" mid="1" usedforid="2375999"> <member type="list" name="related-blog" size="351x200" blgid="222" propertyid="7249,7244" link="article.bc" /> </basis>
-<basis core="dbsource" source="basiscore" name="db" lid="1" mid="1" usedforid="2375999"> <member type="list" name="related-product" size="371x371" blgid="221" /> </basis>
-<basis core="dbsource" source="basiscore" name="db" lid="2" mid="1" usedforid="2375999"> <member type="list" name="en-related-product" size="371x371" blgid="221" /> </basis>
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="1" usedforid="[##cms.query.id##]"> <member name="article" type="view"/> </basis>	
+<basis core="dbsource" name="db" source="media" lid="1" sourcemid="1" usedforid="[##cms.query.id##]"> <member name="image-article" type="list" format="4"/> </basis>
+<basis core="dbsource" source="basiscore" name="basisName" lid="1" mid="1" usedforid="[##cms.query.id##]"> <member type="list" name="related-blog" size="360x200" blgid="222" propertyid="7249,7244" link="article.bc" /> </basis>
+<basis core="dbsource" source="basiscore" name="db" lid="1" mid="1" usedforid="[##cms.query.id##]"> <member type="list" name="related-product" size="371x371" blgid="221" /> </basis>
+<basis core="dbsource" source="basiscore" name="db" lid="2" mid="1" usedforid="[##cms.query.id##]"> <member type="list" name="en-related-product" size="371x371" blgid="221" /> </basis>
   <basis core="inlinesource" name="list" >
     <member name="star" lefttblcol="db.related-product.id" righttblcol="db.en-related-product.id" format="join" jointype="leftjoin" />
   </basis>
 
-<basis core="dbsource" source="basiscore" name="basisName" lid="1" mid="1" usedforid="2375999"> <member type="list" name="related-project" size="383x447" blgid="1611"  link="project.bc"/> </basis>	
+<basis core="dbsource" source="basiscore" name="basisName" lid="1" mid="1" usedforid="[##cms.query.id##]"> <member type="list" name="related-project" size="383x447" blgid="1611"  link="project.bc"/> </basis>	
 
-<basis core="dbsource" source="userbehavior" name="db" lid="1" userid="100005" usedforid="2375999">
+<basis core="dbsource" source="userbehavior" name="db" lid="1" userid="100005" usedforid="[##cms.query.id##]">
     <member request="listcomment" type="list" name="commentlist" link="article.bc" />
 </basis>
 <!DOCTYPE html>
@@ -37,7 +37,7 @@
 
         <section class="section1 w-90p mx-auto mb-2.5">
 
-            <div class="breadCrumb  mt-[120px] mb-16 ">
+            <div class="breadCrumb  mt-[87px] mb-16 ">
                 <a href="/" title="home" class="inline-block font-YekanBakh400 text-xs text-gray2 ml-1.5">
                     خانه
                 </a>
@@ -98,7 +98,7 @@
         
                     </div>
         
-                    <div class="btns mt-4 z-10 gap-x-3 justify-center w-full flex items-center">
+                    <div class="btns mt-5 z-10 gap-x-3 justify-center w-full flex items-center">
                         <div class="prevMembers">
                             <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <mask id="path-1-inside-1_103_2697" fill="white">
@@ -367,7 +367,7 @@
                     <div class="blogBox ">
                         <a href="/@link" title="@title">
                             <div class="imgS mb-3.5">
-                                <img src="[##cms.cms.cdn##]/images/@00351X00200prp" alt="@title" class="w-full">
+                                <img src="[##cms.cms.cdn##]/@00360X00200prp" alt="@title" class="w-full">
                             </div>
                             <div class="date text-left mb-3.5">
                                 <span class="font-YekanBakh400 text-sm leading-6 text-matn">
@@ -487,9 +487,10 @@
                 </div>
             </face>
         </basis>
-        <basis core="call" file="footer.inc" pageindex="[##cms.cms.pageindex##]" />
-
+         <basis core="call" file="top-footer.inc" pageindex="[##cms.cms.pageindex##]" />
     </main>
+    <basis core="call" file="footer.inc" pageindex="[##cms.cms.pageindex##]" />
+
 
 
     <div dir="rtl" class="popUpImgs w-dvw h-svh fixed bg-black/[0.85] inset-0 z-[102585201285] scale-0 duration-1000">

@@ -1,9 +1,11 @@
-
 function addSnaps(params) {
+    if (window.fullpage_api) {
+        fullpage_api.destroy('all');
+    }
+
     var myFullpage = new fullpage('#fullpage', {
         loopTop: true,
         scrollOverflow: false,
-
         loopBottom: true,
         onLeave: function (origin, destination, direction) {
             const totalSections = document.querySelectorAll('.fp-section').length;
@@ -11,10 +13,8 @@ function addSnaps(params) {
 
             document.querySelector('.sectionFraction').textContent = `${currentSection}/${totalSections}`;
         },
-        // Get your license at https://alvarotrigo.com/fullPage/pricing
         licenseKey: 'xxxxxxxxxxxxxxxxxxxxxxxxx'
     });
-
 
     const totalSections = document.querySelectorAll('.fp-section').length;
     const currentSection = 1;
@@ -27,17 +27,59 @@ function addSnaps(params) {
     document.querySelector(".nextSection").addEventListener("click", () => {
         fullpage_api.moveSectionDown();
     });
-
 }
 
+let filterBtn = document.querySelectorAll(".filterBtn")
 
 window.addEventListener("DOMContentLoaded", () => {
-    addPro()
+  let catid  = document.querySelector(".catid").innerHTML
+    let idMember;
 
-    setTimeout(() => {
-        addSnaps();
-    }, 10);
 
+    filterBtn.forEach((element,i) => {
+        if (element.getAttribute("data-id")==catid) {
+            idMember=catid
+            filterBtn[i].classList.add("activeFilterBtn")
+        }
+    });
+
+
+        fetch(`/load-product.inc?catid=${idMember}&refresh=true`)
+            .then(response => response.text())
+
+            .then(userData => {
+                const parser = new DOMParser();
+                const doc = parser.parseFromString(userData, 'text/html');
+                console.log("load", `/load-product.inc?catid=${idMember}&refresh=true`);
+                document.querySelector(".section2 .grid").innerHTML=""
+                const socialInfo = document.querySelector(".section2 .grid")
+                socialInfo.innerHTML = userData
+                let sections = document.querySelectorAll(".section")
+                console.log(userData);
+                
+                sections.forEach(section => {
+                    const hasBothClasses =
+                    section.classList.contains("section2") ||
+                    section.classList.contains("footerSection");
+                
+                
+                  if (!hasBothClasses) {
+                    section.remove(); // حذف سکشن‌هایی که هر دو کلاس رو ندارن
+                  }
+                });
+                addPro();
+                setTimeout(() => {
+                    addSnaps();
+                }, 10);
+            
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+
+
+
+  
 
 
 
@@ -62,7 +104,7 @@ function addPro(params) {
         } else {
             const section = document.createElement("section");
             section.className =
-                "section scrollSection h-svh snap-start flex items-center justify-center";
+                "section scrollSection fp-section fp-table h-svh snap-start flex items-center justify-center";
 
             const grid = document.createElement("div");
             grid.className = "grid grid-cols-3 w-80p mx-auto gap-x-10 ";
@@ -100,8 +142,7 @@ function addPro(params) {
     document.querySelector('.sectionFraction').textContent = `${currentSection}/${totalSections}`;
 
 }
-let filterBtn = document.querySelectorAll(".filterBtn")
-filterBtn[0].classList.add("activeFilterBtn")
+
 filterBtn.forEach(element => {
     element.addEventListener("click", function (params) {
         filterBtn.forEach(element2 => {
@@ -114,29 +155,33 @@ filterBtn.forEach(element => {
 
         let idMember = element.getAttribute("data-id")
 
-        fetch(`/load-product.inc?id=${idMember}&refresh=true`)
+        fetch(`/load-product.inc?catid=${idMember}&refresh=true`)
             .then(response => response.text())
 
             .then(userData => {
                 const parser = new DOMParser();
                 const doc = parser.parseFromString(userData, 'text/html');
-                console.log("element", element);
+                console.log("load", `/load-product.inc?catid=${idMember}&refresh=true`);
                 document.querySelector(".section2 .grid").innerHTML=""
                 const socialInfo = document.querySelector(".section2 .grid")
                 socialInfo.innerHTML = userData
                 let sections = document.querySelectorAll(".section")
+                console.log(userData);
+                
                 sections.forEach(section => {
                     const hasBothClasses =
                     section.classList.contains("section2") ||
                     section.classList.contains("footerSection");
-                console.log(hasBothClasses);
-                console.log(section);
+                
                 
                   if (!hasBothClasses) {
                     section.remove(); // حذف سکشن‌هایی که هر دو کلاس رو ندارن
                   }
                 });
-                addPro()
+                addPro();
+                setTimeout(() => {
+                    addSnaps();
+                }, 10);
             
             })
             .catch(error => {

@@ -4,7 +4,7 @@
 <basis core="dbsource" name="db" source="basiscore" lid="1" mid="20" catid="[##cms.query.catid##]"> <member name="m-productList" type="list" size="350x350"/> </basis>	
 <basis core="dbsource" name="db" source="basiscore" lid="2" mid="20" catid="[##cms.query.catid##]"> <member name="m-enproductList" type="list" size="350x350"/> </basis>	
 <basis core="dbsource" source="basiscore" name="db" lid="1" mid="20" >
- <member request="navcatid" type="tree" name="navList" parentid="[##cms.query.catid##]" postsql="select * from [db.navList] where parentcatid not in (213958,213997)" />
+ <member request="navcatid" type="tree" name="navList" parentid="[##cms.query.catid##]" postsql="select * from [db.navList] where parentcatid not in (213958)" />
  </basis>	
   <basis core="inlinesource" name="list" >
     <member name="star" lefttblcol="db.m-productList.id" righttblcol="db.m-enproductList.id" format="join" jointype="leftjoin" />
@@ -26,12 +26,12 @@
     <main class="productList" dir="rtl">
         <basis core="call" file="header2.inc" pageindex="[##cms.cms.pageindex##]" />
 
-        <section class="section1 mt-[138px]">
+        <section class="section1 mt-[87px]">
             <div class="breadCrumb w-90p mx-auto">
                 <a href="/" title="home" class="inline-block font-YekanBakh400 text-xs text-gray2 ml-1.5">
                     خانه
                 </a>
-          
+           
                 <basis core="print" datamembername="db.navList">
                     <layout>
                         <i class="font-YekanBakh400 inline-block -translate-y-0.5 text-xs text-gray2 ml-1.5">
@@ -47,6 +47,7 @@
                         </h1>
                     </face>
                 </basis>
+            
             </div>
         </section>
         <section class="section2 pb-16 mt-2 bg-gray1">

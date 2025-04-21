@@ -220,9 +220,6 @@
   .top-\[87px\] {
     top: 87px;
   }
-  .top-\[105px\] {
-    top: 105px;
-  }
   .top-\[110px\] {
     top: 110px;
   }
@@ -294,6 +291,9 @@
   }
   .z-\[100000\] {
     z-index: 100000;
+  }
+  .z-\[1000000\] {
+    z-index: 1000000;
   }
   .z-\[1000001\] {
     z-index: 1000001;
@@ -396,9 +396,6 @@
   }
   .mt-\[120px\] {
     margin-top: 120px;
-  }
-  .mt-\[138px\] {
-    margin-top: 138px;
   }
   .mt-\[316px\] {
     margin-top: 316px;
@@ -550,6 +547,9 @@
   .h-\[49px\] {
     height: 49px;
   }
+  .h-\[52px\] {
+    height: 52px;
+  }
   .h-\[58px\] {
     height: 58px;
   }
@@ -604,6 +604,9 @@
   .h-\[573px\] {
     height: 573px;
   }
+  .h-dvh {
+    height: 100dvh;
+  }
   .h-fit {
     height: fit-content;
   }
@@ -621,6 +624,12 @@
   }
   .max-h-\[706px\] {
     max-height: 706px;
+  }
+  .min-h-\[216\] {
+    min-height: 216;
+  }
+  .min-h-\[216px\] {
+    min-height: 216px;
   }
   .\!w-\[134\.46px\] {
     width: 134.46px !important;
@@ -1038,6 +1047,12 @@
       background-color: color-mix(in oklab, var(--color-black) 30%, transparent);
     }
   }
+  .bg-black\/\[0\.55\] {
+    background-color: color-mix(in srgb, #000 55.00000000000001%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      background-color: color-mix(in oklab, var(--color-black) 55.00000000000001%, transparent);
+    }
+  }
   .bg-black\/\[0\.85\] {
     background-color: color-mix(in srgb, #000 85%, transparent);
     @supports (color: color-mix(in lab, red, red)) {
@@ -1083,6 +1098,12 @@
   }
   .object-cover {
     object-fit: cover;
+  }
+  .px-1 {
+    padding-inline: calc(var(--spacing) * 1);
+  }
+  .px-1\.5 {
+    padding-inline: calc(var(--spacing) * 1.5);
   }
   .px-2 {
     padding-inline: calc(var(--spacing) * 2);
@@ -1188,9 +1209,6 @@
   }
   .pt-\[110px\] {
     padding-top: 110px;
-  }
-  .pt-\[120px\] {
-    padding-top: 120px;
   }
   .pr-3 {
     padding-right: calc(var(--spacing) * 3);
@@ -2046,6 +2064,29 @@
 }
 .mainFraction {
   color: white;
+}
+.services .formContainer input {
+  height: 48px !important;
+}
+.services .formContainer [data-bc-title-container] {
+  float: unset !important;
+  margin: 0 !important;
+  line-height: unset !important;
+  padding: 0 !important;
+  margin-bottom: 10px !important;
+}
+.services .formContainer [data-bc-section] {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+.services .formContainer [data-bc-question] {
+  margin-bottom: 0 !important;
+}
+.productShow header {
+  background-color: transparent;
+}
+.blogShow .section2 .swiper-button-lock {
+  display: block !important;
 }
 @property --tw-translate-x {
   syntax: "*";

@@ -22,8 +22,14 @@ if (top === 0) {
     if (window.scrollY>50) {
         header.classList.add("activeHeader")
         document.querySelector("header .logo img").setAttribute("src" , darkLogo)
+        if (document.querySelector("main").classList.contains("productShow")) {
+            header.style.backgroundColor="white"
+        }
     }
     else{
+        if (document.querySelector("main").classList.contains("productShow")) {
+            header.style.backgroundColor="transparent"
+        }
         if (!darkFlag) {
             header.classList.remove("activeHeader")
             document.querySelector("header .logo img").setAttribute("src" , lightLogo)

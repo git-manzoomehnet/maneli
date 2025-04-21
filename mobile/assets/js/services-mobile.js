@@ -47,7 +47,7 @@ const host = {
       captchaInput.setAttribute("placeholder", "پر کردن این فیلد الزامی است");
       captchaInput.classList.add("errorPlaceholder");
       setTimeout(() => {
-        captchaContainerclass.style.border = "none";
+        // captchaContainerclass.style.border = "none";
         captchaInput.setAttribute("placeholder", "کد  امنیتی را وارد نمایید");
         captchaInput.classList.remove("errorPlaceholder");
       }, 3000);
