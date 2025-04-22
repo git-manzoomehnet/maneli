@@ -13,6 +13,11 @@ function addSnaps(params) {
 
             document.querySelector('.sectionFraction').textContent = `${currentSection}/${totalSections}`;
         },
+        afterRender: function() {
+            // مطمئن شویم fullpage_api آماده است
+            // window.fullpage_api = myFullpage;
+            bindNavButtons();
+        },
         licenseKey: 'xxxxxxxxxxxxxxxxxxxxxxxxx'
     });
 
@@ -20,15 +25,31 @@ function addSnaps(params) {
     const currentSection = 1;
 
     document.querySelector('.sectionFraction').textContent = `${currentSection}/${totalSections}`;
-    document.querySelector(".prevSection").addEventListener("click", () => {
-        fullpage_api.moveSectionUp();
-    });
-
-    document.querySelector(".nextSection").addEventListener("click", () => {
-        fullpage_api.moveSectionDown();
-    });
+    setTimeout(() => {
+        bindNavButtons();
+    }, 300);    
 }
+function bindNavButtons() {
+    const prevBtn = document.querySelector(".prevSection");
+    const nextBtn = document.querySelector(".nextSection");
 
+    if (prevBtn && nextBtn) {
+        prevBtn.replaceWith(prevBtn.cloneNode(true));
+        nextBtn.replaceWith(nextBtn.cloneNode(true));
+
+
+        const newPrevBtn = document.querySelector(".prevSection");
+        const newNextBtn = document.querySelector(".nextSection");
+
+        newPrevBtn.addEventListener("click", () => {
+            fullpage_api.moveSectionUp();
+        });
+
+        newNextBtn.addEventListener("click", () => {
+            fullpage_api.moveSectionDown();
+        });
+    }
+}
 let filterBtn = document.querySelectorAll(".filterBtn")
 
 window.addEventListener("DOMContentLoaded", () => {
@@ -70,7 +91,8 @@ window.addEventListener("DOMContentLoaded", () => {
                 addPro();
                 setTimeout(() => {
                     addSnaps();
-                }, 10);
+                    bindNavButtons()
+                }, 100);
             
             })
             .catch(error => {
@@ -141,6 +163,8 @@ function addPro(params) {
 
     document.querySelector('.sectionFraction').textContent = `${currentSection}/${totalSections}`;
 
+
+    
 }
 
 filterBtn.forEach(element => {
@@ -181,6 +205,7 @@ filterBtn.forEach(element => {
                 addPro();
                 setTimeout(() => {
                     addSnaps();
+                    bindNavButtons()
                 }, 10);
             
             })
