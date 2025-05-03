@@ -3,13 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>404|Error</title>
+    <title>404 | Error</title>
     <meta name="description" content="404 Error page">
     <basis core="call" file="styles.inc" pageindex="[##cms.cms.pageindex##]" />
 </head>
 <body>
-    <main class="errorPage">
+    <main class="errorPage" dir="rtl">
         <basis core="call" file="header2.inc" pageindex="[##cms.cms.pageindex##]" />
+
+        <div class="breadCrumb mt-[110px] w-90p mx-auto mb-5">
+            <a href="/" class="inline-block font-YekanBakh400 text-xs text-gray2 ml-1.5" title="home">
+                خانه
+            </a>
+        
+                    <i class="font-YekanBakh400 inline-block -translate-y-0.5 text-xs text-gray2 ml-1.5">
+                        .
+                    </i>
+                    <a title="@title" href="/product-list.bc?catid=@Parentcatid"
+                        class="inline-block font-YekanBakh400 text-xs text-gray2 ml-1.5">
+                        404 | Error
+                    </a>
+
+               
+
+        </div>
+
+
 
         <div class="imgS flex items-center justify-center mt-[316px] mb-[104px]">
             <img class="max-w-[257px] w-90p" src="[##cms.cms.cdn##]/images/404.png" alt="404">
@@ -25,9 +44,10 @@
         </a>
 
 
-        <basis core="call" file="footer.inc" pageindex="[##cms.cms.pageindex##]" />
-
+           <basis core="call" file="top-footer.inc" pageindex="[##cms.cms.pageindex##]" />
     </main>
+    <basis core="call" file="footer.inc" pageindex="[##cms.cms.pageindex##]" />
+
     <script>
         document.querySelector("header").classList.add("darkHeader")
         document.querySelector("header").classList.add("activeHeader")

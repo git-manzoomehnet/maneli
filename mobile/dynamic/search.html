@@ -48,6 +48,27 @@
         <basis core="group"
             if="'[##list.star.RowNumber##]' = '' and '[##db.list-blog.RowNumber##]' = '' and '[##db.project-list.RowNumber##]' = ''">
 
+
+            
+        <div class="breadCrumb mt-[110px] w-90p mx-auto mb-5">
+            <a href="/" class="inline-block font-YekanBakh400 text-xs text-gray2 ml-1.5" title="home">
+                خانه
+            </a>
+        
+                    <i class="font-YekanBakh400 inline-block -translate-y-0.5 text-xs text-gray2 ml-1.5">
+                        .
+                    </i>
+                    <a title="@title" href="/product-list.bc?catid=@Parentcatid"
+                        class="inline-block font-YekanBakh400 text-xs text-gray2 ml-1.5">
+                        یافت نشد
+                    </a>
+
+               
+
+        </div>
+
+
+
             <div class="notFound h-svh flex flex-col items-center justify-center w-90p mx-auto">
                 <form class="pb-5 border-b border-matn mx-auto flex items-center justify-center w-full " role="search"
                     id="searchform" action="/search.bc" method="get">
@@ -77,6 +98,25 @@
         <basis core="group" if="'[##cms.query.q##]' <> ''">
         <basis core="group"
             if="'[##list.star.RowNumber##]' <> '' or '[##db.list-blog.RowNumber##]' <> '' or '[##db.project-list.RowNumber##]' <> ''">
+
+            
+        <div class="breadCrumb mt-[110px] w-90p mx-auto mb-5">
+            <a href="/" class="inline-block font-YekanBakh400 text-xs text-gray2 ml-1.5" title="home">
+                خانه
+            </a>
+        
+                    <i class="font-YekanBakh400 inline-block -translate-y-0.5 text-xs text-gray2 ml-1.5">
+                        .
+                    </i>
+                    <a title="@title" href="/product-list.bc?catid=@Parentcatid"
+                        class="inline-block font-YekanBakh400 text-xs text-gray2 ml-1.5">
+                        جستجو در [##cms.query.q##]
+                    </a>
+
+               
+
+        </div>
+
 
             <div class="foundRes mt-36 w-90p mx-auto">
                 <form class="pb-5 mb-7 border-b border-matn mx-auto w-full flex items-center justify-center " role="search"

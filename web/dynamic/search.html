@@ -48,6 +48,30 @@
         <basis core="group"
             if="'[##list.star.RowNumber##]' = '' and '[##db.list-blog.RowNumber##]' = '' and '[##db.project-list.RowNumber##]' = ''">
 
+
+            <div class="breadCrumb  mt-[110px] w-80p z-10 mx-auto">
+                <a href="/" title="home" class="inline-block font-YekanBakh400 text-sm text-gray2 ml-1.5">
+                    خانه
+                </a>
+                
+                
+            
+    
+    
+              
+                        <i class="font-YekanBakh400 inline-block -translate-y-0.5 text-sm text-gray2 ml-1.5">
+                            .
+                        </i>
+                        <span class="inline-block font-YekanBakh400 text-sm text-gray2 ml-1.5">
+                          یافت نشد
+                        </span>
+                        
+               
+    
+            </div>
+
+
+
             <div class="notFound h-svh flex flex-col items-center justify-center w-80p mx-auto">
                 <form class="pb-5 border-b border-matn mx-auto flex items-center justify-center w-full " role="search"
                     id="searchform" action="/search.bc" method="get">
@@ -76,6 +100,29 @@
         <basis core="group" if="'[##cms.query.q##]' <> ''">
         <basis core="group"
             if="'[##list.star.RowNumber##]' <> '' or '[##db.list-blog.RowNumber##]' <> '' or '[##db.project-list.RowNumber##]' <> ''">
+
+            <div class="breadCrumb  mt-[110px] w-80p z-10 mx-auto">
+                <a href="/" title="home" class="inline-block font-YekanBakh400 text-sm text-gray2 ml-1.5">
+                    خانه
+                </a>
+                
+                
+            
+    
+    
+              
+                        <i class="font-YekanBakh400 inline-block -translate-y-0.5 text-sm text-gray2 ml-1.5">
+                            .
+                        </i>
+                        <span class="inline-block font-YekanBakh400 text-sm text-gray2 ml-1.5">
+                           جستجو در [##cms.query.q##]
+                        </span>
+                        
+               
+    
+            </div>
+
+
 
             <div class="foundRes mt-36 w-80p mx-auto">
                 <form class="pb-5 mb-7 border-b border-matn mx-auto w-full flex items-center justify-center " role="search"
@@ -221,12 +268,12 @@
                     <face>
                         <div class="swiper-slide">
                 
-                            <div class="proBox mb-4 pb-2 border-b border-b-black">
+                            <div class="proBox mb-4 pb-2 ">
                                 <a href="/@db.productList.link" title="@db.en-productList.title">
                                     <div class="imgS mb-0.5">
                                         <img class="w-full" src="[##cms.cms.cdn##]/@db.productList.00371X00371prp" alt="@db.en-productList.title">
                                     </div>
-                                    <h2 class="font-Trueno200  text-xl text-black mb-3 text-center">
+                                    <h2 class="font-Trueno200  text-xl text-black mb-3 text-center mt-5">
                                        @db.en-productList.title	
                                     </h2>
                                     <h3 class="font-YekanBakh400 text-base text-center">
