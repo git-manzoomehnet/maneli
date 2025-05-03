@@ -17,19 +17,19 @@ const config = {
     },
 
 };
-// const customIcon = L.icon({
-//     iconUrl: '/images/locationIcon.png',
-//     iconSize: [28, 28],
-//     iconAnchor: [12, 41]
-// });
+const customIcon = L.icon({
+    iconUrl: '/images/locationIcon.png',
+    iconSize: [33, 33],
+    iconAnchor: [12, 41]
+});
 // استفاده از لایه تاریک CartoDB
 L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
     attribution: '© OpenStreetMap contributors © CartoDB'
 }).addTo(map);
 
 
-// L.marker(config.center, { icon: customIcon })
-//     .addTo(map)
+L.marker(config.center, { icon: customIcon })
+    .addTo(map)
 
 
 let shBox = document.querySelectorAll(".shBox")

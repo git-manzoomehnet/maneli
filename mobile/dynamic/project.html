@@ -15,14 +15,14 @@
 	<basis core="dbsource" name="db" source="basiscore" lid="2" mid="19" usedforid="[##cms.query.id##]"> <member name="en-project" type="view"/> </basis>
 <basis core="dbsource" name="db" source="media" lid="1" sourcemid="19" usedforid="[##cms.query.id##]"> <member name="image-project" type="list" format="4"/> </basis>
 <basis core="dbsource" name="db" source="media" lid="1" sourcemid="19" usedforid="[##cms.query.id##]"> <member name="video-project" type="list" format="3"/> </basis>
-<basis core="dbsource" source="basiscore" name="db" lid="2" mid="19" usedforid="[##cms.query.id##]"> <member type="list" name="en-related-product" size="360x419" blgid="629" link="project.bc" /> </basis>
+<basis core="dbsource" source="basiscore" name="db" lid="2" mid="19" usedforid="[##cms.query.id##]"> <member type="list" name="en-related-product" size="360x419" blgid="630" /> </basis>
 
 <basis core="dbsource" source="basiscore" name="db" lid="1" mid="19" usedforid="[##cms.query.id##]"> <member type="list" name="related-product" size="350x350" blgid="630" /> </basis>
  <basis core="inlinesource" name="list" >
     <member name="star" lefttblcol="db.related-product.id" righttblcol="db.en-related-product.id" format="join" jointype="leftjoin" />
   </basis>
 
-<basis core="dbsource" source="basiscore" name="db" lid="1" mid="19" usedforid="[##cms.query.id##]"> <member type="list" name="related-project"  size="360x419" blgid="629" link="project.bc"/> </basis>
+<basis core="dbsource" source="basiscore" name="db" lid="1" mid="19" usedforid="[##cms.query.id##]"> <member type="list" name="related-project" link="project.bc"  size="360x419" blgid="629" link="project.bc"/> </basis>
 <!DOCTYPE html>
 <html lang="fa">
 
@@ -45,17 +45,17 @@
         <basis core="call" file="header2.inc" pageindex="[##cms.cms.pageindex##]" />
 
         <section class="section1 mb-20 relative flex items-center justify-center">
-            <div class="breadCrumb absolute top-[120px] z-10 w-90p mx-auto">
-                <a href="/" title="home" class="inline-block font-YekanBakh400 text-xs text-gray2 ml-1.5">
+            <div class="breadCrumb absolute top-[87px] z-10 w-90p mx-auto">
+                <a href="/" title="home" class="inline-block font-YekanBakh400 text-xs text-white ml-1.5">
                     خانه
                 </a>
 
 
 
-                <i class="font-YekanBakh400 inline-block -translate-y-0.5 text-xs text-gray2 ml-1.5">
+                <i class="font-YekanBakh400 inline-block -translate-y-0.5 text-xs text-white ml-1.5">
                     .
                 </i>
-                <a href="/project-list.bc" class="inline-block font-YekanBakh400 text-xs text-gray2 ml-1.5">
+                <a href="/project-list.bc" class="inline-block font-YekanBakh400 text-xs text-white ml-1.5">
                     پروژه ها
                 </a>
 
@@ -63,10 +63,10 @@
                  
                     <face filter="TypeID=150"> 
                         
-                        <i class="font-YekanBakh400 inline-block -translate-y-0.5 text-xs text-gray2 ml-1.5">
+                        <i class="font-YekanBakh400 inline-block -translate-y-0.5 text-xs text-white ml-1.5">
                             .
                         </i>
-                        <span class="inline-block font-YekanBakh400 text-xs text-gray2 ml-1.5">
+                        <span class="inline-block font-YekanBakh400 text-xs text-white ml-1.5">
                            @Answer
                         </span>
                     </face>
@@ -205,7 +205,7 @@
         
                         </div>
         
-                        <div class="btns absolute bottom-0 left-0 right-0 z-10 gap-x-1 justify-center w-full flex items-center">
+                        <div class="btns absolute bottom-0 left-0 right-0 z-10 gap-x-1 justify-center w-full flex items-center mb-3">
                             <div class="prevMembers">
                                 <svg width="51" height="50" viewBox="0 0 51 50" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <mask id="path-1-inside-1_266_4514" fill="white">
@@ -342,7 +342,7 @@
                         </div>
                         <div
                             class="title group-[&.swiper-slide-active]/slide:opacity-100 duration-500 opacity-0 absolute">
-                            <h4 class="text-white font-YekanBakh700 text-sm text-center">
+                            <h4 class="text-white font-YekanBakh700 text-2xl text-center">
                                @title
                             </h4>
                         </div>
@@ -399,9 +399,10 @@
             </face>
         </basis>
     
-        <basis core="call" file="footer.inc" pageindex="[##cms.cms.pageindex##]" />
-
+            <basis core="call" file="top-footer.inc" pageindex="[##cms.cms.pageindex##]" />
     </main>
+    <basis core="call" file="footer.inc" pageindex="[##cms.cms.pageindex##]" />
+
 
     <div dir="rtl" class="popUpImgs w-dvw h-svh fixed bg-black/[0.85] inset-0 z-[102585201285] scale-0 duration-1000">
         <div class="in w-[85%] mx-auto relative">
@@ -537,4 +538,4 @@
         </script>
 </body>
 
-</html>
+</html> 

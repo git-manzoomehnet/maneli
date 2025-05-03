@@ -81,8 +81,8 @@ let messageSend = document.querySelector(".messageSend")
 let commentP = document.querySelector(".commentP")
 
 function renderCommentFn(args) {
-  console.log(args);
 
+  
 }
 document.querySelector('.submitComment').addEventListener('click', (event) => {
   //  let input1  = document.querySelector('.namee')
@@ -109,13 +109,13 @@ textareas.forEach(element => {
   }
 });
 
-console.log(emptyFlag);
+
 
   if (emptyFlag) {
 
     let val = document.querySelector(".commentP textarea").value;
     let userName = document.querySelector(".commentP .userName").value;
-    console.log("val", val);
+
     $bc.setSource('db.send', true)
     $bc.setSource('db.senduserName', userName)
     $bc.setSource('db.sendcomment', val)

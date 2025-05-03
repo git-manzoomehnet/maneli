@@ -6,16 +6,15 @@ showBox.forEach(element => {
 
         .then(userData => {
 
-            console.log("element", element);
 
             element.innerHTML = userData
 
             let mapSectoin = document.querySelectorAll(".mapSectoin")
-            if (mapSectoin, length > 0) {
+            if (mapSectoin.length > 0) {
 
                 mapSectoin.forEach(element2 => {
 
-                    let xLat = element2.getAttribute("data-x")
+                    let xLat = element2.getAttribute("data-x").replace(/<p>|<\/p>/g, "");
                     let yLat = element2.getAttribute("data-y")
                     const map = L.map('map').setView([xLat, yLat], 20);
                     const config = {
@@ -24,8 +23,8 @@ showBox.forEach(element => {
                         tileLayer: {
                             url: 'https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png',
                             options: {
-                                maxZoom: 40,
-                                minZoom: 15,
+                                maxZoom: 30,
+                                minZoom: 10,
                                 attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
                                 detectRetina: true
                             }

@@ -1,6 +1,6 @@
 <basis core="dbsource" source="media" name="basisName" lid="1" catid="2365"> <member type="list" name="banner-blog-mob" perpage="10" pageno="1"  /> </basis>
 <basis core="dbsource" source="basiscore" name="basisName" lid="1" mid="1" > <member request="cat" type="tree" name="articleCat" parentid="214075"  /> </basis>
-<basis core="dbsource" name="db" source="basiscore" lid="1" mid="1" catid="214076"> <member name="list-blog" size="351x200" type="list" propertyid="7249"/> </basis>
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="1" catid="214076"> <member name="list-blog" size="351x200" type="list" propertyid="7249" link="article.bc"/> </basis>
 <!DOCTYPE html>
 <html lang="fa">
 <head>
@@ -15,16 +15,16 @@
         <basis core="call" file="header2.inc" pageindex="[##cms.cms.pageindex##]" />
 
         <section class="section1 relative flex items-center justify-center">
-            <div class="breadCrumb absolute top-[120px] z-10 w-90p mx-auto">
-                <a href="/" title="home" class="inline-block font-YekanBakh400 text-xs text-gray2 ml-1.5">
+            <div class="breadCrumb absolute top-[87px] z-10 w-90p mx-auto">
+                <a href="/" title="home" class="inline-block font-YekanBakh400 text-xs text-white ml-1.5">
                     خانه
                 </a>
              
               
-                        <i class="font-YekanBakh400 inline-block -translate-y-0.5 text-xs text-gray2 ml-1.5">
+                        <i class="font-YekanBakh400 inline-block -translate-y-0.5 text-xs text-white ml-1.5">
                             .
                         </i>
-                        <span class="inline-block font-YekanBakh400 text-xs text-gray2 ml-1.5">
+                        <span class="inline-block font-YekanBakh400 text-xs text-white ml-1.5">
                           بلاگ
                         </span>
                   
@@ -55,7 +55,7 @@
                 </div>
             </div>
         </section>
-        <section class="section2 relative pt-16">
+        <section class="section2 relative pt-10">
             <div class="bgImg absolute w-full top-0 left-0 right-0 -z-1">
                 <img class="w-full" src="[##cms.cms.cdn##]/images/bg-def-m.png" alt="bg">
             </div>
@@ -63,7 +63,7 @@
                 <basis core="print" datamembername="basisName.articleCat">
                    
                     <face filter="catid<>214075">
-                        <div data-blog="/load-blog.inc?catid=@catid" class="filterBtn py-4 pr-14 border-b group/filterBtn duration-500 [&.activeFilter]:border-b-black border-b-gray2">
+                        <div data-blog="/load-blog.inc?catid=@catid&refresh=true" class="filterBtn py-4 pr-14 border-b group/filterBtn duration-500 [&.activeFilter]:border-b-black border-b-gray2">
                             <span class="font-YekanBakh700 group-[&.activeFilter]/filterBtn:text-black text-gray2 duration-500 text-base">
                                 @title
                             </span>
@@ -78,7 +78,7 @@
                     <else-layout>
                         <div class="para">
                             <p>
-                                متاسفانه مقاله ای موجود نیست.
+                                متاسفانه خبری موجود نیست.
                             </p>
                         </div>
                     </else-layout>
@@ -108,9 +108,10 @@
                 </basis>
             </div>
         </section>
-        <basis core="call" file="footer.inc" pageindex="[##cms.cms.pageindex##]" />
-
+       <basis core="call" file="top-footer.inc" pageindex="[##cms.cms.pageindex##]" />
     </main>
+    <basis core="call" file="footer.inc" pageindex="[##cms.cms.pageindex##]" />
+
 
 
     <script src="[##cms.cms.cdn##]/js/blog-mobile.js"></script>

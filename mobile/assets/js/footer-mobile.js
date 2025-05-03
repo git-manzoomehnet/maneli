@@ -7,7 +7,6 @@ else{
     scrollTotop.style.scale="0"
 }
 document.addEventListener("scroll" , function (params) {
-    console.log(window.pageYOffset);
     if (window.pageYOffset>50) {
         scrollTotop.style.scale="1"
     }

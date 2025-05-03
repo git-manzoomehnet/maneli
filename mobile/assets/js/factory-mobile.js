@@ -68,7 +68,6 @@ const videoGallery = new Swiper('.videoGallery', {
     },
     on: {
         slideChange: function () {
-            console.log(this.activeIndex);
             videosSlides.forEach(element => {
                 element.querySelector("video").pause()
             });
@@ -101,7 +100,6 @@ const popSliderVideos = new Swiper('.popSliderVideos', {
 
     on: {
         slideChange: function () {
-            console.log(this.activeIndex);
             popVideoSlides.forEach(element => {
                 element.querySelector("video").pause()
             });

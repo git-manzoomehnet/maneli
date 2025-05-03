@@ -2,10 +2,12 @@
 let mapSectoin = document.querySelector(".mapSectoin")
 let xLat = mapSectoin.getAttribute("data-x")
 let yLat = mapSectoin.getAttribute("data-y")
-const map = L.map('map').setView([xLat, yLat], 12);
+
+
+const map = L.map('map').setView([xLat, yLat], 15);
 const config = {
     center: [xLat, yLat], // مختصات دقیق تجریش
-    zoom: 30,
+    zoom: 15,
     tileLayer: {
         url: 'https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png',
         options: {
@@ -17,19 +19,19 @@ const config = {
     },
 
 };
-// const customIcon = L.icon({
-//     iconUrl: '/images/locationIcon.png',
-//     iconSize: [28, 28],
-//     iconAnchor: [12, 41]
-// });
+const customIcon = L.icon({
+    iconUrl: '/images/locationIcon.png',
+    iconSize: [28, 28],
+    iconAnchor: [12, 41]
+});
 // استفاده از لایه تاریک CartoDB
 L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
     attribution: '© OpenStreetMap contributors © CartoDB'
 }).addTo(map);
 
 
-// L.marker(config.center, { icon: customIcon })
-//     .addTo(map)
+L.marker(config.center, { icon: customIcon })
+    .addTo(map)
 
 
 let shBox = document.querySelectorAll(".shBox")
