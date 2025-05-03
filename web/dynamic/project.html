@@ -115,13 +115,11 @@
         </section>
 
         <section class="section2 w-80p mx-auto mb-20">
-            <div class="grid grid-cols-2 gap-x-5 items-center">
-                <div class="rSec max-w-[543px]">
-                    <div class="flex mb-4 justify-between">
-                        <h1 class="font-YekanBakh700  text-2xl">
-                            توضیحات پروژه
-                        </h1>
-                        <div class="share relative group/share cursor-pointer">
+            <div class="grid grid-cols-2 gap-x-5 ">
+                <div class="rSec max-w-[543px] flex flex-col justify-between">
+                    <div class="mt-16">
+                       
+                        <div class="share w-fit relative group/share cursor-pointer">
         
                             <div class="shareBtn">
                                 <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -130,7 +128,7 @@
                                         fill="#A3A3A3" />
                                 </svg>
                             </div>
-                            <div class="shareList origin-bottom scale-y-0 duration-500 group-[&.activeShare]/share:scale-y-100 bg-white z-10 absolute bottom-12 left-0 border border-gray2">
+                            <div class="shareList origin-bottom scale-y-0 duration-500 -translate-x-[50%] group-[&.activeShare]/share:scale-y-100 bg-white z-10 absolute bottom-12 left-0 border border-gray2">
                                 <ul class="flex gap-x-4 items-center py-1 px-2.5">
                                     <li>
                                         <a href="https://api.pp.com/send?text=[##cms.request.host##]/[##db.list5.link##]" title="whatsapp" aria-label="whatsapp">
@@ -176,17 +174,27 @@
         
                             </div>
                         </div>
+                        <h1 class="font-YekanBakh700 mt-4 text-2xl">
+                            توضیحات پروژه
+                        </h1>
+                        <basis core="print" datamembername="db.project">
+                      
+                            <face filter="TypeID=144">
+                                <div class="para font-YekanBakh400 text-sm leading-6 text-justify text-matn">
+                                   @Answer
+                                </div>
+                                
+                            </face>
+                        </basis>
                     </div>
-                    <basis core="print" datamembername="db.project">
-                  
-                        <face filter="TypeID=144">
-                            <div class="para font-YekanBakh400 text-sm leading-6 text-justify text-matn">
-                               @Answer
-                            </div>
-                            
-                        </face>
-                    </basis>
 
+               
+                    <div
+                    class="openPopUpImgs cursor-pointer mt-16 group/link duration-500 w-full flex items-center justify-center h-[49px] border-t border-t-matn border-b border-b-matn after:w-full after:h-full after:bg-black hover:text-white after:duration-500 after:scale-x-0 hover:after:scale-x-100 after:origin-right after:absolute after:inset-0 relative">
+                    <span class="font-YekanBakh500 text-sm text-matn group-hover/link:text-white z-1 duration-500">
+                        مشاهده گالری
+                    </span>
+                </div>
                 </div>
 
                 <basis core="print" datamembername="db.image-project">
@@ -228,12 +236,7 @@
                                 </div>
                             </div>
                     
-                            <div
-                                class="openPopUpImgs cursor-pointer mt-5 w-full flex items-center justify-center h-[49px] border-t border-t-matn border-b border-b-matn">
-                                <span class="font-YekanBakh500 text-sm text-matn">
-                                    مشاهده گالری
-                                </span>
-                            </div>
+                      
                         </div>
                      
                     </layout>

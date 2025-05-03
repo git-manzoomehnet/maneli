@@ -285,3 +285,28 @@ background: #525252;
   color: white;
 }
 
+.services .formContainer input{
+height: 48px !important;
+}
+
+.services .formContainer [data-bc-title-container]{
+  float: unset !important;
+  margin: 0 !important;
+  line-height: unset !important;
+  padding: 0 !important;
+  margin-bottom: 10px !important;
+}
+
+.services .formContainer [data-bc-section]{
+  margin: 0 !important;
+  padding: 0 !important;
+}
+.services .formContainer [data-bc-question]{
+  margin-bottom: 0 !important;
+}
+.productShow header{
+  background-color: transparent;
+}
+.blogShow .section2 .swiper-button-lock{
+display: block !important;
+}

@@ -37,13 +37,17 @@
         <section class="section1 mb-16 relative flex items-center justify-center">
             <div class="breadCrumb absolute top-[87px] z-10 w-90p mx-auto">
                 <a href="/" title="home" class="inline-block font-YekanBakh400 text-xs text-white ml-1.5">
+            <div class="breadCrumb absolute top-[87px] z-10 w-90p mx-auto">
+                <a href="/" title="home" class="inline-block font-YekanBakh400 text-xs text-white ml-1.5">
                     خانه
                 </a>
 
 
                 <i class="font-YekanBakh400 inline-block -translate-y-0.5 text-xs text-white ml-1.5">
+                <i class="font-YekanBakh400 inline-block -translate-y-0.5 text-xs text-white ml-1.5">
                     .
                 </i>
+                <span class="inline-block font-YekanBakh400 text-xs text-white ml-1.5">
                 <span class="inline-block font-YekanBakh400 text-xs text-white ml-1.5">
                     درباره ما
                 </span>
@@ -89,6 +93,8 @@
             </basis>
             <basis core="print" datamembername="db.aboutus">
 
+                <face filter="TypeID=129">
+                    <div class="para text-justify text-matn font-YekanBakh400 text-sm leading-6">
                 <face filter="TypeID=129 or (text in ('درباره ما') and largetext not in ('',null))">
                     <div class="para text-justify text-matn font-YekanBakh400 text-sm leading-6">
                         @Answer
@@ -131,6 +137,7 @@
                                                 </p>
                                             </li>
                                             <li class="socialInfo flex flex-wrap gap-x-3 mb-3 justify-center">
+
 
                                             </li>
                                             <!-- <li class="flex flex-wrap gap-x-3 mb-3 justify-center">
@@ -194,6 +201,7 @@
 
                 <face filter="ord=10">
                     <video poster="[##cms.cms.cdn##]/@largeIMG"  muted autoplay playsinline class="w-full">
+                    <video poster="[##cms.cms.cdn##]/@largeIMG"  muted autoplay playsinline class="w-full">
 
                 </face>
             </basis>
@@ -206,6 +214,7 @@
             </basis>
             </video>
   <!--          <div class="playbtn absolute">
+  <!--          <div class="playbtn absolute">
                 <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
                         d="M33.8093 25.7771L16.6985 34.6279C15.091 35.4598 13 34.4785 13 32.8157V15.114C13 13.4522 15.0911 12.4698 16.6985 13.3018L33.8093 22.1536C34.5373 22.4896 35 23.1939 35 23.9658C35 24.7378 34.5373 25.4411 33.8093 25.7771Z"
@@ -213,6 +222,7 @@
                     <circle cx="24" cy="24" r="24" fill="#D9D9D9" fill-opacity="0.5" />
                 </svg>
 
+            </div>  -->
             </div>  -->
         </section>
 
@@ -460,7 +470,10 @@
         </basis>
 
            <basis core="call" file="top-footer.inc" pageindex="[##cms.cms.pageindex##]" />
+           <basis core="call" file="top-footer.inc" pageindex="[##cms.cms.pageindex##]" />
     </main>
+    <basis core="call" file="footer.inc" pageindex="[##cms.cms.pageindex##]" />
+
     <basis core="call" file="footer.inc" pageindex="[##cms.cms.pageindex##]" />
 
 

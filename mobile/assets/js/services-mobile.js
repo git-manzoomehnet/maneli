@@ -144,3 +144,130 @@ function renderFn1(params) {
 function renderEditobject(params) {
   loaderContainer.style.display = "none";
 }
+
+        allertData.forEach(element => {
+            let prevInput = element.parentElement.previousElementSibling
+            if (prevInput?.value == "") {
+                prevInput.classList.add("errorPlaceholder");
+                prevInput.setAttribute("placeholder", "پر کردن این فیلد الزامی است");
+            }
+            
+            setTimeout(() => {
+                prevInput.setAttribute("placeholder", "");
+                
+                prevInput.classList.remove("errorPlaceholder");
+            }, 3000);
+        })
+    }, 100);
+    if (captchaInput.value == "") {
+      captchaInput.setAttribute("placeholder", "پر کردن این فیلد الزامی است");
+      captchaInput.classList.add("errorPlaceholder");
+      setTimeout(() => {
+        // captchaContainerclass.style.border = "none";
+        captchaInput.setAttribute("placeholder", "کد  امنیتی را وارد نمایید");
+        captchaInput.classList.remove("errorPlaceholder");
+      }, 3000);
+    }
+  });
+  function onSource1(args) {
+    console.log("onSource");
+    const captcha = document.querySelector(
+      ".homeForm1 #requestBox input[name='captcha']"
+    ).value;
+    const captchaid = document.querySelector(
+      ".homeForm1 #requestBox input[name='captchaid']"
+    ).value;
+    const stringJson = JSON.stringify(args.source?.rows[0]);
+    console.log("stringJson", stringJson);
+    $bc.setSource("edit.object1", {
+      value: stringJson,
+      captcha: captcha,
+      captchaid: captchaid,
+    });
+  }
+  
+  let responsMsg = document.querySelector(".responsMsg1");
+  let responsMsgIn = document.querySelector(".responsMsg1 span");
+  async function OnProcessedEditObject1(args) {
+    console.log("OnProcessedEditObject1");
+    const response = args.response;
+    const json = await response.json();
+    console.log(json);
+  
+    if (json.errorid == 6) {
+      console.log(json);
+      responsMsg.style.display = "block";
+      responsMsgIn.innerHTML = "درخواست شما با موفقیت ثبت گردید";
+      responsMsgIn.style.color = "#1A6902";
+      document.querySelector("form").reset();
+      let questions = document.querySelectorAll(
+        ".homeForm1 div[data-bc-question]"
+      );
+      setTimeout(() => {
+        responsMsg.style.display = "none";
+        formBtn.querySelector("span").style.display = "flex";
+        loaderForm.style.display = "none";
+      }, 2000);
+    }
+    if (json.errorid == 4) {
+      console.log(json);
+  
+      responsMsgIn.innerHTML = "مشکلی پیش آمده، لطفا مجدد تلاش فرمایید.";
+  
+      responsMsg.style.display = "block";
+      responsMsgIn.style.color = "#FF2727";
+      document.querySelector("form").reset();
+  
+      setTimeout(() => {
+        formBtn.querySelector("span").style.display = "flex";
+        loaderForm.style.display = "none";
+        responsMsg.style.display = "block";
+      }, 2000);
+    }
+    if (json.errorid == 15 && captchaInput.value != "") {
+      console.log(json);
+  
+      responsMsgIn.innerHTML = "لطفا کپچا را به درستی وارد کنید.";
+  
+      setTimeout(() => {
+        formBtn.querySelector("span").style.display = "flex";
+        loaderForm.style.display = "none";
+        responsMsg.style.display = "block";
+      }, 2000);
+    }
+  }
+  
+  function renderFn1(params) {
+  
+    
+    document.querySelector(".qclass8").style.display = "block";
+    captchaInput = document.querySelector(".captchaContainerclass .codeinputm");
+    captchaContainerclass = document.querySelector(".captchaContainerclass");
+    loaderContainer.style.display = "none";
+    console.log(loaderContainer,'loaderContainer');
+    let questions = document.querySelectorAll(".homeForm1 div[data-bc-question]");
+    questions.forEach((element) => {
+      element.classList.add("afterStar");
+  
+    //   let title = element.querySelector(".homeForm1 [data-bc-question-title]");
+    //   let qInput = element.querySelector(".homeForm1 input");
+    //   let qTxtArea = element.querySelector(".homeForm1 textarea");
+    //   if (title) {
+    //     title = element.querySelector(
+    //       ".homeForm1 [data-bc-question-title]"
+    //     ).innerHTML;
+    //     if (qInput) {
+    //       qInput.setAttribute("placeholder", title);
+    //       qInput.setAttribute("aria-label", title);
+    //     } else if (qTxtArea) {
+    //       qTxtArea.setAttribute("placeholder", title);
+    //       qTxtArea.setAttribute("aria-label", title);
+    //     }
+    //   }
+    });
+  }
+  
+  function renderEditobject(params) {
+    loaderContainer.style.display = "none";
+  }
+  

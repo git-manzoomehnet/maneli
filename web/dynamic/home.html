@@ -1,0 +1,466 @@
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="1" usedforid="2375858"> 
+    <member name="def-content" type="view"/>
+    
+    <member name="def-content250" type="view"  postsql="select * from [db.def-content250] where TypeID=250"/>
+    
+    
+     </basis> 
+
+<basis core="dbsource" name="db" source="media" lid="1" sourcemid="1" usedforid="2375858"> <member name="image-content" type="list" format="4"/> </basis>
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="20" catid="214079"> <member name="list" type="list"/> </basis>	
+<basis core="dbsource" name="db" source="basiscore" lid="2" mid="20" catid="214079"> <member name="en-list" type="list"/> </basis>	
+ <basis core="inlinesource" name="list" >
+        <member name="star" lefttblcol="db.list.id" righttblcol="db.en-list.id" format="join" jointype="leftjoin" />
+      </basis>
+
+
+<basis core="dbsource" source="basiscore" name="basisName" lid="1" mid="20" > <member request="cat" type="tree" name="productCat" parentid="213997" postsql="select * from [basisName.productCat] where parentid=213997" /> </basis>	
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="19" catid="214078"> <member name="list-project" type="list"/> </basis>	
+<basis core="dbsource" name="db" source="media" lid="1" sourcemid="1" usedforid="2375805"> <member name="image-services" type="list" format="4"/> </basis>	
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="1" usedforid="2375890"> <member name="catalouge" type="view"/> </basis>
+<basis core="dbsource" name="db" source="media" lid="1" sourcemid="1" usedforid="2375890"> <member name="image-catalouge" type="list" format="4"/> </basis>	
+<basis core="dbsource" name="db" source="media" lid="1" sourcemid="1" usedforid="2375799"> <member name="image-factory" type="list" format="4"/> </basis>
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="1" usedforid="2375784">
+    <member name="aboutus" type="view"/> 
+   
+    <member name="aboutus250" postsql="select * from [db.aboutus250] where TypeID=250" type="view"/> 
+   
+   </basis>	
+
+   <basis core="dbsource" name="db" source="basiscore" lid="1" mid="11" catid="214026"> <member name="personnel" type="list" size="1000x544" propertyid="2732,91096"/> </basis>
+
+
+   <basis core="dbsource" name="db" source="basiscore" lid="1" mid="11" catid="214026"> <member name="list-person" size="1000x544" type="list"/> </basis>
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="11" catid="214026"> <member name="list-person" size="1000x544" type="list"/> </basis>	
+
+ 
+ <!DOCTYPE html>
+    <html lang="fa">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="[##cms.cms.cdn##]/css/swiper-bundle.min.css">
+
+        <basis core="call" file="styles.inc"/>
+
+    </head>
+    <body>
+        <main class="homePage" dir="rtl">
+            <basis core="call" file="header.inc"/>
+
+            <section class="section1 h-svh overflow-hidden relative flex items-center justify-center">
+            
+                <div class="swiper overflow-hidden mainSlider w-svw">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+
+                        <basis core="print" datamembername="db.image-content">
+
+                            <face filter="ord=1000">
+                                <div class="swiper-slide group/slideMain">
+
+                                    <div
+                                        class="imgS h-full w-full overflow-hidden relative after:absolute after:inset-0 after:bg-black/[0.5]">
+                                        <img class="w-full h-full object-cover duration-[30000ms] group-[&.swiper-slide-active]/slideMain:scale-150"
+                                            src="[##cms.cms.cdn##]/@largeIMG" alt="@name">
+                                    </div>
+                                </div>
+
+                            </face>
+                        </basis>
+
+                    </div>
+
+                </div>
+
+
+                <div class="title absolute translate-y-[100px]">
+                    <basis core="print" datamembername="db.def-content250">
+
+                        <face filter="RowNumber=1">
+                    <h1
+                        class="font-Trueno200 text-white uppercase text-5xl tracking-[15%] text-center whitespace-pre-line mb-5">
+                        @text
+                    </h1>
+                    <h2 class="text-center font-YekanBakh700 text-2xl text-white">
+                        @largetext  
+                    </h2>
+
+                        </face>
+                    </basis>
+                </div>
+                <div class="absolute z-11 -bottom-[29px] overflow-hidden h-fit">
+
+                    <div class="scrollBtm overflow-hidden  h-[130px] w-px bg-gray2">
+                        <div class="line h-[58px] w-px bg-white">
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+
+            <section class="section2 relative z-10 w-80p mx-auto mb-32 -translate-y-[67px]">
+                <div class="columnContainer">
+                    <basis core="print" datamembername="basisName.productCat">
+                    
+                        <face>
+                            
+                            <div class="roomy praha-d justify-content-center h-100"
+                            style=" background-image: url('[##cms.cms.cdn##]/images/@catid-def.jpg');">
+                            <a href="/product-cat.bc?catid=@catid" class="h-full flex flex-col bg-black/[0.3] items-center justify-center">
+                                <span class="font-YekanBakh400 uppercase block mb-14 text-[28px] text-white" style="letter-spacing: 9px;">
+                                @urltitle
+                                </span>
+                
+                
+                            
+                
+                
+                
+                
+                            </a>
+                
+                        </div>
+                        </face>
+                    </basis>
+
+                </div>
+
+            
+            </section>
+
+
+            
+            <basis core="print" datamembername="db.list-project">
+                <layout>
+                    <section class="section3  mb-1 relative">
+                        <div class="bgImg absolute w-full top-[300px] left-0 right-0 -z-1">
+                            <img class="w-full h-[554px] object-cover" src="[##cms.cms.cdn##]/images/mramar.png" alt="bg">
+                        </div>
+                        <h3 class="font-YekanBakh500 scrollTop text-center text-[28px] mb-12">
+                            پروژه های خانه مانلی
+                        </h3>
+
+                        <!-- Slider main container -->
+                        <div class="swiper relatedProject">
+                            <!-- Additional required wrapper -->
+                            <div class="swiper-wrapper">
+                                <!-- Slides -->
+                        
+
+
+                                @child
+
+                            </div>
+
+                        </div>
+
+
+
+                        </div>
+                    </section>
+                </layout>
+
+                <face>
+                    <div class="swiper-slide !w-[419px] group/slide">
+
+                        <a href="/@link" title="@title"
+                            class="flex card overflow-hidden w-full mb-3 items-center justify-center relative group/proj">
+                            <div class=" w-full">
+                                <img class="w-full imgS scale-105" src="[##cms.cms.cdn##]/@image" alt="@title">
+                            </div>
+
+                            <div data-tilt data-tilt-speed="300" class="secImg w-[75%] js-tilt absolute">
+                                <div
+                                    class="in relative after:absolute duration-500 scale-110 opacity-0 group-hover/proj:opacity-100 group-hover/proj:scale-100 after:inset-0 after:bg-black/[0.3]">
+
+                                    <img class="w-full" src="[##cms.cms.cdn##]/@image" alt="@title">
+                                </div>
+
+                            </div>
+                            <div data-tilt data-tilt-speed="300"
+                                class="title js-tilt absolute duration-500 scale-110 opacity-0 group-hover/proj:opacity-100 group-hover/proj:scale-100">
+                                <h4 class="text-white font-YekanBakh700 text-2xl text-center">
+                                    @title
+                                </h4>
+                            </div>
+                        </a>
+                    </div>
+
+                </face>
+            </basis>
+
+    <basis core="print" datamembername="db.image-services">
+        <layout>
+            <section class="section3 w-80p mx-auto grid grid-cols-3 gap-x-16 mt-[104px] mb-24" >
+                @child
+            </section>
+        </layout>
+        
+        <face filter="ord=1000">
+            
+            <div class="boxx py-[66px] flex flex-col items-center justify-center px-9 bg-white" style="box-shadow: 5px 5px 25.4px 3px #A7A7A740;">
+                <div class="imgS flex justify-center items-center">
+                    <img src="[##cms.cms.cdn##]/@largeIMG" alt="@name">
+                </div>
+                <h3 class="font-YekanBakh700 text-base my-7 text-center">
+                @name
+                </h3>
+                <div class="para text-center font-YekanBakh400 text-sm leading-6 text-matn">
+                    <p>
+                        @description
+                    </p>
+                </div>
+            </div>
+        </face>
+    </basis>
+            <section class="section6 mb-28">
+                <h3 class="text-center scrollTop mb-12 font-YekanBakh400 text-[28px]">
+                    محصولات منتخب
+                </h3>
+
+                <div class="swiper productsSlider">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <basis core="print" datamembername="list.star">
+                        
+                            <face>
+                                <div class="swiper-slide">
+                                    <a href="/@db.list.link" title="@db.list.title">
+                                        <div class="imgS mb-28" data-swiper-parallax-scale="0.7">
+                                            <img src="[##cms.cms.cdn##]/@db.list.image" alt="@db.en-list.title" class="w-full">
+                                        </div>
+            
+                                        <div class="title" data-swiper-parallax-scale="0.7">
+                                            <h5 class="font-Trueno200 text-[32px] mb-3 text-center">
+                                            @db.en-list.title
+                                            </h5>
+                                            <h6 class="font-YekanBakh400 text-base text-center">
+                                                @db.list.title
+                                            </h6>
+            
+            
+                                        </div>
+                                    </a>
+                                </div>
+                                
+                            </face>
+                        </basis>
+
+                    </div>
+                    <div class="btns absolute z-10 gap-x-3 bottom-[105px] justify-center w-full flex items-center">
+                        <div class="prevProducts cursor-pointer hover:bg-black duration-500 group/prevProducts">
+                            <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <mask class="duration-500 group-hover/prevProducts:fill-white" id="path-1-inside-1_103_2697" fill="white">
+                                    <path d="M50 0H0V50H50V0Z" />
+                                </mask>
+                                <path class="duration-500 group-hover/prevProducts:fill-white" d="M50 1H0V-1H50V1ZM0 49H50V51H0V49Z" fill="#A3A3A3"
+                                    mask="url(#path-1-inside-1_103_2697)" />
+                                <path class="duration-500 group-hover/prevProducts:fill-white" d="M33 24.5L21.75 18.0048V30.9952L33 24.5Z" fill="#A3A3A3" />
+                            </svg>
+
+                        </div>
+                        <div class="productsFraction !w-fit" dir="ltr"></div>
+                        <div class="nextProducts cursor-pointer  hover:bg-black duration-500 group/nextProducts">
+                            <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <mask class="duration-500 group-hover/nextProducts:fill-white" id="path-1-inside-1_103_2693" fill="white">
+                                    <path class="duration-500 group-hover/nextProducts:fill-white" d="M0 0H50V50H0V0Z" />
+                                </mask>
+                                <path class="duration-500 group-hover/nextProducts:fill-white" d="M0 1H50V-1H0V1ZM50 49H0V51H50V49Z" fill="#A3A3A3"
+                                    mask="url(#path-1-inside-1_103_2693)" />
+                                <path class="duration-500 group-hover/nextProducts:fill-white" d="M17 24.5L28.25 18.0048V30.9952L17 24.5Z" fill="#A3A3A3" />
+                            </svg>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="section6 grid grid-cols-2 mb-14 w-80p mx-auto items-center">
+                <div class="rSec">
+                    <basis core="print" datamembername="db.catalouge">
+                        
+                        <face filter="TypeID=150">
+                            <h4 class="font-YekanBakh400 scrollTop text-[28px] mb-9 text-center">
+                                @Answer 
+                            </h4>
+                            
+                        </face>
+                        <face filter="TypeID=129">
+                        <div class="para text-center scrollTop text-matn mb-9 font-YekanBakh400 leading-7 text-sm">
+                            <p>
+                                @Answer
+                            </p>
+                        </div>
+                        </face>
+                    </basis>
+
+
+                    <a href="/catalogue.bc" title="home" target="_blank" class="flex scrollTop w-[387px] group/link items-center duration-500 justify-center font-YekanBakh500 text-sm text-matn border-t border-t-matn border-b border-b-matn mx-auto h-[49px] after:w-full after:h-full after:bg-black hover:text-white after:duration-500 after:scale-x-0 hover:after:scale-x-100 after:origin-right after:absolute after:inset-0 relative">
+                        <span class="group-hover/link:text-white z-1 font-YekanBakh500 text-sm text-matn duration-500">
+            
+                            کاتالوگ ها
+
+                        </span>
+                    </a>
+                </div>
+                <div class="lSe">
+                    <basis core="print" datamembername="db.image-catalouge">
+                    
+                        <face filter="ord=1">
+                            <div class="imgS">
+                                <img src="[##cms.cms.cdn##]/@largeIMG" alt="@name" class="w-full">
+                            </div>
+                            
+                        </face>
+                    </basis>
+                </div>
+            </section>
+
+            <basis core="print" datamembername="db.image-factory">
+            
+                <face filter="ord=1001">
+                    <section class="section7 flex items-center justify-center mb-14 relative h-[470px] bg-fixed bg-center bg-cover" style="background-image: url('[##cms.cms.cdn##]/@largeIMG');">
+                        <div class="absolute text-center">
+                            <h4 class="mb-14 scrollTop font-YekanBakh400 text-[32px] text-white">
+                                کارخانه مانلی
+                            </h4>
+                    
+                            <a href="/factory.bc" title="home" class="flex scrollTop w-[387px] group/link items-center duration-500 justify-center font-YekanBakh500 text-sm text-white border-t border-t-white border-b border-b-white mx-auto h-[49px] after:w-full after:h-full after:bg-black hover:text-black after:duration-500 after:scale-x-0 hover:after:scale-x-100 after:origin-right after:absolute after:inset-0 relative">
+                                <span class="group-hover/link:text-white z-1 font-YekanBakh500 text-sm text-white duration-500">
+                                    مشاهده بیشتر
+                                </span>
+                            </a>
+                        </div>
+                    </section>
+                    
+                </face>
+            </basis>
+
+            <section class="section8 w-80p !max-w-[1000px] mx-auto mb-3">
+                <basis core="print" datamembername="db.aboutus">
+
+                    <face filter="TypeID=150">
+                        <h2 class="font-YekanBakh400 scrollTop text-[32px] text-center mb-6">
+                            @Answer
+                        </h2>
+
+                    </face>
+                    <face filter="TypeID=129">
+                        <div class="para scrollTop font-YekanBakh400 text-base text-matn text-center">
+                            @Answer
+                        </div>
+
+                    </face>
+                </basis>
+            </section>
+            <basis core="print" datamembername="db.personnel">
+                <layout>
+                    <section class="section9 w-80p mx-auto mb-[138px]">
+                        <div class="swiper memberSlides relative">
+                            <!-- Additional required wrapper -->
+                            <div class="swiper-wrapper">
+                                <!-- Slides -->
+
+
+                                @child
+                            </div>
+                            <div class="absolute bottom-10 left-0 w-80p mx-auto flex items-center justify-end right-0">
+
+                                <div class="btns w-[220px] z-10 gap-x-3 justify-end  flex items-center">
+                                    <div class="prevMembers cursor-pointer">
+                                        <svg width="50" height="50" viewBox="0 0 50 50" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <mask id="path-1-inside-1_262_4310" fill="white">
+                                                <path d="M50 0H0V50H50V0Z" />
+                                            </mask>
+                                            <path d="M50 1H0V-1H50V1ZM0 49H50V51H0V49Z" fill="#A3A3A3"
+                                                mask="url(#path-1-inside-1_262_4310)" />
+                                            <path d="M33 24.5L21.75 18.0048V30.9952L33 24.5Z" fill="#A3A3A3" />
+                                        </svg>
+
+                                    </div>
+                                    <div class="membersFraction !w-fit font-YekanBakh300" dir="ltr"></div>
+                                    <div class="nextMembers cursor-pointer">
+                                        <svg width="50" height="50" viewBox="0 0 50 50" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <mask id="path-1-inside-1_103_2693" fill="white">
+                                                <path d="M0 0H50V50H0V0Z" />
+                                            </mask>
+                                            <path d="M0 1H50V-1H0V1ZM50 49H0V51H50V49Z" fill="#A3A3A3"
+                                                mask="url(#path-1-inside-1_103_2693)" />
+                                            <path d="M17 24.5L28.25 18.0048V30.9952L17 24.5Z" fill="#A3A3A3" />
+                                        </svg>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                </layout>
+
+                <face>
+                    <div class="swiper-slide !flex flex-col items-center relative" data-id="@id">
+
+                        <div class="inner pb-10 w-80p mx-auto !max-w-[1000px]">
+
+                            <div class="imgS flex w-full justify-center">
+                                <img class="w-full" src="[##cms.cms.cdn##]/@01000X00544prp" alt="@title">
+                            </div>
+                            <div class="title translate-x-20 w-90p max-w-[594px] py-6 px-12 -mt-[70px] bg-white"
+                                style="box-shadow: 5px 5px 25.4px 3px #A7A7A740;">
+                                <div class="para mb-3 mx-auto font-YekanBakh400 text-base leading-6 text-matn">
+                                    <p>
+                                        جهت ارتباط با واحد @prp_2732 میتوانید
+                                        از راه های زیر اقدام نمایید.
+                                    </p>
+                                </div>
+                                <div class="info">
+                                    <ul>
+                                        <li class="flex flex-wrap gap-x-3 mb-3 ">
+                                            <span class="font-YekanBakh400 text-base leading-6 text-matn">
+                                                @prp_2732:
+                                            </span>
+                                            <p class="font-YekanBakh400 text-base leading-6">
+                                                @title
+                                            </p>
+                                        </li>
+                                        <li class="socialInfo flex flex-wrap gap-x-3 mb-3 ">
+                                        </li>
+                                        <!-- <li class="flex flex-wrap gap-x-3 mb-3 justify-center">
+                                    <span class="font-YekanBakh400 text-sm leading-6 text-matn">
+                                        ایمیل:
+                                    </span>
+                                    <p class="font-YekanBakh400 leading-6">
+                                        خانم الهام
+                                    </p>
+                                </li> -->
+                                        <!-- <li class="flex flex-wrap gap-x-3 mb-3 justify-center">
+                                    <span class="font-YekanBakh400 text-sm leading-6 text-matn">
+                                        تماس:
+                                    </span>
+                                    <p class="font-YekanBakh400 leading-6">
+                                        خانم الهام
+                                    </p>
+                                </li> -->
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </face>
+            </basis>
+            <basis core="call" file="footer.inc"/>
+
+        </main>
+        <basis core="call" file="scripts.inc"/>
+        <script src="[##cms.cms.cdn##]/js/swiper-bundle7.4.1.min.js"></script>
+
+        <script src="[##cms.cms.cdn##]/js/scrollTotop.js"></script>
+        <script src="[##cms.cms.cdn##]/js/home-des.js"></script>
+    </body>
+    </html>

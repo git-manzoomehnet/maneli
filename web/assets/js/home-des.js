@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 function onAllImagesLoaded(container, callback) {
   const images = container.querySelectorAll('.productsSlider img');
   let loadedCount = 0;
@@ -30,6 +31,9 @@ function onAllImagesLoaded(container, callback) {
 onAllImagesLoaded(document, () => {
   
   document.querySelectorAll(".card").forEach((card) => {
+=======
+document.querySelectorAll(".card").forEach((card) => {
+>>>>>>> 47819a86bffc7101a1d2b8ea685dd2705b621a54
     const tilt = card.querySelector("[data-tilt]");
     const img = card.querySelector(".imgS");
   
@@ -75,6 +79,7 @@ onAllImagesLoaded(document, () => {
   });
 
 
+<<<<<<< HEAD
 });
 
 
@@ -110,6 +115,34 @@ const productsSlider = new Swiper('.productsSlider', {
     },
 
 });
+=======
+
+  const productsSlider = new Swiper('.productsSlider', {
+    slidesPerView: 3,
+    spaceBetween: 10,
+    loop: true,
+    centeredSlides:true,
+    parallax: true,
+
+    speed:1000,
+    navigation: {
+        nextEl: '.nextProducts',
+        prevEl: '.prevProducts',
+      },
+    pagination: {
+        el: '.productsFraction',
+        type: 'fraction',
+        formatFractionCurrent: function (number) {
+          
+                return number;
+            
+        }
+
+
+      },
+
+  });
+>>>>>>> 47819a86bffc7101a1d2b8ea685dd2705b621a54
 
 
 
@@ -122,6 +155,7 @@ const productsSlider = new Swiper('.productsSlider', {
 
 
 
+<<<<<<< HEAD
 const memberSlides = new Swiper('.memberSlides', {
   slidesPerView: 1,
   spaceBetween: 10,
@@ -191,10 +225,83 @@ loop:true,
       delay: 3000,
     },
   spaceBetween: 61,
+=======
+  const memberSlides = new Swiper('.memberSlides', {
+    slidesPerView: 1,
+    spaceBetween: 10,
+    loop: true,
+ 
+
+    speed:1000,
+    navigation: {
+        nextEl: '.nextMembers',
+        prevEl: '.prevMembers',
+      },
+    pagination: {
+        el: '.membersFraction',
+        type: 'fraction',
+        formatFractionCurrent: function (number) {
+          
+                return number;
+            
+        }
+
+
+      },
+      on: {
+        init: function(swiper){
+
+    
+          
+        }, 
+      },
+  });
+
+  
+  let swipers = document.querySelectorAll(".memberSlides .swiper-slide")
+  console.log("swipers",swipers);
+  
+  swipers.forEach((element,i) => {
+    let idMember = element.getAttribute("data-id")
+    fetch(`/person-info.inc?id=${idMember}`)
+    .then(response => response.text())
+
+    .then(userData => {
+      const parser = new DOMParser();
+      const doc = parser.parseFromString(userData, 'text/html');
+      console.log("element",element);
+      console.log(".socialInfo",element.querySelector(".socialInfo"));
+      
+      const socialInfo = element.querySelector(".socialInfo")
+      socialInfo.innerHTML=userData
+    })
+    .catch(error => {
+      console.error('Error:', error);
+    });
+  });
+
+
+
+  const relatedProject = new Swiper('.relatedProject', {
+    // Optional parameters
+    speed: 1000,
+    slidesPerView:3,
+    // If we need pagination
+    navigation: {
+        nextEl: '.nextRelatedProject',
+        prevEl: '.prevRelatedProject',
+    },
+loop:true,
+    autoplay: {
+        delay: 3000,
+      },
+    spaceBetween: 61,
+>>>>>>> 47819a86bffc7101a1d2b8ea685dd2705b621a54
 });
 
 
 const mainSlider = new Swiper('.mainSlider', {
+<<<<<<< HEAD
   slidesPerView: 1,
   loop: true,
   speed:1000,
@@ -208,3 +315,18 @@ fadeEffect: {
       delay: 3000,
     },
 });
+=======
+    slidesPerView: 1,
+    loop: true,
+    speed:1000,
+    draggable:false,
+    allowTouchMove:false,
+    effect: 'fade',
+  fadeEffect: {
+    crossFade: false
+  },
+    autoplay: {
+        delay: 3000,
+      },
+  });
+>>>>>>> 47819a86bffc7101a1d2b8ea685dd2705b621a54

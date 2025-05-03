@@ -24,12 +24,21 @@ if (top === 0) {
 
         document.querySelector("header .logo img").setAttribute("src" , darkLogo)
 
+<<<<<<< HEAD
 
+=======
+        console.log(darkLogo);
+        
+>>>>>>> 47819a86bffc7101a1d2b8ea685dd2705b621a54
     }
     else{
         if (!darkFlag) {
             header.classList.remove("activeHeader")
             document.querySelector("header .logo img").setAttribute("src" , lightLogo)
+<<<<<<< HEAD
+=======
+            console.log(lightLogo);
+>>>>>>> 47819a86bffc7101a1d2b8ea685dd2705b621a54
             
         }
     

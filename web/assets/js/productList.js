@@ -71,12 +71,20 @@ window.addEventListener("DOMContentLoaded", () => {
             .then(userData => {
                 const parser = new DOMParser();
                 const doc = parser.parseFromString(userData, 'text/html');
+<<<<<<< HEAD
 
+=======
+                console.log("load", `/load-product.inc?catid=${idMember}&refresh=true`);
+>>>>>>> 47819a86bffc7101a1d2b8ea685dd2705b621a54
                 document.querySelector(".section2 .grid").innerHTML=""
                 const socialInfo = document.querySelector(".section2 .grid")
                 socialInfo.innerHTML = userData
                 let sections = document.querySelectorAll(".section")
+<<<<<<< HEAD
 
+=======
+                console.log(userData);
+>>>>>>> 47819a86bffc7101a1d2b8ea685dd2705b621a54
                 
                 sections.forEach(section => {
                     const hasBothClasses =
@@ -185,12 +193,20 @@ filterBtn.forEach(element => {
             .then(userData => {
                 const parser = new DOMParser();
                 const doc = parser.parseFromString(userData, 'text/html');
+<<<<<<< HEAD
 
+=======
+                console.log("load", `/load-product.inc?catid=${idMember}&refresh=true`);
+>>>>>>> 47819a86bffc7101a1d2b8ea685dd2705b621a54
                 document.querySelector(".section2 .grid").innerHTML=""
                 const socialInfo = document.querySelector(".section2 .grid")
                 socialInfo.innerHTML = userData
                 let sections = document.querySelectorAll(".section")
+<<<<<<< HEAD
 
+=======
+                console.log(userData);
+>>>>>>> 47819a86bffc7101a1d2b8ea685dd2705b621a54
                 
                 sections.forEach(section => {
                     const hasBothClasses =
